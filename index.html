@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Nemanja Grujicic - CV</title>
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #5d6678;
+            --soft: #f7f9fc;
+            --panel: #ffffff;
+            --line: #dfe5ee;
+            --blue: #155eef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--soft);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 34px 22px 60px;
+        }
+
+        header {
+            padding: 30px 0 24px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 5vw, 4.25rem);
+            line-height: 1.02;
+            letter-spacing: 0;
+        }
+
+        .subtitle {
+            margin: 10px 0 18px;
+            color: var(--blue);
+            font-size: 1.15rem;
+            font-weight: 750;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .links a,
+        .links span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 7px 10px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--panel);
+            color: var(--ink);
+            font-size: 0.9rem;
+            font-weight: 650;
+        }
+
+        section {
+            margin: 28px 0;
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--panel);
+        }
+
+        h2 {
+            margin: 0 0 16px;
+            color: var(--ink);
+            font-size: 1.45rem;
+            line-height: 1.2;
+        }
+
+        h3 {
+            margin: 0 0 5px;
+            font-size: 1.05rem;
+            line-height: 1.25;
+        }
+
+        p {
+            margin: 0 0 13px;
+            color: var(--muted);
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 21px;
+        }
+
+        li {
+            margin: 0 0 8px;
+            color: var(--muted);
+        }
+
+        strong {
+            color: var(--ink);
+        }
+
+        .role {
+            margin-bottom: 24px;
+        }
+
+        .role:last-child {
+            margin-bottom: 0;
+        }
+
+        .role-head {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            flex: 0 0 auto;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 650;
+        }
+
+        .skills p,
+        .proof p {
+            margin-bottom: 9px;
+        }
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 24px 14px 44px;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            .role-head {
+                display: block;
+            }
+
+            .meta {
+                margin-top: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header>
+            <h1>Nemanja Grujicic</h1>
+            <div class="subtitle">AI / Data Product Leader | Technical Builder</div>
+            <nav class="links" aria-label="Profile links">
+                <a href="artifacts.html">Selected work</a>
+                <a href="https://www.linkedin.com/in/grujicicnemanja/">LinkedIn</a>
+                <a href="https://github.com/vokativ/">GitHub</a>
+                <span>Singapore / Remote</span>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p>Technical builder-leader who rebuilt Rapsodo's data and AI platform from scratch: GCP, BigQuery, Terraform, Kubernetes, Airflow, Dataform, Superset, and AI analytics applications. Former Google operator, McKinsey consultant, startup founder, and INSEAD MBA with a track record of turning ambiguous business problems into shipped systems, product workflows, and operating leverage.</p>
+            <p>Target roles: AI product leadership, data platform/product leadership, solutions architecture, field engineering, technical customer engineering, applied AI product specialist, and builder-heavy product / operations roles.</p>
+        </section>
+
+        <section class="proof">
+            <h2>Selected Work</h2>
+            <p><strong><a href="artifacts.html">Selected work &amp; case studies:</a></strong> Sanitized private-platform case studies and public projects behind the CV.</p>
+            <p><strong><a href="https://github.com/vokativ/">GitHub:</a></strong> Public project history and code samples.</p>
+            <p><strong><a href="https://github.com/vokativ/glasanje">hocudaglasam.com:</a></strong> Open-source Serbian diaspora voter registration portal built in TypeScript / Angular with client-side processing and no server-side PII collection.</p>
+            <p><strong><a href="https://adiufant.com">Adiufant:</a></strong> AI calendar assistant for busy parents; converts images, PDFs, voice notes, and text into calendar events and preparation tasks using Gemini.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>AI / Product:</strong> Gemini API, conversational analytics, AI-assisted internal tooling, product discovery, prototyping, workflow automation.</p>
+            <p><strong>Data / Analytics:</strong> BigQuery, Dataform, SQL, star schemas, incremental loading, CDC, Apache Superset, BI adoption.</p>
+            <p><strong>Cloud / Infrastructure:</strong> GCP, Kubernetes / GKE, Terraform, Cloud Composer / Airflow, Cloud Run, Cloud Functions, IAM, Secret Manager.</p>
+            <p><strong>AI-Assisted Engineering:</strong> Python, TypeScript, Node.js / Bun, WebSockets, Docker, CI/CD, Git.</p>
+            <p><strong>Operating Range:</strong> Technical product leadership, cross-functional execution, support operations, customer onboarding, stakeholder translation.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Rapsodo | Head of Data Analytics &amp; AI Lead</h3>
+                    <div class="meta">Singapore | 2023 - Present</div>
+                </div>
+                <p>Inherited a brittle, unscalable data architecture and rebuilt the company's analytics platform, data warehouse, BI layer, orchestration, and internal AI applications from scratch after the previous data engineering team departed.</p>
+                <ul>
+                    <li>Architected and deployed the full GCP analytics stack as Terraform infrastructure-as-code: GKE Autopilot, Cloud Composer 3, self-hosted Airbyte, Apache Superset 5.0, Cloud Run, Cloud Functions, Secret Manager, IAM, and BigQuery.</li>
+                    <li>Migrated Apache Superset from VM-based v4 to Kubernetes-based v5 with zero data loss, preserving BigQuery connections, custom roles, and 100+ users with Microsoft 365 SSO.</li>
+                    <li>Built Dataform SQL pipelines modeling 16 business domains across sports products, Salesforce, Stripe, Shopify, Recharge, Zendesk, Jira, Iterable, NetSuite, Flowspace, and others.</li>
+                    <li>Designed incremental loading patterns for 3.5B+ row datasets, cutting refresh cycles to sub-5 minutes while maintaining data integrity through protected tables, unique keys, assertions, and change detection.</li>
+                    <li>Wrote Python Airflow logic orchestrating daily pipelines across ingestion, transformation, materialized views, Trino syncs, retries, and cross-system dependencies.</li>
+                    <li>Developed Google Cloud Functions for real-time MongoDB CDC, Auth0 organization sync, PostgreSQL extraction, NetSuite / SPS Commerce imports, currency updates, automated reporting, and Dataform workflow orchestration.</li>
+                    <li>Built Golf Genie, a FastAPI + Gemini conversational analytics app on Cloud Run that lets non-technical staff query curated BigQuery datasets in plain English with streamed SQL and chart output.</li>
+                    <li>Created a real-time company metrics display using Bun, TypeScript, Canvas 2D, WebSockets, and BigQuery, showing live revenue, shot volume, support, NPS, and engineering health metrics on office screens.</li>
+                    <li>Led the full-stack replacement of the customer support tooling setup, including evaluation and integration of conversational AI partners to improve response times and stabilize the support operation.</li>
+                    <li>Executed GCP security remediation: removed stale service accounts, consolidated API keys, tightened IAM to least privilege, and implemented dataset-level BigQuery access controls.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Aspire Financial Technologies | Head of Customer Onboarding and KYC</h3>
+                    <div class="meta">Singapore | 2021 - 2023</div>
+                </div>
+                <p>Led a 40-person onboarding and compliance operations team, partnering closely with Product and Engineering to scale customer activation, automate workflows, and improve technical support for business users.</p>
+                <ul>
+                    <li>Partnered with Product to build internal tooling and workflow changes that reduced unsuccessful first-try verifications by 30%.</li>
+                    <li>Created auto-translation tooling and process changes that reduced non-English customer onboarding time by approximately 30%.</li>
+                    <li>Scaled onboarding capacity by 3x through automation, queue design, and algorithmic leverage without increasing headcount.</li>
+                    <li>Led the operational and technical integration of Indonesian partners, launching customer onboarding months ahead of schedule.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Sama / Opportunity Labs | Co-founder &amp; COO</h3>
+                    <div class="meta">Singapore | 2019 - 2022</div>
+                </div>
+                <p>Co-founded an ethical recruitment technology startup for migrant workers, raised $1.1M in pre-seed funding, and built early product and operating systems from zero.</p>
+                <ul>
+                    <li>Built and launched the first working prototype in one day on Messenger, attracting the first 500 customers within 12 hours.</li>
+                    <li>Designed the fastest WhatsApp-based KYC verification product for the market, taking users from passport submission to verified identity in 45 seconds.</li>
+                    <li>Built operational partnerships and licensing foundations across Singapore, India, Pakistan, the Middle East, and Bangladesh.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Google / YouTube | Product Strategy, Corporate Ventures, Export Programs</h3>
+                    <div class="meta">APAC / EMEA | 2015 - 2019</div>
+                </div>
+                <ul>
+                    <li>Created rapid prototypes of APAC live video solutions for YouTube and led a global 50+ person reorganization for an operations-heavy team.</li>
+                    <li>Created and launched Google Magellan, a B2B growth line for large advertisers; built the international payments acceptance program from inception, sourcing and negotiating with 7 global payment companies in two quarters.</li>
+                    <li>Interviewed 200+ partner companies to identify expansion needs and translate ambiguous market problems into productized offerings.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>McKinsey &amp; Company | Engagement Manager, Associate, Business Analyst</h3>
+                    <div class="meta">Global | 2008 - 2015</div>
+                </div>
+                <ul>
+                    <li>Led enterprise transformation, digital strategy, and operations work across financial services, industrials, mining, and public-sector-adjacent organizations.</li>
+                    <li>Defined and led development of a portfolio cleaning and allocation tool for a major European insurer to improve sales transparency.</li>
+                    <li>Combined 20 separate departmental IT strategies into a unified roadmap for a Middle Eastern mining corporation.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p><strong>INSEAD:</strong> MBA, Singapore / France.</p>
+            <p><strong>American University in Bulgaria:</strong> BA in Business Administration and European Studies, Soros Foundation Full Scholarship.</p>
+        </section>
+    </main>
+</body>
+</html>
