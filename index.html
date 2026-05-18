@@ -207,36 +207,24 @@
     <main class="page">
         <header>
             <h1>Nemanja Grujičić</h1>
-            <div class="subtitle">AI / Data Product Leader | Technical Builder</div>
+            <div class="subtitle">AI &amp; Data Builder-Translator | Enterprise AI Deployment | Product / Operations Systems</div>
             <nav class="links" aria-label="Profile links">
                 <a href="artifacts.html">Selected work</a>
                 <a href="https://www.linkedin.com/in/grujicicnemanja/">LinkedIn</a>
-                <a href="https://github.com/vokativ/">GitHub</a>
                 <span>Singapore / Remote</span>
             </nav>
         </header>
 
         <section>
             <h2>Summary</h2>
-            <p>Technical builder-leader who rebuilt Rapsodo's data and AI platform from scratch: GCP, BigQuery, Terraform, Kubernetes, Airflow, Dataform, Superset, and AI analytics applications. Former Google operator, McKinsey consultant, startup founder, and INSEAD MBA with a track record of turning ambiguous business problems into shipped systems, product workflows, and operating leverage.</p>
-            <p>Target roles: AI product leadership, data platform/product leadership, solutions architecture, field engineering, technical customer engineering, applied AI product specialist, and builder-heavy product / operations roles.</p>
+            <p>Impact operator-builder who diagnoses messy business systems, redesigns workflows around real internal or external customers, and uses data, AI, automation, and partner models to create measurable outcomes. Recent work includes creating daily transparency across previously unreportable business metrics, helping management steer a major operating performance turnaround, scaling MAS-regulated fintech onboarding 3x without headcount, transforming support to roughly 30% AI-handled tickets, and co-building a Google business line that later supported tens of millions in revenue. Former Google operator, McKinsey consultant, startup founder, and INSEAD MBA.</p>
+            <p>Target roles: practical AI deployment, data/product leadership, solutions architecture, field engineering, technical customer engineering, applied AI product specialist, and builder-heavy product / operations roles.</p>
         </section>
 
         <section class="proof">
-            <h2>Selected Work</h2>
+            <h2>Selected Proof</h2>
             <p><strong><a href="artifacts.html">Selected work &amp; case studies:</a></strong> Sanitized private-platform case studies and public projects behind the CV.</p>
-            <p><strong><a href="https://github.com/vokativ/">GitHub:</a></strong> Public project history and code samples.</p>
-            <p><strong><a href="https://github.com/vokativ/glasanje">hocudaglasam.com:</a></strong> Open-source Serbian diaspora voter registration portal built in TypeScript / Angular with client-side processing and no server-side PII collection.</p>
-            <p><strong><a href="https://adiufant.com">Adiufant:</a></strong> AI calendar assistant for busy parents; converts images, PDFs, voice notes, and text into calendar events and preparation tasks using Gemini.</p>
-        </section>
-
-        <section class="skills">
-            <h2>Technical Skills</h2>
-            <p><strong>AI / Product:</strong> Gemini API, conversational analytics, AI-assisted internal tooling, product discovery, prototyping, workflow automation.</p>
-            <p><strong>Data / Analytics:</strong> BigQuery, Dataform, SQL, star schemas, incremental loading, CDC, Apache Superset, BI adoption.</p>
-            <p><strong>Cloud / Infrastructure:</strong> GCP, Kubernetes / GKE, Terraform, Cloud Composer / Airflow, Cloud Run, Cloud Functions, IAM, Secret Manager.</p>
-            <p><strong>AI-Assisted Engineering:</strong> Python, TypeScript, Node.js / Bun, WebSockets, Docker, CI/CD, Git.</p>
-            <p><strong>Operating Range:</strong> Technical product leadership, cross-functional execution, support operations, customer onboarding, stakeholder translation.</p>
+            <p><strong>Public products:</strong> Open-source Serbian diaspora voter-registration portal and active AI calendar assistant for busy parents; details and links in selected work.</p>
         </section>
 
         <section>
@@ -247,32 +235,25 @@
                     <h3>Rapsodo | Head of Data Analytics &amp; AI Lead</h3>
                     <div class="meta">Singapore | 2023 - Present</div>
                 </div>
-                <p>Inherited a brittle, unscalable data architecture and rebuilt the company's analytics platform, data warehouse, BI layer, orchestration, and internal AI applications from scratch after the previous data engineering team departed.</p>
+                <p>Inherited brittle data infrastructure after the prior data engineering team departed and rebuilt the company's analytics, AI, reporting, and support-intelligence operating layer, making previously fragmented or impossible business questions visible enough for daily management action.</p>
                 <ul>
-                    <li>Architected and deployed the full GCP analytics stack as Terraform infrastructure-as-code: GKE Autopilot, Cloud Composer 3, self-hosted Airbyte, Apache Superset 5.0, Cloud Run, Cloud Functions, Secret Manager, IAM, and BigQuery.</li>
-                    <li>Migrated Apache Superset from VM-based v4 to Kubernetes-based v5 with zero data loss, preserving BigQuery connections, custom roles, and 100+ users with Microsoft 365 SSO.</li>
-                    <li>Built Dataform SQL pipelines modeling 16 business domains across sports products, Salesforce, Stripe, Shopify, Recharge, Zendesk, Jira, Iterable, NetSuite, Flowspace, and others.</li>
-                    <li>Designed incremental loading patterns for 3.5B+ row datasets, cutting refresh cycles to sub-5 minutes while maintaining data integrity through protected tables, unique keys, assertions, and change detection.</li>
-                    <li>Wrote Python Airflow logic orchestrating daily pipelines across ingestion, transformation, materialized views, Trino syncs, retries, and cross-system dependencies.</li>
-                    <li>Developed Google Cloud Functions for real-time MongoDB CDC, Auth0 organization sync, PostgreSQL extraction, NetSuite / SPS Commerce imports, currency updates, automated reporting, and Dataform workflow orchestration.</li>
-                    <li>Built Golf Genie, a FastAPI + Gemini conversational analytics app on Cloud Run that lets non-technical staff query curated BigQuery datasets in plain English with streamed SQL and chart output.</li>
-                    <li>Created a real-time company metrics display using Bun, TypeScript, Canvas 2D, WebSockets, and BigQuery, showing live revenue, shot volume, support, NPS, and engineering health metrics on office screens.</li>
-                    <li>Led the full-stack replacement of the customer support tooling setup, including evaluation and integration of conversational AI partners to improve response times and stabilize the support operation.</li>
-                    <li>Executed GCP security remediation: removed stale service accounts, consolidated API keys, tightened IAM to least privilege, and implemented dataset-level BigQuery access controls.</li>
+                    <li>Created new daily transparency across usage, trial take-up, subscriptions, payments, sales, support, logistics, and product metrics, replacing previously impossible reporting and 1-2 week, 3-5 person metric hunts with self-serve visibility that helped management steer a major operating performance turnaround.</li>
+                    <li>Built the underlying GCP data platform across 16 business domains and 3.5B+ row datasets using BigQuery, Dataform, Airflow / Cloud Composer, Superset, Cloud Functions, and Terraform-managed infrastructure.</li>
+                    <li>Built Shopify / NetSuite SKU controls across 1,100 historical SKUs, preventing near-weekly sync failures that would stall ecommerce, middleware, and Finance teams for a day while SKUs were manually propagated and failed syncs repaired.</li>
+                    <li>Reset failed customer-support AI and tooling: stopped an underperforming AI contract, selected an outcome-aligned partner, moved support from Salesforce views to Zendesk, reached roughly 30% AI-handled tickets, and created weekly product/engineering signal from support interactions.</li>
                 </ul>
             </article>
 
             <article class="role">
                 <div class="role-head">
                     <h3>Aspire Financial Technologies | Head of Customer Onboarding and KYC</h3>
-                    <div class="meta">Singapore | 2021 - 2023</div>
+                    <div class="meta">Singapore | 2022 - 2023</div>
                 </div>
-                <p>Led a 40-person onboarding and compliance operations team, partnering closely with Product and Engineering to scale customer activation, automate workflows, and improve technical support for business users.</p>
+                <p>Led a 40-person MAS-regulated onboarding and KYC operation, balancing user growth, compliance discipline, partner integration, and product/process automation.</p>
                 <ul>
-                    <li>Partnered with Product to build internal tooling and workflow changes that reduced unsuccessful first-try verifications by 30%.</li>
-                    <li>Created auto-translation tooling and process changes that reduced non-English customer onboarding time by approximately 30%.</li>
-                    <li>Scaled onboarding capacity by 3x through automation, queue design, and algorithmic leverage without increasing headcount.</li>
-                    <li>Led the operational and technical integration of Indonesian partners, launching customer onboarding months ahead of schedule.</li>
+                    <li>Scaled onboarding capacity 3x without increasing headcount by redesigning queues, automating manual work, and preserving compliance discipline in a regulated fintech environment.</li>
+                    <li>Built tooling and workflow changes that reduced unsuccessful first-try verifications by 30% and cut non-English onboarding time by approximately 50%.</li>
+                    <li>Led Indonesia partner integration across KYC, onboarding, banking interfaces, and operations, resolving CEO-level blockers and launching customer onboarding months ahead of plan.</li>
                 </ul>
             </article>
 
@@ -281,11 +262,11 @@
                     <h3>Sama / Opportunity Labs | Co-founder &amp; COO</h3>
                     <div class="meta">Singapore | 2019 - 2022</div>
                 </div>
-                <p>Co-founded an ethical recruitment technology startup for migrant workers, raised $1.1M in pre-seed funding, and built early product and operating systems from zero.</p>
+                <p>Co-founded an ethical recruitment technology startup for migrant workers, raised $1.1M in pre-seed funding, and built the first product and operating systems from zero.</p>
                 <ul>
-                    <li>Built and launched the first working prototype in one day on Messenger, attracting the first 500 customers within 12 hours.</li>
-                    <li>Designed the fastest WhatsApp-based KYC verification product for the market, taking users from passport submission to verified identity in 45 seconds.</li>
-                    <li>Built operational partnerships and licensing foundations across Singapore, India, Pakistan, the Middle East, and Bangladesh.</li>
+                    <li>Built and launched the first working prototype in one day on Messenger, attracting the first 500 customers within 12 hours and helping start the fundraise.</li>
+                    <li>Designed a WhatsApp-based KYC and CV workflow that took users from passport submission to verified identity in 45 seconds.</li>
+                    <li>Built licensing, operating, and partnership foundations across Singapore, India, Pakistan, the Middle East, and Bangladesh; became the only staffing agency licensed across India, Pakistan, and Singapore at the same time.</li>
                 </ul>
             </article>
 
@@ -294,10 +275,11 @@
                     <h3>Google / YouTube | Product Strategy, Corporate Ventures, Export Programs</h3>
                     <div class="meta">APAC / EMEA | 2015 - 2019</div>
                 </div>
+                <p>Built new operating models and productized services for large advertisers and YouTube teams, translating customer constraints into scalable partner, product, and sales workflows.</p>
                 <ul>
-                    <li>Created rapid prototypes of APAC live video solutions for YouTube and led a global 50+ person reorganization for an operations-heavy team.</li>
-                    <li>Created and launched Google Magellan, a B2B growth line for large advertisers; built the international payments acceptance program from inception, sourcing and negotiating with 7 global payment companies in two quarters.</li>
-                    <li>Interviewed 200+ partner companies to identify expansion needs and translate ambiguous market problems into productized offerings.</li>
+                    <li>Co-built Google Magellan from customer discovery to scaled business line for large advertisers, using 200+ interviews to define expansion blockers and later supporting tens of millions in revenue.</li>
+                    <li>Owned the payments-acceptance pillar of Magellan: sourced 7 global partners in two quarters, created triage/onboarding workflows, and trained 50+ salespeople to help advertisers reduce 12-18 month international expansion barriers.</li>
+                    <li>Created rapid prototypes of APAC live video solutions for YouTube and led a global 50+ person operations reorganization that enabled the team to support 2x more partners.</li>
                 </ul>
             </article>
 
@@ -306,12 +288,21 @@
                     <h3>McKinsey &amp; Company | Engagement Manager, Associate, Business Analyst</h3>
                     <div class="meta">Global | 2008 - 2015</div>
                 </div>
+                <p>Built durable operating systems for banks, insurers, industrials, and public-sector-adjacent organizations across Europe, the Middle East, and Latin America.</p>
                 <ul>
-                    <li>Led enterprise transformation, digital strategy, and operations work across financial services, industrials, mining, and public-sector-adjacent organizations.</li>
-                    <li>Defined and led development of a portfolio cleaning and allocation tool for a major European insurer to improve sales transparency.</li>
-                    <li>Combined 20 separate departmental IT strategies into a unified roadmap for a Middle Eastern mining corporation.</li>
+                    <li>Built a commercial / SMB banking sales framework for an Eastern European bank that is still used 17 years later.</li>
+                    <li>Helped design the operating model for a non-performing-loan workout entity, ring-fencing bad assets and strengthening the parent bank.</li>
+                    <li>Led durable transformation work including a 20-department IT roadmap, a portfolio cleaning and sales allocation tool for a major European insurer that removed 20% inactive / misallocated clients.</li>
                 </ul>
             </article>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <p><strong>Enterprise AI Deployment:</strong> Gemini API, conversational analytics, AI support tooling, workflow automation, AI vendor evaluation, product discovery.</p>
+            <p><strong>Data Platforms:</strong> BigQuery, Dataform, SQL, star schemas, incremental loading, CDC, Apache Superset, BI adoption.</p>
+            <p><strong>Cloud / Automation:</strong> GCP, Kubernetes / GKE, Terraform, Cloud Composer / Airflow, Cloud Run, Cloud Functions, IAM, Secret Manager.</p>
+            <p><strong>Builder-Translator Range:</strong> Python, TypeScript, Node.js / Bun, Docker, CI/CD, technical product leadership, stakeholder translation, operating-model design.</p>
         </section>
 
         <section>

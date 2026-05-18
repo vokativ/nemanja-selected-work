@@ -504,7 +504,7 @@
             <div>
                 <p class="eyebrow">Selected work</p>
                 <h1>AI, data, and product systems built from ambiguity into operating leverage.</h1>
-                <p class="lead">A skim-first set of case studies behind the CV: public projects where the code or coverage can be inspected, and sanitized private-platform examples where the proof is architecture, product judgment, and business impact.</p>
+                <p class="lead">A skim-first set of case studies behind the CV: proof that the same pattern repeats across roles - diagnosing hidden operating constraints, redesigning workflows or partner models, and using technology to create measurable business impact.</p>
             </div>
             <nav class="contact" aria-label="Profile links">
                 <a href="index.html">CV</a>
@@ -520,7 +520,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>Company Data + AI Platform</h2>
-                    <p class="artifact-summary">Turned a stalled analytics effort into the daily operating layer for subscription revenue, trial take-up, churn, sales, logistics, support, and product usage.</p>
+                    <p class="artifact-summary">Turned a stalled analytics effort into the daily operating layer for subscription behavior, revenue, trial take-up, payments, sales, logistics, support, product usage, and executive company-health reporting.</p>
                 </div>
                 <span class="tag">Private case study</span>
             </header>
@@ -529,7 +529,7 @@
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
-                            <p>Subscription performance was effectively opaque. Trial take-up, renewal behavior, revenue movement, churn reasons, channel performance, and usage patterns were almost impossible to understand daily; teams often needed quarterly-style reviews to reconstruct what had happened.</p>
+                            <p>Many core operating metrics were slow, manual, fragmented, or impossible to report. Usage, trial take-up, subscription behavior, payment movement, sales performance, support signals, and product usage could take 1-2 weeks and 3-5 people to procure, while some questions were not answerable at all.</p>
                         </section>
                         <section class="copy-box">
                             <strong>Built</strong>
@@ -537,11 +537,11 @@
                         </section>
                         <section class="copy-box">
                             <strong>Judgment</strong>
-                            <p>The work was not just modernization. It required rescuing broken syncs after schema changes, keeping critical data moving with temporary Python notebook extraction, replacing fragile paths with Cloud Functions and Airflow DAGs, and handling messy details such as currency normalization and exchange-rate sourcing for billing analytics.</p>
+                            <p>The work was not just modernization. It required translating executive, finance, product, support, and ecommerce questions into modeled data, while rescuing broken syncs, replacing fragile paths, and handling details such as currency normalization, SKU hygiene, and business-defined sales logic.</p>
                         </section>
                         <section class="copy-box">
                             <strong>Impact</strong>
-                            <p>Leaders and teams could finally manage subscription performance actively instead of discovering problems late. Daily visibility into trial conversion, revenue, churn, product usage, sales, support, and logistics became part of the business operating rhythm.</p>
+                            <p>Leaders and teams could finally manage the business actively instead of reconstructing it late. Daily visibility into trial conversion, subscription behavior, payment movement, revenue, product usage, sales, support, and logistics became part of the operating rhythm, helping management steer a major operating performance turnaround.</p>
                         </section>
                     </div>
                     <div class="metrics" aria-label="Company platform proof points">
@@ -555,7 +555,15 @@
                         </div>
                         <div class="metric">
                             <b>Daily cadence</b>
-                            <span>Moved core revenue and subscription questions out of quarterly reconstruction.</span>
+                            <span>Moved key metrics from impossible or 1-2 week manual procurement into daily visibility.</span>
+                        </div>
+                        <div class="metric">
+                            <b>1,100 SKUs</b>
+                            <span>Surfaced Shopify / NetSuite SKU issues before they triggered recurring cleanup.</span>
+                        </div>
+                        <div class="metric">
+                            <b>Board view</b>
+                            <span>Created executive reporting across finance, customer, product, sales, and support.</span>
                         </div>
                     </div>
                     <div class="proof-links">
@@ -613,28 +621,171 @@
                         <div class="state before">
                             <h3>Before</h3>
                             <ul>
-                                <li>Quarterly-style reconstruction</li>
+                                <li>1-2 week metric procurement</li>
                                 <li>Raw engineering database dumps</li>
                                 <li>Brittle VM jobs and broken connectors</li>
-                                <li>Opaque subscription performance</li>
+                                <li>Opaque payment, SKU, and trial behavior</li>
                             </ul>
                         </div>
                         <div class="state after">
                             <h3>After</h3>
                             <ul>
-                                <li>Daily subscription visibility</li>
+                                <li>Daily operating visibility</li>
                                 <li>Multi-domain warehouse</li>
                                 <li>Governed BI and AI analytics</li>
-                                <li>Live metrics for shared operating context</li>
+                                <li>Executive and board reporting cadence</li>
                             </ul>
                         </div>
                     </div>
                     <p class="visual-title" style="margin-top: 18px;">Subscription visibility flow</p>
                     <div class="pipeline">
-                        <div class="pipeline-step"><strong>Sources:</strong> Stripe, Shopify, product usage, churn surveys, support, logistics.</div>
+                        <div class="pipeline-step"><strong>Sources:</strong> Stripe, Shopify, NetSuite, product usage, churn surveys, support, logistics.</div>
                         <div class="pipeline-step"><strong>Warehouse:</strong> modeled BigQuery layers with transformation, quality checks, and domain ownership.</div>
-                        <div class="pipeline-step"><strong>Review:</strong> trial take-up, renewal cohorts, revenue movement, churn reasons, and daily business review.</div>
+                        <div class="pipeline-step"><strong>Finance:</strong> daily sales reporting from business logic that was previously maintained manually.</div>
+                        <div class="pipeline-step"><strong>Operations:</strong> SKU and order-sync reporting exposed new Shopify / NetSuite issues before recurring cleanup escalated.</div>
+                        <div class="pipeline-step"><strong>Review:</strong> trial take-up, subscription behavior, payment movement, renewal cohorts, revenue, customer pain, and executive company-health reporting.</div>
                     </div>
+                </aside>
+            </div>
+        </article>
+
+        <article class="artifact" id="support-ai-reset">
+            <header class="artifact-header">
+                <div>
+                    <h2>Customer Support AI + Operating System Reset</h2>
+                    <p class="artifact-summary">Reset a failed support AI procurement, replaced a misfit tooling setup, and turned support interactions into earlier product and engineering signals.</p>
+                </div>
+                <span class="tag">Practical AI</span>
+            </header>
+            <div class="artifact-body">
+                <div>
+                    <div class="copy-grid">
+                        <section class="copy-box">
+                            <strong>Problem</strong>
+                            <p>A customer-service AI solution had been bought without the operating work needed to train, maintain, and improve it. The contract was substantial, the system was underperforming, and support teams were still buried in manual work.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Built</strong>
+                            <p>I stopped the bleeding on the old contract, selected an outcome-aligned AI partner willing to work closely with us, and led the move from Salesforce views to Zendesk because the prior setup was not fit for support operations.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Judgment</strong>
+                            <p>The AI decision was treated as an operating-system problem, not a procurement shortcut. Vendor incentives, team workflow, training effort, escalation paths, and continuous improvement all had to fit together.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Impact</strong>
+                            <p>By handoff, the new AI solution handled roughly 30% of tickets. Support data also became a product signal, with emails, tickets, and transcribed calls classified into issue categories defined with Product and Engineering.</p>
+                        </section>
+                    </div>
+                    <div class="metrics" aria-label="Support AI proof points">
+                        <div class="metric">
+                            <b>~30%</b>
+                            <span>Tickets handled by AI at handoff.</span>
+                        </div>
+                        <div class="metric">
+                            <b>Weekly signal</b>
+                            <span>Moved emerging bug and customer-pain detection away from several-week lag.</span>
+                        </div>
+                        <div class="metric">
+                            <b>Outcome aligned</b>
+                            <span>Shifted vendor model toward paid outcomes instead of unused automation.</span>
+                        </div>
+                    </div>
+                    <div class="proof-links">
+                        <span>Zendesk migration</span>
+                        <span>AI vendor reset</span>
+                        <span>Ticket, email, and call classification</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Support AI operating model">
+                    <p class="visual-title">Support intelligence flow</p>
+                    <div class="flow">
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Customer signals</b>
+                                <span>Tickets, emails, support calls, transcripts, and manual escalations.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>AI classification</b>
+                                <span>Product-defined issue categories, bug themes, and customer-pain clusters.</span>
+                            </div>
+                        </div>
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Support action</b>
+                                <span>AI-handled tickets, human escalation, and continuous improvement loops.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Product signal</b>
+                                <span>Earlier weekly visibility for Product and Engineering on what is starting to break.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="note">This case is about practical AI deployment: matching incentives, workflows, data, and operational ownership so AI becomes useful instead of performative.</p>
+                </aside>
+            </div>
+        </article>
+
+        <article class="artifact" id="security-governance">
+            <header class="artifact-header">
+                <div>
+                    <h2>Security, Governance, and Production Discipline</h2>
+                    <p class="artifact-summary">Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations.</p>
+                </div>
+                <span class="tag">Enterprise trust</span>
+            </header>
+            <div class="artifact-body">
+                <div>
+                    <div class="copy-grid">
+                        <section class="copy-box">
+                            <strong>Problem</strong>
+                            <p>Production analytics and AI systems touched company, customer, billing, and athlete data. The inherited setup had fragile VM deployments, stale access, scattered keys, limited disaster recovery, and overly broad permissions.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Built</strong>
+                            <p>I migrated Superset from a VM to Kubernetes with Microsoft 365 SSO, automated backups, custom roles, and preserved existing dashboards and users. I also tightened GCP access, service accounts, API keys, and dataset-level BigQuery permissions.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Judgment</strong>
+                            <p>Enterprise AI and analytics only work when people can trust the operating layer. The goal was reproducibility, access control, recovery, and safe self-service, not just dashboards or prototypes.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Impact</strong>
+                            <p>The platform became safer to operate and easier to trust: 100+ users kept access through the migration, dashboards and connections were preserved, stale accounts were removed, and permissions were narrowed without breaking production workflows.</p>
+                        </section>
+                    </div>
+                    <div class="metrics" aria-label="Security and governance proof points">
+                        <div class="metric">
+                            <b>100+ users</b>
+                            <span>Preserved access during Superset migration with M365 SSO.</span>
+                        </div>
+                        <div class="metric">
+                            <b>24 -> 5 keys</b>
+                            <span>Consolidated active API keys as part of GCP remediation.</span>
+                        </div>
+                        <div class="metric">
+                            <b>10 accounts</b>
+                            <span>Removed stale service accounts and orphaned IAM bindings.</span>
+                        </div>
+                    </div>
+                    <div class="proof-links">
+                        <span>Superset v4 to v5 migration</span>
+                        <span>M365 SSO and RBAC</span>
+                        <span>Automated backups and restore paths</span>
+                        <span>Least-privilege IAM</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Enterprise trust operating layer">
+                    <p class="visual-title">Trust layer</p>
+                    <div class="pipeline">
+                        <div class="pipeline-step"><strong>Identity:</strong> Microsoft 365 SSO, role mapping, and governed user access.</div>
+                        <div class="pipeline-step"><strong>Recovery:</strong> automated backups, retention, and restore procedures for production BI metadata.</div>
+                        <div class="pipeline-step"><strong>Permissions:</strong> stale accounts removed, API keys consolidated, BigQuery access scoped by dataset and purpose.</div>
+                        <div class="pipeline-step"><strong>Operations:</strong> Terraform-managed infrastructure, Kubernetes deployment, and safer production change paths.</div>
+                    </div>
+                    <p class="note">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
                 </aside>
             </div>
         </article>
@@ -804,6 +955,134 @@
                         <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
                         <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
                         <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
+        <article class="artifact" id="google-magellan">
+            <header class="artifact-header">
+                <div>
+                    <h2>Google Magellan: Export Business Line</h2>
+                    <p class="artifact-summary">Turned advertiser international expansion pain into a scaled Google business line with partner networks, sales enablement, and payments-acceptance workflows.</p>
+                </div>
+                <span class="tag">Business line</span>
+            </header>
+            <div class="artifact-body">
+                <div>
+                    <div class="copy-grid">
+                        <section class="copy-box">
+                            <strong>Problem</strong>
+                            <p>Large advertisers wanted to expand internationally, but market entry could be slowed by payments acceptance, local operating setup, and unclear partner pathways. The pain was real, but it was not yet packaged into a repeatable Google offer.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Built</strong>
+                            <p>I used 200+ customer interviews to define Magellan's expansion themes, then built the payments-acceptance pillar: 7 global payment partners, client triage and onboarding paths, and 50+ salespeople trained to consult on expansion blockers.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Judgment</strong>
+                            <p>The value was not a generic partnership list. It was a diagnosis process: understand each advertiser's expansion constraint, route them to the right partner or operating fix, and make sales teams capable of spotting the problem early.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Impact</strong>
+                            <p>Magellan became a scaled business line for large advertisers, later supporting tens of millions in revenue by helping customers reduce 12-18 month international expansion barriers.</p>
+                        </section>
+                    </div>
+                    <div class="metrics" aria-label="Google Magellan proof points">
+                        <div class="metric">
+                            <b>200+ interviews</b>
+                            <span>Customer discovery to map expansion barriers and productize the offer.</span>
+                        </div>
+                        <div class="metric">
+                            <b>7 partners</b>
+                            <span>Global payments partners sourced and negotiated in two quarters.</span>
+                        </div>
+                        <div class="metric">
+                            <b>50+ trained</b>
+                            <span>Salespeople enabled to consult on payments and expansion blockers.</span>
+                        </div>
+                    </div>
+                    <div class="proof-links">
+                        <span>Customer discovery</span>
+                        <span>Payments partner network</span>
+                        <span>Sales enablement</span>
+                        <span>Tens of millions in supported revenue</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Magellan operating model">
+                    <p class="visual-title">Expansion constraint flow</p>
+                    <div class="pipeline">
+                        <div class="pipeline-step"><strong>Discover:</strong> interview advertisers and identify repeated international expansion blockers.</div>
+                        <div class="pipeline-step"><strong>Diagnose:</strong> separate payments acceptance, local market setup, and operational partner needs.</div>
+                        <div class="pipeline-step"><strong>Route:</strong> connect customers to vetted partners and Google sales support paths.</div>
+                        <div class="pipeline-step"><strong>Scale:</strong> train sales teams and convert the process into a repeatable business line.</div>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
+        <article class="artifact" id="mckinsey-operating-systems">
+            <header class="artifact-header">
+                <div>
+                    <h2>McKinsey: Durable Operating Systems</h2>
+                    <p class="artifact-summary">Selected consulting work that mattered because clients kept using the operating systems after the project ended.</p>
+                </div>
+                <span class="tag">Durable change</span>
+            </header>
+            <div class="artifact-body">
+                <div>
+                    <div class="copy-grid">
+                        <section class="copy-box">
+                            <strong>Problem</strong>
+                            <p>Clients did not just need strategy documents. Banks, insurers, and industrial companies needed operating systems that managers could actually run after the consulting team left.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Built</strong>
+                            <p>I helped build a commercial / SMB banking sales framework in Eastern Europe, helped create the operating model for a non-performing-loan bad bank, and worked on transformation tools and roadmaps across multiple functions.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Judgment</strong>
+                            <p>The work required making complex institutions legible: aligning leadership, process owners, field teams, and technical or financial constraints into a system people could keep using.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Impact</strong>
+                            <p>The banking sales framework is still used 17 years later; the bad-bank operating model moved from restructuring need to functioning workout entity in four months; and insurer portfolio cleaning removed 20% inactive / misallocated clients.</p>
+                        </section>
+                    </div>
+                    <div class="metrics" aria-label="McKinsey proof points">
+                        <div class="metric">
+                            <b>17 years</b>
+                            <span>Commercial / SMB banking framework still in use.</span>
+                        </div>
+                        <div class="metric">
+                            <b>4 months</b>
+                            <span>Operating model built for a non-performing-loan bad bank.</span>
+                        </div>
+                        <div class="metric">
+                            <b>20 departments</b>
+                            <span>IT strategies combined into one actionable roadmap in another project.</span>
+                        </div>
+                    </div>
+                    <div class="proof-links">
+                        <span>Commercial banking sales framework</span>
+                        <span>Bad-bank operating model</span>
+                        <span>Transformation tools and roadmaps</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Durable operating system pattern">
+                    <p class="visual-title">Operating-system pattern</p>
+                    <div class="flow">
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Institutional complexity</b>
+                                <span>Fragmented teams, unclear incentives, legacy processes, and high-stakes financial constraints.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Usable system</b>
+                                <span>Frameworks, roles, cadence, tools, and governance that managers can keep running.</span>
+                            </div>
+                        </div>
                     </div>
                 </aside>
             </div>
