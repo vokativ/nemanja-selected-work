@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nemanja Grujičić - Print-friendly CV</title>
+    <meta name="description" content="Print-friendly CV for Nemanja Grujičić, AI and data builder-translator focused on enterprise AI deployment, data platforms, product operations, and measurable business outcomes.">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --ink: #132033;
+            --muted: #586579;
+            --soft: #f5f7fb;
+            --panel: #ffffff;
+            --line: #dfe5ee;
+            --blue: #1358db;
+            --code: #f0f5ff;
+            --shadow: 0 18px 45px rgba(19, 32, 51, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background:
+                linear-gradient(90deg, rgba(19, 88, 219, 0.05) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(19, 88, 219, 0.05) 1px, transparent 1px),
+                var(--soft);
+            background-size: 28px 28px;
+            font-family: "Aptos", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 0.98rem;
+            line-height: 1.4;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 22px 20px 34px;
+        }
+
+        header {
+            padding: 14px 0 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.45rem, 3.5vw, 2.8rem);
+            line-height: 1.02;
+            letter-spacing: 0;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .subtitle {
+            margin: 6px 0 10px;
+            color: var(--blue);
+            font-size: 0.8rem;
+            font-weight: 750;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 16px;
+        }
+
+        .links a,
+        .links span {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 7px 10px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            background: var(--panel);
+            color: var(--ink);
+            font-size: 0.9rem;
+            font-weight: 650;
+            box-shadow: var(--shadow);
+        }
+
+        section {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        h2 {
+            margin: 0 0 6px;
+            color: var(--blue);
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        p {
+            margin: 0 0 6px;
+        }
+
+        ul {
+            margin: 5px 0 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .role {
+            margin-top: 8px;
+        }
+
+        .role:first-of-type {
+            margin-top: 0;
+        }
+
+        .role-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: baseline;
+        }
+
+        .detail-link {
+            font-family: "Aptos", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 650;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        @media (max-width: 700px) {
+            .role-head {
+                display: block;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #e6edf7;
+                --muted: #a9b6c9;
+                --soft: #0d1117;
+                --panel: #131a24;
+                --line: #2b3545;
+                --blue: #7aa7ff;
+                --code: #182232;
+                --shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+            }
+
+            body {
+                background:
+                    linear-gradient(90deg, rgba(122, 167, 255, 0.08) 1px, transparent 1px),
+                    linear-gradient(180deg, rgba(122, 167, 255, 0.08) 1px, transparent 1px),
+                    var(--soft);
+                background-size: 28px 28px;
+            }
+        }
+
+        @media print {
+            @page {
+                margin: 0.45in;
+            }
+
+            :root {
+                --ink: #111827;
+                --muted: #374151;
+                --soft: #ffffff;
+                --line: #c7ced8;
+                --blue: #111827;
+            }
+
+            body {
+                background: #ffffff;
+                font-size: 9.8pt;
+                line-height: 1.3;
+            }
+
+            .page {
+                max-width: none;
+                padding: 0;
+            }
+
+            header {
+                padding: 0 0 8pt;
+            }
+
+            h1 {
+                font-size: 18pt;
+            }
+
+            .subtitle {
+                font-size: 8.4pt;
+                margin: 4pt 0 6pt;
+            }
+
+            section {
+                padding: 8pt 0;
+            }
+
+            h2 {
+                font-size: 8.2pt;
+                margin-bottom: 4pt;
+            }
+
+            h3 {
+                font-size: 9.6pt;
+            }
+
+            .meta {
+                font-size: 8.4pt;
+            }
+
+            ul {
+                margin-top: 3pt;
+            }
+
+            li {
+                margin-bottom: 3.3pt;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            a[href]::after {
+                content: " (" attr(href) ")";
+                color: var(--muted);
+                font-size: 7.8pt;
+                font-weight: 400;
+            }
+
+            a[href^="http"]::after {
+                content: " (" attr(href) ")";
+            }
+
+            a[href="index.html"]::after {
+                content: " (https://vokativ.github.io/nemanja-selected-work/)";
+            }
+
+            a[href="artifacts.html"]::after {
+                content: " (https://vokativ.github.io/nemanja-selected-work/artifacts.html)";
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header>
+            <h1>Nemanja Grujičić</h1>
+            <div class="subtitle">AI &amp; Data Builder-Translator | Enterprise AI Deployment | Product / Operations Systems</div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p>I engineer clarity out of business chaos. I apply a broad technical, operating, and commercial toolkit to ambiguous problems, then build the trusted workflows, data systems, and judicious AI automations that help teams move faster. Former Google operator, McKinsey consultant, startup founder, and INSEAD MBA.</p>
+            <p><a href="artifacts.html">Selected work &amp; case studies</a> | Public products: Serbian diaspora voter-registration portal; AI calendar assistant for busy parents.</p>
+        </section>
+
+        <section>
+            <h2>Selected Experience <span class="detail-link">(<a href="index.html">detailed CV</a>)</span></h2>
+            <article class="role">
+                <div class="role-head">
+                    <h3>Rapsodo | Head of Data Analytics &amp; AI Lead</h3>
+                    <div class="meta">Singapore | 2023 - Present</div>
+                </div>
+                <ul>
+                    <li>Rebuilt the company's data platform and operating layer across 16 business domains, turning usage, trials, subscriptions, payments, sales, support, logistics, and product metrics from fragmented or impossible reporting into daily management visibility.</li>
+                    <li>Translated executive, finance, product, support, and ecommerce questions into trusted workflows and modeled data, replacing 1-2 week, 3-5 person metric hunts and helping leadership steer a major operating performance turnaround.</li>
+                    <li>Built Shopify / NetSuite SKU controls across 1,100 historical SKUs, preventing near-weekly sync failures that would stall ecommerce, middleware, and Finance teams.</li>
+                    <li>Reset support AI and tooling: stopped an underperforming AI contract, moved support from Salesforce views to Zendesk, selected an outcome-aligned AI partner, reached roughly 30% AI-handled tickets, and created weekly product/engineering signal.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Aspire Financial Technologies | Head of Customer Onboarding and KYC</h3>
+                    <div class="meta">Singapore | 2022 - 2023</div>
+                </div>
+                <ul>
+                    <li>Led a 40-person regulated fintech onboarding/KYC operation, scaling capacity 3x without headcount while reducing unsuccessful first-try verifications by 30% and non-English onboarding time by approximately 50%.</li>
+                    <li>Led Indonesia partner integration across KYC, onboarding, banking interfaces, and operations, launching customer onboarding months ahead of plan.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Sama / Opportunity Labs | Co-founder &amp; COO</h3>
+                    <div class="meta">Singapore | 2019 - 2022</div>
+                </div>
+                <ul>
+                    <li>Co-founded an ethical recruitment technology startup for migrant workers, raised $1.1M, and built the first product and operating systems from zero.</li>
+                    <li>Built the first Messenger prototype in one day, attracting 500 customers in 12 hours, and designed a WhatsApp KYC/CV workflow that verified users in 45 seconds.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>Google / YouTube | Product Strategy, Corporate Ventures, Export Programs</h3>
+                    <div class="meta">APAC / EMEA | 2015 - 2019</div>
+                </div>
+                <ul>
+                    <li>Co-built Google Magellan from 200+ customer interviews to a scaled business line for large advertisers, later supporting tens of millions in revenue.</li>
+                    <li>Owned the payments-acceptance pillar: sourced 7 global partners, created triage/onboarding workflows, and trained 50+ salespeople.</li>
+                </ul>
+            </article>
+
+            <article class="role">
+                <div class="role-head">
+                    <h3>McKinsey &amp; Company | Engagement Manager, Associate, Business Analyst</h3>
+                    <div class="meta">Global | 2008 - 2015</div>
+                </div>
+                <ul>
+                    <li>Built durable operating systems for banks, insurers, industrials, and public-sector-adjacent organizations, including a banking sales framework still used 17 years later.</li>
+                    <li>Helped design a non-performing-loan workout entity and led transformation work including a 20-department IT roadmap and insurer portfolio cleanup removing 20% inactive / misallocated clients.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Skills &amp; Education</h2>
+            <p><strong>Enterprise AI / Data:</strong> Gemini API, conversational analytics, AI support tooling, workflow automation, BigQuery, Dataform, SQL, Airflow, Superset, GCP, Terraform, Python, TypeScript.</p>
+            <p><strong>Education:</strong> INSEAD MBA; American University in Bulgaria, BA Business Administration and European Studies, Soros Foundation Full Scholarship.</p>
+        </section>
+    </main>
+</body>
+</html>
