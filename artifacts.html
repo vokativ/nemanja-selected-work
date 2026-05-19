@@ -248,6 +248,38 @@
             padding: 24px;
         }
 
+        .impact-strip {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .impact-tile {
+            min-height: 96px;
+            padding: 13px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--diagram-panel);
+            border-top: 5px solid var(--blue);
+        }
+
+        .impact-tile strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--ink);
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .impact-tile span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
         .copy-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -531,6 +563,7 @@
             }
 
             .copy-grid,
+            .impact-strip,
             .metrics,
             .before-after {
                 grid-template-columns: 1fr;
@@ -558,6 +591,10 @@
             }
 
             .copy-box {
+                min-height: auto;
+            }
+
+            .impact-tile {
                 min-height: auto;
             }
         }
@@ -627,6 +664,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Company platform impact highlights">
+                        <div class="impact-tile">
+                            <strong>Sizing the problem</strong>
+                            <span>Core metrics took 1-2 weeks and 3-5 people to procure, while some business questions could not be answered at all.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Business impact</strong>
+                            <span>Daily visibility across trials, subscriptions, payments, revenue, usage, support, logistics, and product behavior.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Operating leverage</strong>
+                            <span>Reduced manual reporting loops, brittle finance reconstruction, and recurring SKU/order-sync escalations.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>AI/data leverage</strong>
+                            <span>Created the trusted modeled data layer needed for conversational analytics, support intelligence, and executive cadence.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -760,6 +815,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Support AI impact highlights">
+                        <div class="impact-tile">
+                            <strong>Sizing the problem</strong>
+                            <span>A substantial AI contract was underperforming while support teams remained buried in manual work.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Business impact</strong>
+                            <span>New support AI handled roughly 30% of tickets by handoff.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Operating leverage</strong>
+                            <span>Zendesk, outcome-aligned vendor incentives, and continuous improvement replaced a misfit Salesforce-view setup.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Product signal</strong>
+                            <span>Tickets, emails, and call transcripts became weekly signal for Product and Engineering.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -839,6 +912,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Security and governance impact highlights">
+                        <div class="impact-tile">
+                            <strong>Risk surface</strong>
+                            <span>Analytics and AI systems touched company, customer, billing, and athlete data.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Business continuity</strong>
+                            <span>100+ users kept access through the Superset migration with dashboards and connections preserved.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Enterprise trust</strong>
+                            <span>SSO, backups, governed BI, least-privilege IAM, and key cleanup made the platform safer to operate.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>AI readiness</strong>
+                            <span>Made self-service analytics and AI workflows safer by fixing the trust layer underneath them.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -901,6 +992,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Golf Genie impact highlights">
+                        <div class="impact-tile">
+                            <strong>Response time</strong>
+                            <span>Golf-related data questions moved from one to several days to almost instant answers, usually within 30 seconds.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Timezone leverage</strong>
+                            <span>US and Turkey teams no longer had to wait for a Singapore-based analyst to wake up or become available.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Self-service analysis</strong>
+                            <span>Business users could ask plain-English questions while still seeing SQL and exportable results.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>AI done safely</strong>
+                            <span>Verified query patterns and curated BigQuery datasets kept the AI useful rather than a black box.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -996,6 +1105,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Office metrics display impact highlights">
+                        <div class="impact-tile">
+                            <strong>Global operating view</strong>
+                            <span>All four global offices could see the same live dashboard instead of asking what was happening through fragmented updates.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Shared truth</strong>
+                            <span>Sales, product usage, support, logistics, and customer signals became visible to teams at the same time.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Previously impossible</strong>
+                            <span>Cross-functional metrics that were not available in one place became an ambient operating layer for offices.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Always-on cadence</strong>
+                            <span>Live screens made the business visible without waiting for manual reports, meetings, or dashboard digging.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -1071,6 +1198,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Google Magellan impact highlights">
+                        <div class="impact-tile">
+                            <strong>Sizing the problem</strong>
+                            <span>Large advertisers faced 12-18 month international expansion barriers.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Business impact</strong>
+                            <span>Magellan later supported tens of millions in revenue as a scaled business line.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Customer discovery</strong>
+                            <span>200+ interviews turned vague expansion pain into repeatable productized themes.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Sales leverage</strong>
+                            <span>7 global payment partners and 50+ trained salespeople made the offer scalable.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -1110,13 +1255,27 @@
                         <span>Tens of millions in supported revenue</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Magellan operating model">
-                    <p class="visual-title">Expansion constraint flow</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step"><strong>Discover:</strong> interview advertisers and identify repeated international expansion blockers.</div>
-                        <div class="pipeline-step"><strong>Diagnose:</strong> separate payments acceptance, local market setup, and operational partner needs.</div>
-                        <div class="pipeline-step"><strong>Route:</strong> connect customers to vetted partners and Google sales support paths.</div>
-                        <div class="pipeline-step"><strong>Scale:</strong> train sales teams and convert the process into a repeatable business line.</div>
+                <aside class="visual" aria-label="Magellan before and after market expansion model">
+                    <p class="visual-title">Market expansion: before vs Magellan</p>
+                    <div class="before-after">
+                        <div class="state before">
+                            <h3>Before: 12-18 months</h3>
+                            <ul>
+                                <li>Hire local market research help</li>
+                                <li>Find finance, translation, and support providers</li>
+                                <li>Negotiate several separate contracts</li>
+                                <li>Integrate vendors before launch</li>
+                            </ul>
+                        </div>
+                        <div class="state after">
+                            <h3>Magellan: Google-led path</h3>
+                            <ul>
+                                <li>Start from an existing Google relationship</li>
+                                <li>Diagnose the market-entry blocker</li>
+                                <li>Route to vetted partner options</li>
+                                <li>Move toward launch in days or weeks</li>
+                            </ul>
+                        </div>
                     </div>
                 </aside>
             </div>
@@ -1132,6 +1291,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="McKinsey impact highlights">
+                        <div class="impact-tile">
+                            <strong>Durable change</strong>
+                            <span>Commercial / SMB banking framework remains in use 17 years later.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Bank health</strong>
+                            <span>Bad-bank operating model helped separate bad assets so leaders could focus on the healthy bank.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Cost of noise</strong>
+                            <span>Insurer portfolio cleanup removed 20% inactive / misallocated clients.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Operating system</strong>
+                            <span>Work focused on systems managers could keep running after the project ended.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -1225,6 +1402,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="hocudaglasam impact highlights">
+                        <div class="impact-tile">
+                            <strong>Several thousand users</strong>
+                            <span>Several thousand Serbian citizens abroad registered through the website.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Reusable civic tool</strong>
+                            <span>The project was reused by other groups in later election cycles.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Privacy by design</strong>
+                            <span>Registration documents were generated on-device, avoiding server-side PII collection.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Public trust</strong>
+                            <span>Open-source code and press coverage made the workflow inspectable by citizens and institutions.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
@@ -1249,13 +1444,27 @@
                         <a href="https://www.danas.rs/vesti/politika/sajt-hocudaglasam-com-pojednostavljuje-glasanje-u-inostranstvu/">Danas coverage</a>
                     </div>
                 </div>
-                <aside class="visual" aria-label="hocudaglasam privacy flow">
-                    <p class="visual-title">Privacy-aware workflow</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step"><strong>User enters data:</strong> the browser has the information needed to generate the form.</div>
-                        <div class="pipeline-step"><strong>Client-side document:</strong> the registration output is produced on the user's device.</div>
-                        <div class="pipeline-step"><strong>User sends materials:</strong> the citizen sends the generated document and passport image to the relevant embassy or consulate.</div>
-                        <div class="pipeline-step"><strong>Public code:</strong> open-source implementation allows inspection of the no-server-PII model.</div>
+                <aside class="visual" aria-label="hocudaglasam before and after voter registration workflow">
+                    <p class="visual-title">Diaspora registration: before vs product</p>
+                    <div class="before-after">
+                        <div class="state before">
+                            <h3>Before: fragmented search</h3>
+                            <ul>
+                                <li>Find the right ministry and embassy pages</li>
+                                <li>Hope the registration email and PDF are published</li>
+                                <li>Print, fill by pen, scan, and attach documents</li>
+                                <li>Manually address the correct embassy email</li>
+                            </ul>
+                        </div>
+                        <div class="state after">
+                            <h3>After: guided flow</h3>
+                            <ul>
+                                <li>Pick country of residence</li>
+                                <li>Embassy and form details load automatically</li>
+                                <li>Sign on phone and generate the PDF locally</li>
+                                <li>Send a pre-filled email with only passport image added</li>
+                            </ul>
+                        </div>
                     </div>
                 </aside>
             </div>
@@ -1271,6 +1480,24 @@
             </header>
             <div class="artifact-body">
                 <div>
+                    <div class="impact-strip" aria-label="Adiufant impact highlights">
+                        <div class="impact-tile">
+                            <strong>Parent pain</strong>
+                            <span>School logistics arrive as images, PDFs, voice notes, forms, and scattered reminders.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>AI leverage</strong>
+                            <span>Multimodal inputs become calendar events and preparation tasks.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Workflow focus</strong>
+                            <span>Designed around what parents need to bring, sign, pay, prepare, or remember.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Active build</strong>
+                            <span>Proof of ongoing hands-on AI product shipping beyond private company work.</span>
+                        </div>
+                    </div>
                     <div class="copy-grid">
                         <section class="copy-box">
                             <strong>Problem</strong>
