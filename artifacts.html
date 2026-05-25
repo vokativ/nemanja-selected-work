@@ -211,6 +211,13 @@
             border-bottom: 1px solid var(--line);
         }
 
+        .artifact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+
         .artifact h2 {
             margin: 0 0 8px;
             font-size: clamp(1.45rem, 2vw, 2rem);
@@ -239,6 +246,28 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .copy-link {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            min-height: 30px;
+            padding: 5px 9px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            background: var(--panel);
+            color: var(--ink);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .copy-link:hover {
+            border-color: var(--blue);
+            text-decoration: none;
         }
 
         .artifact-body {
@@ -562,6 +591,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .artifact-actions {
+                justify-content: flex-start;
+            }
+
             .copy-grid,
             .impact-strip,
             .metrics,
@@ -660,7 +693,10 @@
                     <h2>Company Data + AI Platform</h2>
                     <p class="artifact-summary">Turned a stalled analytics effort into the daily operating layer for subscription behavior, revenue, trial take-up, payments, sales, logistics, support, product usage, and executive company-health reporting.</p>
                 </div>
-                <span class="tag">Private case study</span>
+                <div class="artifact-actions">
+                    <span class="tag">Private case study</span>
+                    <a class="copy-link" href="#company-platform" data-copy-link aria-label="Copy link to Company Data + AI Platform">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -811,7 +847,10 @@
                     <h2>Customer Support AI + Operating System Reset</h2>
                     <p class="artifact-summary">Reset a failed support AI procurement, replaced a misfit tooling setup, and turned support interactions into earlier product and engineering signals.</p>
                 </div>
-                <span class="tag">Practical AI</span>
+                <div class="artifact-actions">
+                    <span class="tag">Practical AI</span>
+                    <a class="copy-link" href="#support-ai-reset" data-copy-link aria-label="Copy link to Customer Support AI + Operating System Reset">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -908,7 +947,10 @@
                     <h2>Security, Governance, and Production Discipline</h2>
                     <p class="artifact-summary">Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations.</p>
                 </div>
-                <span class="tag">Enterprise trust</span>
+                <div class="artifact-actions">
+                    <span class="tag">Enterprise trust</span>
+                    <a class="copy-link" href="#security-governance" data-copy-link aria-label="Copy link to Security, Governance, and Production Discipline">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -988,7 +1030,10 @@
                     <h2>Golf Genie: Conversational Analytics</h2>
                     <p class="artifact-summary">Internal production AI analytics app that helped leadership, product, and non-technical teams ask complex business questions without starting from a blank SQL prompt.</p>
                 </div>
-                <span class="tag">AI analytics</span>
+                <div class="artifact-actions">
+                    <span class="tag">AI analytics</span>
+                    <a class="copy-link" href="#golf-genie" data-copy-link aria-label="Copy link to Golf Genie: Conversational Analytics">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1101,7 +1146,10 @@
                     <h2>Company Office Metrics Display</h2>
                     <p class="artifact-summary">A live TV-native dashboard that gave offices a shared view of what was happening across products, channels, customers, support, logistics, and regions.</p>
                 </div>
-                <span class="tag">Live operations</span>
+                <div class="artifact-actions">
+                    <span class="tag">Live operations</span>
+                    <a class="copy-link" href="#office-metrics" data-copy-link aria-label="Copy link to Company Office Metrics Display">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1194,7 +1242,10 @@
                     <h2>Google Magellan: Export Business Line</h2>
                     <p class="artifact-summary">Turned advertiser international expansion pain into a scaled Google business line with partner networks, sales enablement, and payments-acceptance workflows.</p>
                 </div>
-                <span class="tag">Business line</span>
+                <div class="artifact-actions">
+                    <span class="tag">Business line</span>
+                    <a class="copy-link" href="#google-magellan" data-copy-link aria-label="Copy link to Google Magellan: Export Business Line">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1287,7 +1338,10 @@
                     <h2>McKinsey: Durable Operating Systems</h2>
                     <p class="artifact-summary">Selected consulting work that mattered because clients kept using the operating systems after the project ended.</p>
                 </div>
-                <span class="tag">Durable change</span>
+                <div class="artifact-actions">
+                    <span class="tag">Durable change</span>
+                    <a class="copy-link" href="#mckinsey-operating-systems" data-copy-link aria-label="Copy link to McKinsey: Durable Operating Systems">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1398,7 +1452,10 @@
                     <h2>hocudaglasam.com</h2>
                     <p class="artifact-summary">A public civic-tech product that simplified Serbian diaspora voter registration while keeping sensitive personal data on the user's device.</p>
                 </div>
-                <span class="tag">Public project</span>
+                <div class="artifact-actions">
+                    <span class="tag">Public project</span>
+                    <a class="copy-link" href="#hocudaglasam" data-copy-link aria-label="Copy link to hocudaglasam.com">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1476,7 +1533,10 @@
                     <h2>Adiufant</h2>
                     <p class="artifact-summary">An active AI calendar assistant for busy parents, built around the daily mess of school notices, images, PDFs, voice notes, and preparation tasks.</p>
                 </div>
-                <span class="tag">Active build</span>
+                <div class="artifact-actions">
+                    <span class="tag">Active build</span>
+                    <a class="copy-link" href="#adiufant" data-copy-link aria-label="Copy link to Adiufant">Copy link</a>
+                </div>
             </header>
             <div class="artifact-body">
                 <div>
@@ -1555,5 +1615,43 @@
             Company examples are sanitized: no private code, credentials, internal URLs, customer data, unreleased revenue figures, or sensitive implementation details are included. The goal is to show product and engineering judgment without exposing confidential systems.
         </section>
     </main>
+    <script>
+        (() => {
+            const copyText = async (text) => {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                    return;
+                }
+
+                const input = document.createElement("textarea");
+                input.value = text;
+                input.setAttribute("readonly", "");
+                input.style.position = "fixed";
+                input.style.opacity = "0";
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand("copy");
+                input.remove();
+            };
+
+            document.querySelectorAll("[data-copy-link]").forEach((link) => {
+                link.addEventListener("click", async (event) => {
+                    event.preventDefault();
+                    const url = new URL(link.getAttribute("href"), window.location.href).toString();
+                    const originalText = link.textContent;
+
+                    try {
+                        await copyText(url);
+                        link.textContent = "Copied";
+                        window.setTimeout(() => {
+                            link.textContent = originalText;
+                        }, 1600);
+                    } catch {
+                        window.location.hash = link.getAttribute("href");
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
