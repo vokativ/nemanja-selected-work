@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Grujičić - Selected Work</title>
-    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, civic technology, and AI calendar assistance.">
-    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, live metrics dashboard, civic technology, privacy by architecture, AI calendar assistant, product operations, technical product leadership">
+    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, open-source agent methods, civic technology, and AI calendar assistance.">
+    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, live metrics dashboard, open-source AI agent skill, Premise Lab, idea stress-testing, civic technology, privacy by architecture, AI calendar assistant, product operations, technical product leadership">
     <meta property="og:title" content="Nemanja Grujičić - Selected Work">
     <meta property="og:description" content="Selected public projects and sanitized private-platform case studies behind the CV.">
     <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
         "@type": "CollectionPage",
         "name": "Nemanja Grujičić - Selected Work",
         "url": "https://vokativ.github.io/nemanja-selected-work/artifacts.html",
-        "description": "Selected public projects and sanitized private-platform case studies covering enterprise data platforms, AI analytics, live operating metrics, civic technology, and AI product building.",
+        "description": "Selected public projects and sanitized private-platform case studies covering enterprise data platforms, AI analytics, live operating metrics, open-source agent methods, civic technology, and AI product building.",
         "creator": {
             "@type": "Person",
             "name": "Nemanja Grujičić",
@@ -39,7 +39,10 @@
                 "Gemini API",
                 "Cloud Run",
                 "Product operations",
-                "Workflow automation"
+                "Workflow automation",
+                "AI agent skills",
+                "Idea validation",
+                "Open-source documentation"
             ]
         },
         "hasPart": [
@@ -59,6 +62,13 @@
                 "@type": "CreativeWork",
                 "name": "Company Office Metrics Display",
                 "description": "Live office metrics display using BigQuery-backed refreshes, Canvas 2D, WebSockets, and TV-compatible rendering for shared operating visibility."
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "The Premise Lab",
+                "codeRepository": "https://github.com/vokativ/premise-lab",
+                "programmingLanguage": ["Markdown", "Shell"],
+                "description": "Open-source AI-agent method and skill package for stress-testing early ideas before they harden into code, with installer guides and tool-specific distributions."
             },
             {
                 "@type": "SoftwareSourceCode",
@@ -94,6 +104,7 @@
             --green: #2f7d32;
             --amber: #a65f00;
             --red: #b42318;
+            --violet: #7251b5;
             --code: #f0f5ff;
             --diagram-panel: #ffffff;
             --shadow: 0 18px 55px rgba(19, 32, 51, 0.10);
@@ -113,6 +124,7 @@
             background-size: 28px 28px;
             font-family: "Aptos", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.55;
+            overflow-x: hidden;
         }
 
         a {
@@ -138,6 +150,10 @@
             padding: 38px 0 34px;
         }
 
+        .hero > div {
+            min-width: 0;
+        }
+
         .eyebrow {
             margin: 0 0 12px;
             color: var(--blue);
@@ -151,11 +167,12 @@
         h1 {
             margin: 0;
             max-width: 850px;
-            font-size: clamp(2.2rem, 4vw, 4.5rem);
+            font-size: 4.25rem;
             line-height: 1.03;
             letter-spacing: 0;
             font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
             font-weight: 760;
+            overflow-wrap: anywhere;
         }
 
         .lead {
@@ -200,6 +217,19 @@
             background: var(--panel);
             box-shadow: var(--shadow);
             overflow: hidden;
+            scroll-margin-top: 18px;
+            transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+        }
+
+        .artifact:hover,
+        .artifact:focus-within {
+            border-color: rgba(19, 88, 219, 0.38);
+            transform: translateY(-1px);
+        }
+
+        .artifact:target {
+            border-color: var(--blue);
+            box-shadow: 0 20px 60px rgba(19, 88, 219, 0.18);
         }
 
         .artifact-header {
@@ -211,6 +241,10 @@
             border-bottom: 1px solid var(--line);
         }
 
+        .artifact-header > div {
+            min-width: 0;
+        }
+
         .artifact-actions {
             display: flex;
             flex-wrap: wrap;
@@ -220,9 +254,10 @@
 
         .artifact h2 {
             margin: 0 0 8px;
-            font-size: clamp(1.45rem, 2vw, 2rem);
+            font-size: 1.85rem;
             line-height: 1.15;
             font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            overflow-wrap: anywhere;
         }
 
         .artifact-summary {
@@ -275,6 +310,11 @@
             grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
             gap: 24px;
             padding: 24px;
+        }
+
+        .artifact-body > div,
+        .artifact-body > aside {
+            min-width: 0;
         }
 
         .impact-strip {
@@ -357,13 +397,32 @@
             color: var(--ink);
             font-size: 0.9rem;
             font-weight: 650;
+            transition: border-color 180ms ease, transform 180ms ease;
+        }
+
+        .proof-links a:hover,
+        .proof-links a:focus-visible {
+            border-color: var(--blue);
+            text-decoration: none;
+            transform: translateY(-1px);
         }
 
         .visual {
+            position: relative;
             padding: 16px;
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--code);
+            overflow: hidden;
+        }
+
+        .visual::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--teal), var(--amber));
+            opacity: 0.7;
         }
 
         .visual-title {
@@ -393,6 +452,12 @@
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--diagram-panel);
+            transition: border-color 180ms ease, transform 180ms ease;
+        }
+
+        .flow-card:hover {
+            border-color: var(--blue);
+            transform: translateY(-1px);
         }
 
         .flow-card b {
@@ -563,6 +628,15 @@
             stroke: var(--blue);
         }
 
+        .diagram-card.idea,
+        .diagram-card.test {
+            stroke: var(--amber);
+        }
+
+        .diagram-card.lens {
+            stroke: var(--violet);
+        }
+
         .diagram-line {
             fill: none;
             stroke: var(--blue);
@@ -584,11 +658,99 @@
             font-size: 11px;
         }
 
+        body.motion-ready .artifact {
+            transform: translateY(14px);
+        }
+
+        body.motion-ready .artifact.is-visible {
+            transform: translateY(0);
+            transition: transform 520ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        body.motion-ready .diagram-line {
+            stroke-dasharray: var(--path-length, 1);
+            stroke-dashoffset: var(--path-length, 1);
+            transition: stroke-dashoffset 900ms ease;
+        }
+
+        body.motion-ready .artifact.is-visible .diagram-line {
+            stroke-dashoffset: 0;
+        }
+
+        body.motion-ready .artifact.is-visible .visual .diagram-card,
+        body.motion-ready .artifact.is-visible .visual .flow-card,
+        body.motion-ready .artifact.is-visible .visual .state,
+        body.motion-ready .artifact.is-visible .visual .pipeline-step {
+            animation: visual-rise 520ms ease both;
+        }
+
+        @keyframes visual-rise {
+            from {
+                opacity: 0.65;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 900px) {
             .hero,
-            .artifact-body,
             .artifact-header {
                 grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .artifact-body {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .artifact-body > div:first-child {
+                display: contents;
+            }
+
+            .impact-strip {
+                display: contents;
+            }
+
+            .impact-tile {
+                order: 3;
+                width: 100%;
+            }
+
+            .impact-strip .impact-tile:nth-child(-n + 2) {
+                order: 1;
+            }
+
+            .impact-strip .impact-tile:nth-child(n + 3) {
+                order: 3;
+            }
+
+            .visual {
+                order: 2;
+                width: 100%;
+            }
+
+            .copy-grid {
+                order: 4;
+                width: 100%;
+            }
+
+            .metrics {
+                order: 5;
+                width: 100%;
+            }
+
+            .proof-links {
+                order: 6;
+                width: 100%;
             }
 
             .artifact-actions {
@@ -615,12 +777,117 @@
 
         @media (max-width: 560px) {
             .page {
+                width: 100%;
+                max-width: 100%;
                 padding: 24px 14px 48px;
+                overflow: hidden;
+            }
+
+            h1 {
+                width: calc(100vw - 28px);
+                max-width: calc(100vw - 28px);
+                font-size: 2rem;
+                line-height: 1.12;
+                word-break: break-word;
+            }
+
+            .lead {
+                width: calc(100vw - 28px);
+                max-width: calc(100vw - 28px);
+                font-size: 1rem;
+                word-break: break-word;
+            }
+
+            .artifact h2 {
+                max-width: 100%;
+                font-size: 1.35rem;
+                word-break: break-word;
+            }
+
+            .artifact-summary,
+            .copy-box p,
+            .impact-tile span,
+            .metric span,
+            .flow-card span,
+            .pipeline-step,
+            .state li {
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+            .contact,
+            .artifact-actions,
+            .proof-links {
+                max-width: 100%;
+            }
+
+            .contact {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                width: calc(100vw - 28px);
+            }
+
+            .contact a,
+            .contact span,
+            .tag,
+            .copy-link,
+            .proof-links a,
+            .proof-links span {
+                max-width: 100%;
+                white-space: normal;
+            }
+
+            .contact a,
+            .contact span {
+                justify-content: center;
+                text-align: center;
             }
 
             .artifact-header,
             .artifact-body {
                 padding: 18px;
+            }
+
+            .artifact,
+            .visual,
+            .diagram {
+                max-width: 100%;
+            }
+
+            .diagram {
+                overflow: hidden;
+            }
+
+            .hero {
+                padding: 26px 0 24px;
+            }
+
+            .artifact {
+                margin: 14px 0 22px;
+            }
+
+            .artifact {
+                width: calc(100vw - 28px);
+            }
+
+            .artifact-header > div,
+            .artifact-actions,
+            .impact-strip,
+            .visual,
+            .copy-grid,
+            .metrics,
+            .proof-links {
+                width: calc(100vw - 64px);
+            }
+
+            .visual,
+            .copy-box,
+            .impact-tile,
+            .metric,
+            .state,
+            .flow-card,
+            .pipeline-step {
+                padding: 12px;
             }
 
             .copy-box {
@@ -629,6 +896,28 @@
 
             .impact-tile {
                 min-height: auto;
+            }
+
+            .metric {
+                min-height: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            body.motion-ready .artifact {
+                transform: none;
+            }
+
+            body.motion-ready .diagram-line {
+                stroke-dashoffset: 0;
             }
         }
 
@@ -644,6 +933,7 @@
                 --green: #7fd37f;
                 --amber: #ffbd66;
                 --red: #ff8a7a;
+                --violet: #c9a7ff;
                 --code: #182232;
                 --diagram-panel: #111821;
                 --shadow: 0 18px 55px rgba(0, 0, 0, 0.38);
@@ -1446,6 +1736,132 @@
             </div>
         </article>
 
+        <article class="artifact" id="premise-lab">
+            <header class="artifact-header">
+                <div>
+                    <h2>The Premise Lab</h2>
+                    <p class="artifact-summary">A public, open-source AI-agent method for stress-testing early ideas before they harden into code, product plans, or institutional commitments.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Public open source</span>
+                    <a class="copy-link" href="#premise-lab" data-copy-link aria-label="Copy link to The Premise Lab">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div>
+                    <div class="impact-strip" aria-label="The Premise Lab impact highlights">
+                        <div class="impact-tile">
+                            <strong>Public artifact</strong>
+                            <span>The whole project is inspectable: method, skill files, installer guide, share guide, changelog, and helper scripts.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Builder leverage</strong>
+                            <span>Helps builders catch hidden assumptions, weak evidence, and category mistakes before implementation momentum takes over.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Method design</strong>
+                            <span>Combines ontological, epistemic, domain, and value lenses into a practical pre-build mentor workflow.</span>
+                        </div>
+                        <div class="impact-tile">
+                            <strong>Portable packaging</strong>
+                            <span>Packaged for coding agents and chat tools, with installation paths for Codex, Claude Code, Cursor, Antigravity, and Gemini Gem.</span>
+                        </div>
+                    </div>
+                    <div class="copy-grid">
+                        <section class="copy-box">
+                            <strong>Problem</strong>
+                            <p>AI coding tools make it easy to build too soon. Early ideas often hide confused categories, unsupported claims, unclear beneficiaries, and real-world friction that only appears after code has already hardened around the wrong premise.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Built</strong>
+                            <p>An open-source agent skill and distribution package: canonical method instructions, tool-specific install paths, a share guide, update-check helper, example comparison outputs, and agent-facing setup docs.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Judgment</strong>
+                            <p>The product is not a generic idea coach. It treats ideas as contact points between language, evidence, behavior, institutions, incentives, and value, then turns those tensions into sharper hypotheses and smaller reality tests.</p>
+                        </section>
+                        <section class="copy-box">
+                            <strong>Impact</strong>
+                            <p>The repo demonstrates a repeatable way to package judgment as agent behavior: clear enough to install, inspect, share, update, and adapt across tools without depending on a private app or opaque prompt.</p>
+                        </section>
+                    </div>
+                    <div class="metrics" aria-label="The Premise Lab proof points">
+                        <div class="metric">
+                            <b>4 lenses</b>
+                            <span>Ontological, epistemic, domain, and value debt become practical build questions.</span>
+                        </div>
+                        <div class="metric">
+                            <b>5+ tools</b>
+                            <span>Install guidance covers Codex, Claude Code, Cursor, Antigravity, Gemini Gem, and chat-only use.</span>
+                        </div>
+                        <div class="metric">
+                            <b>0.2.0</b>
+                            <span>Versioned public package with changelog and update-check flow.</span>
+                        </div>
+                    </div>
+                    <div class="proof-links">
+                        <a href="https://github.com/vokativ/premise-lab">GitHub repo</a>
+                        <a href="https://github.com/vokativ/premise-lab/blob/master/README.md">README</a>
+                        <a href="https://github.com/vokativ/premise-lab/blob/master/AGENT_INSTALL.md">Agent install guide</a>
+                        <a href="https://github.com/vokativ/premise-lab/blob/master/skills/premise-lab/SKILL.md">Skill source</a>
+                        <a href="https://github.com/vokativ/premise-lab/blob/master/SHARE.md">Share guide</a>
+                        <a href="https://github.com/vokativ/premise-lab/blob/master/CHANGELOG.md">Changelog</a>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="The Premise Lab method diagram">
+                    <p class="visual-title">Idea stress-test flow</p>
+                    <svg class="diagram" viewBox="0 0 520 292" role="img" aria-label="The Premise Lab turns a raw idea through four lenses into an idea artifact and reality test">
+                        <rect class="diagram-card idea" x="14" y="106" width="112" height="80" rx="8"></rect>
+                        <text class="diagram-text" x="30" y="139">raw idea</text>
+                        <text class="diagram-subtext" x="30" y="158">can we build</text>
+                        <text class="diagram-subtext" x="30" y="173">this?</text>
+
+                        <path class="diagram-line" d="M138 146 C152 146 152 48 170 48"></path>
+                        <path class="diagram-line" d="M138 146 C154 146 154 112 170 112"></path>
+                        <path class="diagram-line" d="M138 146 C154 146 154 176 170 176"></path>
+                        <path class="diagram-line" d="M138 146 C152 146 152 240 170 240"></path>
+
+                        <rect class="diagram-card lens" x="170" y="22" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="45">ontology</text>
+                        <text class="diagram-subtext" x="186" y="62">what kind of thing?</text>
+
+                        <rect class="diagram-card lens" x="170" y="86" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="109">evidence</text>
+                        <text class="diagram-subtext" x="186" y="126">known vs assumed</text>
+
+                        <rect class="diagram-card lens" x="170" y="150" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="173">domain</text>
+                        <text class="diagram-subtext" x="186" y="190">real-world friction</text>
+
+                        <rect class="diagram-card lens" x="170" y="214" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="237">value</text>
+                        <text class="diagram-subtext" x="186" y="254">who is better off?</text>
+
+                        <path class="diagram-line" d="M322 48 C350 48 350 104 370 104"></path>
+                        <path class="diagram-line" d="M322 112 C346 112 346 104 370 104"></path>
+                        <path class="diagram-line" d="M322 176 C346 176 346 214 370 214"></path>
+                        <path class="diagram-line" d="M322 240 C350 240 350 214 370 214"></path>
+
+                        <rect class="diagram-card good" x="370" y="66" width="132" height="76" rx="8"></rect>
+                        <text class="diagram-text" x="386" y="95">idea artifact</text>
+                        <text class="diagram-subtext" x="386" y="114">hypothesis and</text>
+                        <text class="diagram-subtext" x="386" y="129">reality debt</text>
+
+                        <rect class="diagram-card test" x="370" y="178" width="132" height="76" rx="8"></rect>
+                        <text class="diagram-text" x="386" y="207">reality test</text>
+                        <text class="diagram-subtext" x="386" y="226">small contact</text>
+                        <text class="diagram-subtext" x="386" y="241">with the world</text>
+                    </svg>
+                    <div class="pipeline">
+                        <div class="pipeline-step"><strong>Mirror:</strong> restate the idea in higher resolution before judging it.</div>
+                        <div class="pipeline-step"><strong>X-ray:</strong> surface the load-bearing assumption or category mistake.</div>
+                        <div class="pipeline-step"><strong>Reframe:</strong> turn the idea into a sharper working hypothesis.</div>
+                        <div class="pipeline-step"><strong>Contact:</strong> propose the smallest useful reality test before building.</div>
+                    </div>
+                </aside>
+            </div>
+        </article>
+
         <article class="artifact" id="hocudaglasam">
             <header class="artifact-header">
                 <div>
@@ -1617,6 +2033,62 @@
     </main>
     <script>
         (() => {
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const artifacts = Array.from(document.querySelectorAll(".artifact"));
+
+            if (!prefersReducedMotion) {
+                document.querySelectorAll(".diagram-line").forEach((line) => {
+                    if (typeof line.getTotalLength !== "function") {
+                        return;
+                    }
+
+                    const length = line.getTotalLength();
+                    line.style.setProperty("--path-length", length);
+                });
+
+                artifacts.forEach((artifact) => {
+                    const rect = artifact.getBoundingClientRect();
+
+                    if (rect.top < window.innerHeight * 0.92) {
+                        artifact.classList.add("is-visible");
+                    }
+                });
+
+                if (window.location.hash.length > 1) {
+                    let target = null;
+
+                    try {
+                        target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+                    } catch {
+                        target = null;
+                    }
+
+                    if (target && target.classList.contains("artifact")) {
+                        target.classList.add("is-visible");
+                    }
+                }
+
+                document.body.classList.add("motion-ready");
+
+                if ("IntersectionObserver" in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        rootMargin: "0px 0px -12% 0px",
+                        threshold: 0.08
+                    });
+
+                    artifacts.forEach((artifact) => observer.observe(artifact));
+                } else {
+                    artifacts.forEach((artifact) => artifact.classList.add("is-visible"));
+                }
+            }
+
             const copyText = async (text) => {
                 if (navigator.clipboard && window.isSecureContext) {
                     await navigator.clipboard.writeText(text);
