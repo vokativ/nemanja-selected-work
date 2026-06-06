@@ -305,37 +305,77 @@
             text-decoration: none;
         }
 
+        /*
+         * Layout model:
+         * - Desktop (> 900px): two columns, everything shown, no toggle.
+         * - Mobile (<= 900px): single column. By default only the essentials show
+         *   (chips, Challenge, Impact, the primary diagram). Anything tagged
+         *   .block-extra / .visual-extra is hidden until the card gets .is-open
+         *   via the "Show full case" toggle.
+         */
         .artifact-body {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
-            gap: 24px;
+            column-gap: 24px;
+            align-items: start;
             padding: 24px;
         }
 
-        .artifact-body > div,
-        .artifact-body > aside {
+        .col-main {
+            grid-column: 1;
+            grid-row: 1;
             min-width: 0;
         }
 
-        .impact-strip {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            margin-bottom: 16px;
+        .artifact-body > .visual {
+            grid-column: 2;
+            grid-row: 1;
+            min-width: 0;
         }
 
-        .impact-tile {
-            min-height: 96px;
-            padding: 13px;
+        .case-toggle {
+            display: none;
+        }
+
+        .impact-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 7px 11px;
             border: 1px solid var(--line);
-            border-radius: 8px;
+            border-left: 3px solid var(--blue);
+            border-radius: 7px;
             background: var(--diagram-panel);
-            border-top: 5px solid var(--blue);
+            color: var(--ink);
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1.45;
         }
 
-        .impact-tile strong {
+        .chip b {
+            color: var(--ink);
+            font-weight: 800;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+        }
+
+        .prose {
+            display: grid;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .detail-block {
+            padding-left: 13px;
+            border-left: 3px solid var(--line);
+        }
+
+        .detail-block strong {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             color: var(--ink);
             font-size: 0.8rem;
             letter-spacing: 0.06em;
@@ -343,39 +383,37 @@
             font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
         }
 
-        .impact-tile span {
-            display: block;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .copy-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .copy-box {
-            min-height: 138px;
-            padding: 15px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--code);
-        }
-
-        .copy-box strong {
-            display: block;
-            margin-bottom: 6px;
-            color: var(--ink);
-            font-size: 0.83rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .copy-box p {
+        .detail-block p {
             margin: 0;
             color: var(--muted);
             font-size: 0.95rem;
+        }
+
+        .case-toggle {
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            min-height: 44px;
+            margin-top: 4px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--diagram-panel);
+            color: var(--blue);
+            font-size: 0.92rem;
+            font-weight: 750;
+            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            cursor: pointer;
+        }
+
+        .case-toggle::after {
+            content: "\25BE";
+            display: inline-block;
+            transition: transform 160ms ease;
+        }
+
+        .artifact.is-open .case-toggle::after {
+            transform: rotate(180deg);
         }
 
         .proof-links {
@@ -696,6 +734,30 @@
             }
         }
 
+        @keyframes reveal-extra {
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes collapse-extra {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+        }
+
         @media (max-width: 900px) {
             .hero,
             .artifact-header {
@@ -712,54 +774,60 @@
                 gap: 16px;
             }
 
-            .artifact-body > div:first-child {
-                display: contents;
-            }
-
-            .impact-strip {
-                display: contents;
-            }
-
-            .impact-tile {
-                order: 3;
-                width: 100%;
-            }
-
-            .impact-strip .impact-tile:nth-child(-n + 2) {
+            .col-main {
                 order: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
             }
 
-            .impact-strip .impact-tile:nth-child(n + 3) {
-                order: 3;
-            }
-
-            .visual {
+            .artifact-body > .visual {
                 order: 2;
-                width: 100%;
             }
 
-            .copy-grid {
-                order: 4;
-                width: 100%;
+            .case-toggle {
+                order: 3;
+                display: flex;
             }
 
-            .metrics {
-                order: 5;
-                width: 100%;
+            /* Mobile compact default: hide the "extra" until the card is opened. */
+            .artifact:not(.is-open) .block-extra,
+            .artifact:not(.is-open) .visual-extra {
+                display: none;
             }
 
-            .proof-links {
-                order: 6;
-                width: 100%;
+            /* Collapsed mobile card shows <= 3 chips; the rest reveal when that card opens. */
+            .artifact:not(.is-open) .chip-extra {
+                display: none;
+            }
+
+            /* Smooth the reveal as the extras switch from display:none to shown. */
+            .artifact.is-open .block-extra,
+            .artifact.is-open .visual-extra,
+            .artifact.is-open .chip-extra {
+                animation: reveal-extra 280ms ease both;
+            }
+
+            /* While collapsing, the card keeps .is-open (so extras stay rendered) and
+               plays the exit animation; JS drops both classes when it finishes. */
+            .artifact.is-closing .block-extra,
+            .artifact.is-closing .visual-extra,
+            .artifact.is-closing .chip-extra {
+                animation: collapse-extra 240ms ease both;
+            }
+
+            .case-toggle {
+                transition: background-color 160ms ease;
+            }
+
+            .prose {
+                margin-top: 0;
             }
 
             .artifact-actions {
                 justify-content: flex-start;
             }
 
-            .copy-grid,
-            .impact-strip,
-            .metrics,
             .before-after {
                 grid-template-columns: 1fr;
             }
@@ -777,54 +845,37 @@
 
         @media (max-width: 560px) {
             .page {
-                width: 100%;
-                max-width: 100%;
                 padding: 24px 14px 48px;
-                overflow: hidden;
             }
 
             h1 {
-                width: calc(100vw - 28px);
-                max-width: calc(100vw - 28px);
                 font-size: 2rem;
                 line-height: 1.12;
                 word-break: break-word;
             }
 
             .lead {
-                width: calc(100vw - 28px);
-                max-width: calc(100vw - 28px);
                 font-size: 1rem;
-                word-break: break-word;
             }
 
             .artifact h2 {
-                max-width: 100%;
                 font-size: 1.35rem;
                 word-break: break-word;
             }
 
             .artifact-summary,
-            .copy-box p,
-            .impact-tile span,
+            .detail-block p,
+            .chip,
             .metric span,
             .flow-card span,
             .pipeline-step,
             .state li {
                 overflow-wrap: anywhere;
-                word-break: break-word;
-            }
-
-            .contact,
-            .artifact-actions,
-            .proof-links {
-                max-width: 100%;
             }
 
             .contact {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                width: calc(100vw - 28px);
             }
 
             .contact a,
@@ -833,7 +884,6 @@
             .copy-link,
             .proof-links a,
             .proof-links span {
-                max-width: 100%;
                 white-space: normal;
             }
 
@@ -848,12 +898,6 @@
                 padding: 18px;
             }
 
-            .artifact,
-            .visual,
-            .diagram {
-                max-width: 100%;
-            }
-
             .diagram {
                 overflow: hidden;
             }
@@ -866,40 +910,11 @@
                 margin: 14px 0 22px;
             }
 
-            .artifact {
-                width: calc(100vw - 28px);
-            }
-
-            .artifact-header > div,
-            .artifact-actions,
-            .impact-strip,
             .visual,
-            .copy-grid,
-            .metrics,
-            .proof-links {
-                width: calc(100vw - 64px);
-            }
-
-            .visual,
-            .copy-box,
-            .impact-tile,
-            .metric,
             .state,
             .flow-card,
             .pipeline-step {
                 padding: 12px;
-            }
-
-            .copy-box {
-                min-height: auto;
-            }
-
-            .impact-tile {
-                min-height: auto;
-            }
-
-            .metric {
-                min-height: auto;
             }
         }
 
@@ -989,66 +1004,29 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Company platform impact highlights">
-                        <div class="impact-tile">
-                            <strong>Sizing the problem</strong>
-                            <span>Core metrics took 1-2 weeks and 3-5 people to procure, while some business questions could not be answered at all.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Company platform impact highlights">
+                    <span class="chip"><b>Weeks &rarr; daily</b> reporting</span>
+                    <span class="chip"><b>Board-level</b> reporting</span>
+                    <span class="chip"><b>16</b> business domains</span>
+                    <span class="chip chip-extra"><b>3.5B+</b> rows modeled</span>
+                    <span class="chip chip-extra"><b>1,100</b> SKUs governed</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Core operating metrics took 1-2 weeks and 3-5 people to pull &mdash; usage, trials, subscriptions, payments, sales, support, logistics, product. Some questions couldn't be answered at all.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Business impact</strong>
-                            <span>Daily visibility across trials, subscriptions, payments, revenue, usage, support, logistics, and product behavior.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Rebuilt the stack on Terraform-managed GCP &mdash; BigQuery, Dataform, Airflow/Composer, Superset, Cloud Functions &mdash; across 16 business domains, and translated finance, product, and support questions into modeled data (currency normalization, SKU hygiene, sales logic) while rescuing broken syncs along the way.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Operating leverage</strong>
-                            <span>Reduced manual reporting loops, brittle finance reconstruction, and recurring SKU/order-sync escalations.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>AI/data leverage</strong>
-                            <span>Created the trusted modeled data layer needed for conversational analytics, support intelligence, and executive cadence.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Many core operating metrics were slow, manual, fragmented, or impossible to report. Usage, trial take-up, subscription behavior, payment movement, sales performance, support signals, and product usage could take 1-2 weeks and 3-5 people to procure, while some questions were not answerable at all.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>I stabilized failing VM-based ingestion and orchestration, expanded the warehouse from raw engineering database copies into business domains, then rebuilt the stack on Terraform-managed GCP, GKE, Cloud Composer, BigQuery, Dataform, Airbyte, Superset, Cloud Functions, and Cloud Run.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The work was not just modernization. It required translating executive, finance, product, support, and ecommerce questions into modeled data, while rescuing broken syncs, replacing fragile paths, and handling details such as currency normalization, SKU hygiene, and business-defined sales logic.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>Leaders and teams could finally manage the business actively instead of reconstructing it late. Daily visibility into trial conversion, subscription behavior, payment movement, revenue, product usage, sales, support, and logistics became part of the operating rhythm, helping management steer a major operating performance turnaround.</p>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="Company platform proof points">
-                        <div class="metric">
-                            <b>16 domains</b>
-                            <span>Modeled across product, sales, support, finance, logistics, and operations systems.</span>
-                        </div>
-                        <div class="metric">
-                            <b>3.5B+ rows</b>
-                            <span>Incremental loading patterns for very large product usage datasets.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Daily cadence</b>
-                            <span>Moved key metrics from impossible or 1-2 week manual procurement into daily visibility.</span>
-                        </div>
-                        <div class="metric">
-                            <b>1,100 SKUs</b>
-                            <span>Surfaced Shopify / NetSuite SKU issues before they triggered recurring cleanup.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Board view</b>
-                            <span>Created executive reporting across finance, customer, product, sales, and support.</span>
+                            <p>Leaders manage the business daily instead of reconstructing it late &mdash; helping steer a major operating performance turnaround.</p>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Sanitized architecture</span>
                         <span>Private production systems</span>
                         <span>GCP, BigQuery, Airflow, Dataform, Superset</span>
@@ -1099,6 +1077,7 @@
                         <text class="diagram-subtext" x="412" y="226">chat analytics</text>
                         <text class="diagram-subtext" x="412" y="241">office display</text>
                     </svg>
+                    <div class="visual-extra">
                     <div class="before-after">
                         <div class="state before">
                             <h3>Before</h3>
@@ -1127,7 +1106,9 @@
                         <div class="pipeline-step"><strong>Operations:</strong> SKU and order-sync reporting exposed new Shopify / NetSuite issues before recurring cleanup escalated.</div>
                         <div class="pipeline-step"><strong>Review:</strong> trial take-up, subscription behavior, payment movement, renewal cohorts, revenue, customer pain, and executive company-health reporting.</div>
                     </div>
+                    </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1143,58 +1124,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Support AI impact highlights">
-                        <div class="impact-tile">
-                            <strong>Sizing the problem</strong>
-                            <span>A substantial AI contract was underperforming while support teams remained buried in manual work.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Support AI impact highlights">
+                    <span class="chip"><b>~30%</b> tickets AI-handled</span>
+                    <span class="chip"><b>Weekly</b> product signal</span>
+                    <span class="chip"><b>Outcome-aligned</b> vendor</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>A substantial customer-service AI contract had been bought without the work to train and improve it. It underperformed, and support teams were still buried in manual work.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Business impact</strong>
-                            <span>New support AI handled roughly 30% of tickets by handoff.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Treated it as an operating-system problem, not a procurement shortcut. Stopped the old contract, picked an outcome-aligned partner, and moved support from Salesforce views to Zendesk &mdash; aligning vendor incentives, workflow, training, and escalation paths.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Operating leverage</strong>
-                            <span>Zendesk, outcome-aligned vendor incentives, and continuous improvement replaced a misfit Salesforce-view setup.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Product signal</strong>
-                            <span>Tickets, emails, and call transcripts became weekly signal for Product and Engineering.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>A customer-service AI solution had been bought without the operating work needed to train, maintain, and improve it. The contract was substantial, the system was underperforming, and support teams were still buried in manual work.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>I stopped the bleeding on the old contract, selected an outcome-aligned AI partner willing to work closely with us, and led the move from Salesforce views to Zendesk because the prior setup was not fit for support operations.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The AI decision was treated as an operating-system problem, not a procurement shortcut. Vendor incentives, team workflow, training effort, escalation paths, and continuous improvement all had to fit together.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>By handoff, the new AI solution handled roughly 30% of tickets. Support data also became a product signal, with emails, tickets, and transcribed calls classified into issue categories defined with Product and Engineering.</p>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="Support AI proof points">
-                        <div class="metric">
-                            <b>~30%</b>
-                            <span>Tickets handled by AI at handoff.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Weekly signal</b>
-                            <span>Moved emerging bug and customer-pain detection away from several-week lag.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Outcome aligned</b>
-                            <span>Shifted vendor model toward paid outcomes instead of unused automation.</span>
+                            <p>By handoff the new AI handled roughly 30% of tickets. Emails, tickets, and call transcripts became weekly signal for Product and Engineering on what was starting to break.</p>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Zendesk migration</span>
                         <span>AI vendor reset</span>
                         <span>Ticket, email, and call classification</span>
@@ -1226,8 +1176,9 @@
                             </div>
                         </div>
                     </div>
-                    <p class="note">This case is about practical AI deployment: matching incentives, workflows, data, and operational ownership so AI becomes useful instead of performative.</p>
+                    <p class="note visual-extra">This case is about practical AI deployment: matching incentives, workflows, data, and operational ownership so AI becomes useful instead of performative.</p>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1243,58 +1194,26 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Security and governance impact highlights">
-                        <div class="impact-tile">
-                            <strong>Risk surface</strong>
-                            <span>Analytics and AI systems touched company, customer, billing, and athlete data.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Security and governance impact highlights">
+                    <span class="chip"><b>Whole company</b> kept access</span>
+                    <span class="chip"><b>5&times; fewer</b> API keys, stale accounts cut, full SSO</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Production analytics and AI touched company, customer, billing, and athlete data &mdash; but the inherited setup had fragile VM deployments, stale access, scattered keys, little disaster recovery, and overly broad permissions.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Business continuity</strong>
-                            <span>100+ users kept access through the Superset migration with dashboards and connections preserved.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Migrated Superset from a VM to Kubernetes with Microsoft 365 SSO, automated backups, and custom roles &mdash; preserving existing dashboards and users. Tightened GCP service accounts, API keys, and dataset-level BigQuery permissions. The goal was a trust layer people could rely on, not just dashboards.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Enterprise trust</strong>
-                            <span>SSO, backups, governed BI, least-privilege IAM, and key cleanup made the platform safer to operate.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>AI readiness</strong>
-                            <span>Made self-service analytics and AI workflows safer by fixing the trust layer underneath them.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Production analytics and AI systems touched company, customer, billing, and athlete data. The inherited setup had fragile VM deployments, stale access, scattered keys, limited disaster recovery, and overly broad permissions.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>I migrated Superset from a VM to Kubernetes with Microsoft 365 SSO, automated backups, custom roles, and preserved existing dashboards and users. I also tightened GCP access, service accounts, API keys, and dataset-level BigQuery permissions.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>Enterprise AI and analytics only work when people can trust the operating layer. The goal was reproducibility, access control, recovery, and safe self-service, not just dashboards or prototypes.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>The platform became safer to operate and easier to trust: 100+ users kept access through the migration, dashboards and connections were preserved, stale accounts were removed, and permissions were narrowed without breaking production workflows.</p>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="Security and governance proof points">
-                        <div class="metric">
-                            <b>100+ users</b>
-                            <span>Preserved access during Superset migration with M365 SSO.</span>
-                        </div>
-                        <div class="metric">
-                            <b>24 -> 5 keys</b>
-                            <span>Consolidated active API keys as part of GCP remediation.</span>
-                        </div>
-                        <div class="metric">
-                            <b>10 accounts</b>
-                            <span>Removed stale service accounts and orphaned IAM bindings.</span>
+                            <p>Safer and easier to trust: 100+ users kept access through the migration, stale accounts were removed, and permissions narrowed without breaking production workflows.</p>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Superset v4 to v5 migration</span>
                         <span>M365 SSO and RBAC</span>
                         <span>Automated backups and restore paths</span>
@@ -1309,8 +1228,9 @@
                         <div class="pipeline-step"><strong>Permissions:</strong> stale accounts removed, API keys consolidated, BigQuery access scoped by dataset and purpose.</div>
                         <div class="pipeline-step"><strong>Operations:</strong> Terraform-managed infrastructure, Kubernetes deployment, and safer production change paths.</div>
                     </div>
-                    <p class="note">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
+                    <p class="note visual-extra">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1326,44 +1246,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Golf Genie impact highlights">
-                        <div class="impact-tile">
-                            <strong>Response time</strong>
-                            <span>Golf-related data questions moved from one to several days to almost instant answers, usually within 30 seconds.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Golf Genie impact highlights">
+                    <span class="chip"><b>Days &rarr; ~30s</b> answers</span>
+                    <span class="chip"><b>Self-serve</b> with visible SQL</span>
+                    <span class="chip"><b>All global teams</b> unblocked</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Product and subscription questions &mdash; renewal and usage by customer vintage, month, and geography &mdash; were trapped behind dashboards, SQL, or analyst backlogs. US and Turkey teams waited on a Singapore analyst to wake up.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Timezone leverage</strong>
-                            <span>US and Turkey teams no longer had to wait for a Singapore-based analyst to wake up or become available.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a FastAPI + Gemini analytics app on Cloud Run over curated BigQuery datasets. More than a chatbot on a database: it uses several dozen analyst-verified query patterns, shows the SQL it runs, and makes CSV/Excel export part of the workflow &mdash; so follow-up starts from concrete evidence.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Self-service analysis</strong>
-                            <span>Business users could ask plain-English questions while still seeing SQL and exportable results.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>AI done safely</strong>
-                            <span>Verified query patterns and curated BigQuery datasets kept the AI useful rather than a black box.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Important product and subscription questions were trapped behind dashboards, SQL, or analyst backlogs. Business users needed a faster way to ask questions such as renewal and usage behavior by customer vintage, month, and geography.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>A FastAPI + Gemini analytics app on Cloud Run, connected to curated BigQuery datasets and designed for internal use by leadership, product, and any team that needed data answers.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The app was more than a chatbot connected to a database. It used several dozen analyst-verified query patterns, showed the SQL being used, and made CSV/Excel exports part of the workflow so business follow-up with analysts started from concrete evidence.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>Teams could explore business questions in plain English while still preserving transparency. The generated SQL and exports reduced the friction of moving from a first answer to deeper analysis.</p>
-                        </section>
+                            <p>Teams explore business questions in plain English, usually answered within 30 seconds, while keeping transparency. Verified patterns and curated datasets keep the AI useful instead of a black box.</p>
+                        </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Production internal use</span>
                         <span>Gemini, FastAPI, BigQuery, Cloud Run</span>
                         <span>Verified query library</span>
@@ -1402,7 +1305,7 @@
                         <text class="diagram-text" x="31" y="150">decision</text>
                         <text class="diagram-subtext" x="31" y="169">visible evidence</text>
                     </svg>
-                    <div class="flow">
+                    <div class="flow visual-extra">
                         <div class="flow-row">
                             <div class="flow-card">
                                 <b>User question</b>
@@ -1427,6 +1330,7 @@
                         </div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1442,44 +1346,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Office metrics display impact highlights">
-                        <div class="impact-tile">
-                            <strong>Global operating view</strong>
-                            <span>All four global offices could see the same live dashboard instead of asking what was happening through fragmented updates.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Office metrics display impact highlights">
+                    <span class="chip"><b>4 offices</b>, one live view</span>
+                    <span class="chip"><b>Responsive</b>: TV, 4K, and mobile</span>
+                    <span class="chip"><b>Always-on</b> cadence</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Company results were siloed. Teams had no shared, ambient view of product usage, sales, support signals, logistics, or customer feedback &mdash; and fragmented updates filled the gap.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Shared truth</strong>
-                            <span>Sales, product usage, support, logistics, and customer signals became visible to teams at the same time.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes for office TVs (including Amazon Silk on Fire TV), scaling from mobile to 4K. Display context was a product constraint &mdash; URL parameters set units, so North American teams saw imperial while others saw metric.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Previously impossible</strong>
-                            <span>Cross-functional metrics that were not available in one place became an ambient operating layer for offices.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Always-on cadence</strong>
-                            <span>Live screens made the business visible without waiting for manual reports, meetings, or dashboard digging.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Company results were siloed. Teams did not have a shared, ambient view of product usage, sales, support signals, logistics movement, or customer feedback.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>A Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes. It was built for office TVs, including Amazon Silk on Fire TV, while still scaling from mobile screens to 4K displays.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The dashboard treated display context as a product constraint. URL parameters controlled units and behavior, so North American teams could see imperial units while other offices saw metric defaults.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>The display made company activity visible without asking every team to dig through reports. It also surfaced unusual changes and helped teams understand the operating picture across functions.</p>
-                        </section>
+                            <p>All four global offices saw the same live picture at once, without digging through reports &mdash; surfacing unusual changes and aligning teams across functions.</p>
+                        </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Bun, TypeScript, Canvas 2D, WebSockets</span>
                         <span>BigQuery-backed metrics</span>
                         <span>TV, mobile, and 4K layouts</span>
@@ -1516,13 +1403,14 @@
                         <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
                         <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
                     </svg>
-                    <div class="pipeline">
+                    <div class="pipeline visual-extra">
                         <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
                         <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
                         <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
                         <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1538,58 +1426,28 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Google Magellan impact highlights">
-                        <div class="impact-tile">
-                            <strong>Sizing the problem</strong>
-                            <span>Large advertisers faced 12-18 month international expansion barriers.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Google Magellan impact highlights">
+                    <span class="chip"><b>Tens of millions</b> revenue supported</span>
+                    <span class="chip"><b>200+</b> customer interviews</span>
+                    <span class="chip"><b>7</b> payment partners</span>
+                    <span class="chip chip-extra"><b>50+</b> salespeople trained</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Large advertisers wanted to expand internationally but hit 12-18 month barriers &mdash; payments acceptance, local setup, unclear partner pathways. The pain was real but not yet packaged into a repeatable Google offer.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Business impact</strong>
-                            <span>Magellan later supported tens of millions in revenue as a scaled business line.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Used 200+ customer interviews to define Magellan's expansion themes, then built the payments-acceptance pillar: 7 global partners, client triage and onboarding paths, and 50+ salespeople trained to consult on blockers. The value wasn't a partner list &mdash; it was a diagnosis process that routed each advertiser to the right fix.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Customer discovery</strong>
-                            <span>200+ interviews turned vague expansion pain into repeatable productized themes.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Sales leverage</strong>
-                            <span>7 global payment partners and 50+ trained salespeople made the offer scalable.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Large advertisers wanted to expand internationally, but market entry could be slowed by payments acceptance, local operating setup, and unclear partner pathways. The pain was real, but it was not yet packaged into a repeatable Google offer.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>I used 200+ customer interviews to define Magellan's expansion themes, then built the payments-acceptance pillar: 7 global payment partners, client triage and onboarding paths, and 50+ salespeople trained to consult on expansion blockers.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The value was not a generic partnership list. It was a diagnosis process: understand each advertiser's expansion constraint, route them to the right partner or operating fix, and make sales teams capable of spotting the problem early.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>Magellan became a scaled business line for large advertisers, later supporting tens of millions in revenue by helping customers reduce 12-18 month international expansion barriers.</p>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="Google Magellan proof points">
-                        <div class="metric">
-                            <b>200+ interviews</b>
-                            <span>Customer discovery to map expansion barriers and productize the offer.</span>
-                        </div>
-                        <div class="metric">
-                            <b>7 partners</b>
-                            <span>Global payments partners sourced and negotiated in two quarters.</span>
-                        </div>
-                        <div class="metric">
-                            <b>50+ trained</b>
-                            <span>Salespeople enabled to consult on payments and expansion blockers.</span>
+                            <p>Magellan became a scaled business line, later supporting tens of millions in revenue by cutting 12-18 month expansion barriers down to days or weeks.</p>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Customer discovery</span>
                         <span>Payments partner network</span>
                         <span>Sales enablement</span>
@@ -1619,6 +1477,7 @@
                         </div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1634,62 +1493,31 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="McKinsey impact highlights">
-                        <div class="impact-tile">
-                            <strong>Durable change</strong>
-                            <span>Commercial / SMB banking framework remains in use 17 years later.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="McKinsey impact highlights">
+                    <span class="chip"><b>17 years</b> in use</span>
+                    <span class="chip"><b>20%</b> dead clients removed</span>
+                    <span class="chip"><b>20 departments</b> &rarr; one roadmap</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Clients didn't just need strategy decks. Banks, insurers, and industrial companies needed operating systems that managers could actually run after the consulting team left.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Bank health</strong>
-                            <span>Bad-bank operating model helped separate bad assets so leaders could focus on the healthy bank.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a commercial / SMB banking sales framework in Eastern Europe, the operating model for a non-performing-loan bad bank, and transformation tools and roadmaps across functions &mdash; aligning leadership, process owners, and field teams into systems people could keep using.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Cost of noise</strong>
-                            <span>Insurer portfolio cleanup removed 20% inactive / misallocated clients.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Operating system</strong>
-                            <span>Work focused on systems managers could keep running after the project ended.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Clients did not just need strategy documents. Banks, insurers, and industrial companies needed operating systems that managers could actually run after the consulting team left.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>I helped build a commercial / SMB banking sales framework in Eastern Europe, helped create the operating model for a non-performing-loan bad bank, and worked on transformation tools and roadmaps across multiple functions.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The work required making complex institutions legible: aligning leadership, process owners, field teams, and technical or financial constraints into a system people could keep using.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
                             <ul class="impact-list">
-                                <li>Commercial / SMB banking framework remains in use 17 years later.</li>
-                                <li>Bad-bank work turned a restructuring problem into a functioning workout entity.</li>
+                                <li>Commercial / SMB banking framework still in use 17 years later.</li>
+                                <li>Bad-bank work turned a restructuring problem into a functioning workout entity, separating bad assets from the healthy bank.</li>
                                 <li>Insurer portfolio cleanup removed 20% inactive / misallocated clients.</li>
                             </ul>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="McKinsey proof points">
-                        <div class="metric">
-                            <b>17 years</b>
-                            <span>Commercial / SMB banking framework still in use.</span>
-                        </div>
-                        <div class="metric">
-                            <b>4 months</b>
-                            <span>Operating model built for a non-performing-loan bad bank.</span>
-                        </div>
-                        <div class="metric">
-                            <b>20 departments</b>
-                            <span>IT strategies combined into one actionable roadmap in another project.</span>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <span>Commercial banking sales framework</span>
                         <span>Bad-bank operating model</span>
                         <span>Transformation tools and roadmaps</span>
@@ -1733,6 +1561,7 @@
                         </div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1748,58 +1577,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="The Premise Lab impact highlights">
-                        <div class="impact-tile">
-                            <strong>AI beyond code</strong>
-                            <span>Uses models for judgment and pre-build thinking, not only for shipping implementation faster.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="The Premise Lab impact highlights">
+                    <span class="chip"><b>Open source</b> + Gemini + Opal</span>
+                    <span class="chip"><b>AI</b> for judgment, not just code</span>
+                    <span class="chip"><b>Philosophy</b> as a build tool</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>AI is getting good at building &mdash; which lets weak ideas harden faster. The expensive failure comes earlier: unclear premises, vague words, and hidden beliefs about how the world works.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Hidden premises</strong>
-                            <span>Helps builders notice what an idea assumes about people, language, institutions, and behavior.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a public, open-source thinking partner combining philosophy, behavioral science, and systems thinking, so you can examine an idea before building it. It asks what must be true, what would prove the idea wrong, and which words carry more confusion than meaning &mdash; without making you perform intelligence for the machine.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Philosophy applied</strong>
-                            <span>Uses Socrates, Popper, Wittgenstein-style questions as practical tools, not intellectual decoration.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Real-world test</strong>
-                            <span>Pushes ideas toward sharper hypotheses, smaller reality contact, and more useful artifacts before action.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>AI tools are increasingly good at building, but that can make weak ideas harden faster. The expensive failure often comes earlier: unclear premises, vague words, unsupported claims, and hidden beliefs about how the world works.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>A public thinking partner that combines philosophy, behavioral science, systems thinking, architecture, and practical judgment so a person can examine an idea before turning it into a product or plan.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The method challenges the idea without making the user perform intelligence for the machine. It asks what must be true, what would prove the idea wrong, and which words are carrying more confusion than meaning.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>The project shows AI as a way to improve judgment before action. A rough thought can become a working hypothesis, a clearer brief, a reality test, and a ledger of the assumptions still owed to the world.</p>
-                        </section>
-                    </div>
-                    <div class="metrics" aria-label="The Premise Lab proof points">
-                        <div class="metric">
-                            <b>Philosophy as tool</b>
-                            <span>Socratic, Popperian, and Wittgenstein-like questions help test what an idea assumes.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Reality contact</b>
-                            <span>Asks what must be true in the world, and who would resist, ignore, misunderstand, or need something different.</span>
-                        </div>
-                        <div class="metric">
-                            <b>Idea artifact</b>
-                            <span>Saves a working hypothesis, clearer brief, and reality-debt ledger for the next step.</span>
+                            <p>A rough thought becomes a working hypothesis, a clearer brief, a reality test, and a ledger of assumptions still owed to the world &mdash; AI used to improve judgment before action.</p>
                         </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <a href="https://github.com/vokativ/premise-lab">GitHub repo</a>
                         <a href="https://gemini.google.com/gem/1q5LvzjQh-pSG5I9E5RAEZ4CgLtqNC1cR?usp=sharing">Gemini Gem</a>
                         <a href="https://opal.google/app/14amAGTURQAnFBo8HRXwUXG4DRIaQUQZA">Opal app with Google Docs output</a>
@@ -1849,13 +1647,14 @@
                         <text class="diagram-subtext" x="386" y="226">small contact</text>
                         <text class="diagram-subtext" x="386" y="241">with the world</text>
                     </svg>
-                    <div class="pipeline">
+                    <div class="pipeline visual-extra">
                         <div class="pipeline-step"><strong>Mirror:</strong> restate the idea in higher resolution before judging it.</div>
                         <div class="pipeline-step"><strong>X-ray:</strong> surface the load-bearing assumption or category mistake.</div>
                         <div class="pipeline-step"><strong>Reframe:</strong> turn the idea into a sharper working hypothesis.</div>
                         <div class="pipeline-step"><strong>Contact:</strong> propose the smallest useful reality test before building.</div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1871,44 +1670,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="hocudaglasam impact highlights">
-                        <div class="impact-tile">
-                            <strong>Several thousand users</strong>
-                            <span>Several thousand Serbian citizens abroad registered through the website.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="hocudaglasam impact highlights">
+                    <span class="chip"><b>Several thousand</b> registered</span>
+                    <span class="chip"><b>Reused</b> across election cycles</span>
+                    <span class="chip"><b>On-device</b> PII, open source</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Serbian citizens abroad faced a clumsy registration: find the right embassy, download and print forms, fill them by hand, scan, and email everything to the correct address.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Reusable civic tool</strong>
-                            <span>The project was reused by other groups in later election cycles.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built an open-source Angular/TypeScript app that generated the registration document client-side and routed it to the right embassy. The core decision was privacy by architecture &mdash; no server-side PII; sensitive data stayed on the user's device, and the public code let citizens and institutions inspect the behavior.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Privacy by design</strong>
-                            <span>Registration documents were generated on-device, avoiding server-side PII collection.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Public trust</strong>
-                            <span>Open-source code and press coverage made the workflow inspectable by citizens and institutions.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Serbian citizens abroad faced a clumsy registration process: finding the right embassy, downloading and printing forms, filling them manually, scanning documents, and sending everything to the correct address.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>An open-source Angular/TypeScript app that generated the registration document client-side and helped users route the completed materials to the relevant embassy or consulate.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The core product decision was privacy by architecture. The app did not need server-side PII collection; sensitive data stayed on the user's device, and the code was public so citizens and institutions could inspect the behavior.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Impact</strong>
-                            <p>The project became public enough to attract institutional scrutiny and press coverage, which made transparency and clear privacy communication as important as the product workflow itself.</p>
-                        </section>
+                            <p>Several thousand registered, the tool was reused in later cycles, and it drew institutional scrutiny and press &mdash; making transparency and clear privacy communication as important as the workflow itself.</p>
+                        </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <a href="https://github.com/vokativ/glasanje">GitHub repo</a>
                         <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian interview</a>
                         <a href="https://www.danas.rs/vesti/politika/sajt-hocudaglasam-com-pojednostavljuje-glasanje-u-inostranstvu/">Danas coverage</a>
@@ -1937,6 +1719,7 @@
                         </div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
 
@@ -1952,44 +1735,27 @@
                 </div>
             </header>
             <div class="artifact-body">
-                <div>
-                    <div class="impact-strip" aria-label="Adiufant impact highlights">
-                        <div class="impact-tile">
-                            <strong>Parent pain</strong>
-                            <span>School logistics arrive as images, PDFs, voice notes, forms, and scattered reminders.</span>
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Adiufant impact highlights">
+                    <span class="chip"><b>Multimodal in</b> &rarr; events + prep</span>
+                    <span class="chip"><b>Gemini</b> extraction</span>
+                    <span class="chip"><b>Active build</b></span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Family logistics arrive as fragmented inputs &mdash; WhatsApp messages, school PDFs, photos, forms, voice notes &mdash; easy to miss until it's too late.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>AI leverage</strong>
-                            <span>Multimodal inputs become calendar events and preparation tasks.</span>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built an early AI assistant that turns multimodal inputs into structured calendar events and preparation tasks with Gemini. Designed around a real workflow, not a generic assistant: extract the event, identify what to prepare, and surface the next action before the parent has to remember it.</p>
                         </div>
-                        <div class="impact-tile">
-                            <strong>Workflow focus</strong>
-                            <span>Designed around what parents need to bring, sign, pay, prepare, or remember.</span>
-                        </div>
-                        <div class="impact-tile">
-                            <strong>Active build</strong>
-                            <span>Proof of ongoing hands-on AI product shipping beyond private company work.</span>
-                        </div>
-                    </div>
-                    <div class="copy-grid">
-                        <section class="copy-box">
-                            <strong>Problem</strong>
-                            <p>Family logistics often arrive as fragmented inputs: WhatsApp messages, school PDFs, photos, forms, voice notes, and reminders that are easy to miss until too late.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Built</strong>
-                            <p>An AI assistant concept and early product that converts multimodal inputs into structured calendar events and preparation tasks using Gemini.</p>
-                        </section>
-                        <section class="copy-box">
-                            <strong>Judgment</strong>
-                            <p>The product is designed around a real workflow rather than a generic assistant: extract the event, identify what needs to be prepared, and make the next action visible before the parent has to remember it.</p>
-                        </section>
-                        <section class="copy-box">
+                        <div class="detail-block">
                             <strong>Status</strong>
-                            <p>This is intentionally framed as an active build, not a mature production system. It is useful proof of ongoing AI product thinking and hands-on shipping beyond private company work.</p>
-                        </section>
+                            <p>Intentionally framed as an active build, not a mature production system &mdash; proof of ongoing hands-on AI product shipping beyond private company work.</p>
+                        </div>
                     </div>
-                    <div class="proof-links">
+                    <div class="proof-links block-extra">
                         <a href="https://adiufant.com">adiufant.com</a>
                         <span>Gemini, multimodal extraction, calendar workflow</span>
                     </div>
@@ -2021,6 +1787,7 @@
                         </div>
                     </div>
                 </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
     </main>
@@ -2028,6 +1795,86 @@
         (() => {
             const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
             const artifacts = Array.from(document.querySelectorAll(".artifact"));
+
+            const cardFromHash = () => {
+                if (window.location.hash.length <= 1) {
+                    return null;
+                }
+
+                try {
+                    const el = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+                    return el && el.classList.contains("artifact") ? el : null;
+                } catch {
+                    return null;
+                }
+            };
+
+            // The toggle only matters on mobile; on desktop everything is shown via CSS.
+            const COLLAPSE_MS = prefersReducedMotion ? 0 : 240;
+
+            const updateToggleLabel = (artifact, open) => {
+                const toggle = artifact.querySelector(".case-toggle");
+
+                if (toggle) {
+                    toggle.setAttribute("aria-expanded", String(open));
+                    toggle.firstChild.textContent = open ? "Show less" : "Show full case";
+                }
+            };
+
+            const setCardOpen = (artifact, open) => {
+                if (open) {
+                    if (artifact.dataset.closeTimer) {
+                        window.clearTimeout(Number(artifact.dataset.closeTimer));
+                        delete artifact.dataset.closeTimer;
+                    }
+                    artifact.classList.remove("is-closing");
+                    artifact.classList.add("is-open");
+                    updateToggleLabel(artifact, true);
+                    return;
+                }
+
+                if (!artifact.classList.contains("is-open")) {
+                    return;
+                }
+
+                updateToggleLabel(artifact, false);
+
+                // Play the exit animation, then actually collapse. Skip the wait when
+                // motion is reduced or the toggle is off-screen (desktop).
+                if (COLLAPSE_MS === 0) {
+                    artifact.classList.remove("is-open", "is-closing");
+                    return;
+                }
+
+                artifact.classList.add("is-closing");
+                const timer = window.setTimeout(() => {
+                    artifact.classList.remove("is-open", "is-closing");
+                    delete artifact.dataset.closeTimer;
+                }, COLLAPSE_MS);
+                artifact.dataset.closeTimer = String(timer);
+            };
+
+            document.querySelectorAll(".case-toggle").forEach((toggle) => {
+                toggle.addEventListener("click", () => {
+                    const artifact = toggle.closest(".artifact");
+
+                    if (artifact) {
+                        setCardOpen(artifact, !artifact.classList.contains("is-open"));
+                    }
+                });
+            });
+
+            // Deep links from the CV pages (e.g. artifacts.html#adiufant) should land on an open case.
+            const openTargetCard = () => {
+                const target = cardFromHash();
+
+                if (target) {
+                    setCardOpen(target, true);
+                }
+            };
+
+            openTargetCard();
+            window.addEventListener("hashchange", openTargetCard);
 
             if (!prefersReducedMotion) {
                 document.querySelectorAll(".diagram-line").forEach((line) => {
@@ -2047,18 +1894,10 @@
                     }
                 });
 
-                if (window.location.hash.length > 1) {
-                    let target = null;
+                const hashTarget = cardFromHash();
 
-                    try {
-                        target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
-                    } catch {
-                        target = null;
-                    }
-
-                    if (target && target.classList.contains("artifact")) {
-                        target.classList.add("is-visible");
-                    }
+                if (hashTarget) {
+                    hashTarget.classList.add("is-visible");
                 }
 
                 document.body.classList.add("motion-ready");
