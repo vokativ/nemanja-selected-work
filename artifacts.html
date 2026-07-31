@@ -1167,7 +1167,7 @@
                             <p>Designed, built, and launched a production mobile application (iOS &amp; Android) that converts unstructured media into verified calendar entries, preparation actions (what to bring, sign, pay, or remember), and family contact tags.</p>
                             <p>Architected a local-first dual-database model: local SQLite guarantees zero data loss and instant offline writes, paired with cloud synchronization for cross-device state and token cost tracking. Built a zero-trust backend AI proxy on cloud functions with secret management and App Check to keep credentials off devices while tracking unit economics. Designed a specialized calendar scanner to extract ICS events from photos of work calendars, solving an enterprise IT restriction edge case for parents unable to sync corporate and personal schedules.</p>
                         </div>
-                        <div class="detail-block">
+                        <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
                             <p>Releasing to General Availability (GA) at <a href="https://adiufant.com">adiufant.com</a> on iOS &amp; Android next week, backed by production cloud infrastructure, token usage tracking, and 26+ specification integration tests &mdash; proving hands-on consumer AI software shipping beyond enterprise platform leadership.</p>
                         </div>
@@ -1180,28 +1180,30 @@
                 <aside class="visual" aria-label="Adiufant product showcase and architecture">
                     <p class="visual-title">Product in action: Notice to structured event</p>
                     <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
-                    <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
-                    <div class="flow">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Multimodal Input</b>
-                                <span>Photo, PDF, voice note, message, or work calendar photo.</span>
+                    <div class="visual-extra">
+                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
+                        <div class="flow">
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Multimodal Input</b>
+                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Secure AI Proxy</b>
+                                    <span>Backend proxy + AI API model + token cost analytics.</span>
+                                </div>
                             </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Secure AI Proxy</b>
-                                <span>Backend proxy + AI API model + token cost analytics.</span>
-                            </div>
-                        </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Save-First Review</b>
-                                <span>Local SQLite store with main events, prep tasks &amp; people tags.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Calendar &amp; Sync</b>
-                                <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Save-First Review</b>
+                                    <span>Local SQLite store with main events, prep tasks &amp; people tags.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Calendar &amp; Sync</b>
+                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
