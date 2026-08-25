@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Grujičić - Selected Work</title>
-    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, open-source agent methods, civic technology, and AI calendar assistance.">
-    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, live metrics dashboard, open-source AI agent skill, Premise Lab, idea stress-testing, civic technology, privacy by architecture, AI calendar assistant, product operations, technical product leadership">
+    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, civic technology, a production AI family organizer, and a privacy-first language-conversion extension.">
+    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, civic technology, privacy by architecture, AI family organizer, local-first mobile app, browser extension, Latin Cyrillic conversion, Ekavian Ijekavian conversion, linguistic data, product operations, technical product leadership">
     <meta property="og:title" content="Nemanja Grujičić - Selected Work">
     <meta property="og:description" content="Selected public projects and sanitized private-platform case studies behind the CV.">
     <meta property="og:type" content="website">
@@ -54,16 +54,21 @@
             },
             {
                 "@type": "SoftwareApplication",
-                "name": "Adiufant",
-                "url": "https://adiufant.com",
-                "applicationCategory": "ProductivityApplication",
-                "description": "Production mobile app live at adiufant.com on both the Apple App Store and Google Play; turns school PDFs, photos, voice notes, calendar screenshots, and text into calendar events and preparation tasks."
-            },
-            {
-                "@type": "SoftwareApplication",
                 "name": "Golf Genie",
                 "applicationCategory": "BusinessApplication",
                 "description": "Internal conversational analytics application using Gemini, verified query patterns, BigQuery, visible SQL, and CSV/Excel export to help non-technical users explore business questions."
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Adiufant",
+                "url": "https://adiufant.com",
+                "applicationCategory": "ProductivityApplication",
+                "description": "Production mobile app for iPhone and Android, live at adiufant.com; turns family-related PDFs, photos, voice notes, shared files, and calendar screenshots into structured events and preparation tasks.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Vulcanus Holdings, Inc.",
+                    "url": "https://vulcanusholdings.com"
+                }
             },
             {
                 "@type": "CreativeWork",
@@ -82,13 +87,13 @@
             },
             {
                 "@type": "CreativeWork",
-                "name": "Company Office Metrics Display",
-                "description": "Live office metrics display using BigQuery-backed refreshes, Canvas 2D, WebSockets, and TV-compatible rendering for shared operating visibility."
+                "name": "McKinsey: Durable Operating Systems",
+                "description": "Selected consulting work that mattered because clients kept using the operating systems after the project ended."
             },
             {
                 "@type": "CreativeWork",
-                "name": "McKinsey: Durable Operating Systems",
-                "description": "Selected consulting work that mattered because clients kept using the operating systems after the project ended."
+                "name": "Company Office Metrics Display",
+                "description": "Live office metrics display using BigQuery-backed refreshes, Canvas 2D, WebSockets, and TV-compatible rendering for shared operating visibility."
             },
             {
                 "@type": "SoftwareSourceCode",
@@ -103,6 +108,13 @@
                 "codeRepository": "https://github.com/vokativ/glasanje",
                 "programmingLanguage": ["TypeScript", "Angular"],
                 "description": "Open-source Serbian diaspora voter-registration portal with client-side document generation and no server-side PII collection."
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Prepiši",
+                "url": "https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb",
+                "applicationCategory": "UtilitiesApplication",
+                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge. It converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants without uploading page text."
             }
         ],
         "mainEntityOfPage": {
@@ -1139,80 +1151,6 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
-        <article class="artifact" id="adiufant">
-            <header class="artifact-header">
-                <div>
-                    <h2>Adiufant</h2>
-                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning fragmented school PDFs, photos, voice notes, calendar screenshots, and chat messages into structured calendar events and preparation checklists.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Live Product</span>
-                    <a class="copy-link" href="#adiufant" data-copy-link aria-label="Copy link to Adiufant">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Adiufant impact highlights">
-                    <span class="chip"><b>Multimodal AI</b> &rarr; events + prep</span>
-                    <span class="chip"><b>Local-first Dual DB</b> (Offline + Sync)</span>
-                    <span class="chip"><b>Zero-trust AI Proxy</b> (Security + Analytics)</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>Family logistics arrive as fragmented, noisy inputs &mdash; WhatsApp messages, school PDFs, paper forms, voice notes, and work calendar photos &mdash; creating high mental overhead and missed preparation steps across the family unit.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Designed, built, and launched a production mobile application (iOS &amp; Android) that converts unstructured media into verified calendar entries, preparation actions (what to bring, sign, pay, or remember), and family contact tags.</p>
-                            <p>Architected a local-first dual-database model: local SQLite guarantees zero data loss and instant offline writes, paired with cloud synchronization for cross-device state and token cost tracking. Built a zero-trust backend AI proxy on cloud functions with secret management and App Check to keep credentials off devices while tracking unit economics. Designed a specialized calendar scanner to extract ICS events from photos of work calendars, solving an enterprise IT restriction edge case for parents unable to sync corporate and personal schedules.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>Status &amp; Delivery</strong>
-                            <p>Publicly launched in August 2026 and live on both the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> and <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>, currently shipping v1.1.1, backed by production cloud infrastructure, token usage tracking, and 26+ specification integration tests &mdash; proving hands-on consumer AI software shipping beyond enterprise platform leadership.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <a href="https://adiufant.com">adiufant.com</a>
-                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
-                        <span>Flutter (iOS &amp; Android), Multimodal AI API, Secure AI Backend Proxy, Local SQLite + Cloud Sync</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Adiufant product showcase and architecture">
-                    <p class="visual-title">Product in action: Notice to structured event</p>
-                    <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
-                    <div class="visual-extra">
-                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
-                        <div class="flow">
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Multimodal Input</b>
-                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Secure AI Proxy</b>
-                                    <span>Backend proxy + AI API model + token cost analytics.</span>
-                                </div>
-                            </div>
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Save-First Review</b>
-                                    <span>Local SQLite store with main events, prep tasks &amp; people tags.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Calendar &amp; Sync</b>
-                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
         <article class="artifact" id="golf-genie">
             <header class="artifact-header">
                 <div>
@@ -1313,6 +1251,80 @@
             </div>
         </article>
 
+        <article class="artifact" id="adiufant">
+            <header class="artifact-header">
+                <div>
+                    <h2>Adiufant</h2>
+                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning family-related images, PDFs, voice notes, shared files, and calendar screenshots into structured calendar events and preparation checklists.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Live Product</span>
+                    <a class="copy-link" href="#adiufant" data-copy-link aria-label="Copy link to Adiufant">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Adiufant impact highlights">
+                    <span class="chip"><b>Two app stores</b> &rarr; Android + iPhone</span>
+                    <span class="chip"><b>Discovery-shaped</b> feature set</span>
+                    <span class="chip"><b>Local-first AI</b> &rarr; review before action</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>While coordinating two children's lives, my wife and I found that even a shared calendar solved only part of the problem. Information arrived through school apps, chats, flyers, PDFs, screenshots, voice notes, and work calendars; entering it was a constant time tax, and a date alone did not capture what had to be brought, signed, paid, or prepared beforehand.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>I tested model feasibility in early 2025, built a web demo over the summer, and learned that a browser upload flow was too clunky because parents' source information lives on their phones. I then owned the mobile product, architecture, implementation, testing, customer discovery, and store releases end to end, using AI development tools throughout.</p>
+                            <p>Conversations with roughly two dozen busy parents and feedback from the first several dozen users moved voice input to the top level, added whole-calendar import from school or work materials, and created typed or spoken context so incoming assets can be mapped to the right Important Person. Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through protected Firebase callable functions to Gemini before normalized suggestions are saved for an explicit accept-or-skip review.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and publicly launched in August 2026 at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>, and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>. Both stores are live on v1.1.1. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://adiufant.com">adiufant.com</a>
+                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
+                        <span>Flutter, Riverpod, Drift, Firebase Authentication, Firestore Sync, Cloud Functions, Gemini, App Check</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Adiufant product showcase and architecture">
+                    <p class="visual-title">Product in action: Notice to structured event</p>
+                    <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
+                    <div class="visual-extra">
+                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
+                        <div class="flow">
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Multimodal Input</b>
+                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Protected AI Pipeline</b>
+                                    <span>Auth + App Check + callable backend + temporary media staging + Gemini.</span>
+                                </div>
+                            </div>
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Save-First Review</b>
+                                    <span>Pending events, preparation tasks &amp; Important People in Drift.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Calendar &amp; Sync</b>
+                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
         <article class="artifact" id="support-ai-reset">
             <header class="artifact-header">
                 <div>
@@ -1502,87 +1514,6 @@
         </article>
 
 
-        <article class="artifact" id="office-metrics">
-            <header class="artifact-header">
-                <div>
-                    <h2>Company Office Metrics Display</h2>
-                    <p class="artifact-summary">A live TV-native dashboard that gave offices a shared view of what was happening across products, channels, customers, support, logistics, and regions.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Live operations</span>
-                    <a class="copy-link" href="#office-metrics" data-copy-link aria-label="Copy link to Company Office Metrics Display">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Office metrics display impact highlights">
-                    <span class="chip"><b>4 offices</b>, one live view</span>
-                    <span class="chip"><b>Responsive</b>: TV, 4K, and mobile</span>
-                    <span class="chip"><b>Always-on</b> cadence</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>Company results were siloed. Teams had no shared, ambient view of product usage, sales, support signals, logistics, or customer feedback &mdash; and fragmented updates filled the gap.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Built a Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes for office TVs (including Amazon Silk on Fire TV), scaling from mobile to 4K. Display context was a product constraint &mdash; URL parameters set units, so North American teams saw imperial while others saw metric.</p>
-                        </div>
-                        <div class="detail-block">
-                            <strong>Impact</strong>
-                            <p>All four global offices saw the same live picture at once, without digging through reports &mdash; surfacing unusual changes and aligning teams across functions.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <span>Bun, TypeScript, Canvas 2D, WebSockets</span>
-                        <span>BigQuery-backed metrics</span>
-                        <span>TV, mobile, and 4K layouts</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Office metrics display data flow">
-                    <p class="visual-title">Signals included</p>
-                    <svg class="diagram" viewBox="0 0 520 250" role="img" aria-label="Office metrics display flow">
-                        <rect class="diagram-card" x="16" y="20" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="49">sales</text>
-                        <rect class="diagram-card" x="16" y="79" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="108">logistics</text>
-                        <rect class="diagram-card" x="16" y="138" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="167">product usage</text>
-                        <rect class="diagram-card" x="16" y="197" width="116" height="38" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="222">surveys</text>
-
-                        <path class="diagram-line" d="M144 44 C174 44 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 103 C174 103 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 162 C174 162 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 216 C174 216 174 125 204 125"></path>
-
-                        <rect class="diagram-card core" x="204" y="78" width="120" height="94" rx="8"></rect>
-                        <text class="diagram-text" x="220" y="108">BigQuery</text>
-                        <text class="diagram-subtext" x="220" y="128">refreshes</text>
-                        <text class="diagram-subtext" x="220" y="146">metric cards</text>
-                        <text class="diagram-subtext" x="220" y="164">alert signals</text>
-
-                        <path class="diagram-line" d="M336 125 H382"></path>
-                        <rect class="diagram-card good" x="382" y="50" width="120" height="150" rx="8"></rect>
-                        <text class="diagram-text" x="398" y="82">TV display</text>
-                        <text class="diagram-subtext" x="398" y="104">Canvas 2D</text>
-                        <text class="diagram-subtext" x="398" y="124">WebSockets</text>
-                        <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
-                        <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
-                    </svg>
-                    <div class="pipeline visual-extra">
-                        <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
-                        <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
-                        <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
-                        <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
-
-
         <article class="artifact" id="mckinsey-operating-systems">
             <header class="artifact-header">
                 <div>
@@ -1666,6 +1597,87 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
+        <article class="artifact" id="office-metrics">
+            <header class="artifact-header">
+                <div>
+                    <h2>Company Office Metrics Display</h2>
+                    <p class="artifact-summary">A live TV-native dashboard that gave offices a shared view of what was happening across products, channels, customers, support, logistics, and regions.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Live operations</span>
+                    <a class="copy-link" href="#office-metrics" data-copy-link aria-label="Copy link to Company Office Metrics Display">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Office metrics display impact highlights">
+                    <span class="chip"><b>4 offices</b>, one live view</span>
+                    <span class="chip"><b>Responsive</b>: TV, 4K, and mobile</span>
+                    <span class="chip"><b>Always-on</b> cadence</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Company results were siloed. Teams had no shared, ambient view of product usage, sales, support signals, logistics, or customer feedback &mdash; and fragmented updates filled the gap.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes for office TVs (including Amazon Silk on Fire TV), scaling from mobile to 4K. Display context was a product constraint &mdash; URL parameters set units, so North American teams saw imperial while others saw metric.</p>
+                        </div>
+                        <div class="detail-block">
+                            <strong>Impact</strong>
+                            <p>All four global offices saw the same live picture at once, without digging through reports &mdash; surfacing unusual changes and aligning teams across functions.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <span>Bun, TypeScript, Canvas 2D, WebSockets</span>
+                        <span>BigQuery-backed metrics</span>
+                        <span>TV, mobile, and 4K layouts</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Office metrics display data flow">
+                    <p class="visual-title">Signals included</p>
+                    <svg class="diagram" viewBox="0 0 520 250" role="img" aria-label="Office metrics display flow">
+                        <rect class="diagram-card" x="16" y="20" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="49">sales</text>
+                        <rect class="diagram-card" x="16" y="79" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="108">logistics</text>
+                        <rect class="diagram-card" x="16" y="138" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="167">product usage</text>
+                        <rect class="diagram-card" x="16" y="197" width="116" height="38" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="222">surveys</text>
+
+                        <path class="diagram-line" d="M144 44 C174 44 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 103 C174 103 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 162 C174 162 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 216 C174 216 174 125 204 125"></path>
+
+                        <rect class="diagram-card core" x="204" y="78" width="120" height="94" rx="8"></rect>
+                        <text class="diagram-text" x="220" y="108">BigQuery</text>
+                        <text class="diagram-subtext" x="220" y="128">refreshes</text>
+                        <text class="diagram-subtext" x="220" y="146">metric cards</text>
+                        <text class="diagram-subtext" x="220" y="164">alert signals</text>
+
+                        <path class="diagram-line" d="M336 125 H382"></path>
+                        <rect class="diagram-card good" x="382" y="50" width="120" height="150" rx="8"></rect>
+                        <text class="diagram-text" x="398" y="82">TV display</text>
+                        <text class="diagram-subtext" x="398" y="104">Canvas 2D</text>
+                        <text class="diagram-subtext" x="398" y="124">WebSockets</text>
+                        <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
+                        <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
+                    </svg>
+                    <div class="pipeline visual-extra">
+                        <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
+                        <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
+                        <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
+                        <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+
 
         <article class="artifact" id="premise-lab">
             <header class="artifact-header">
@@ -1818,6 +1830,76 @@
                                 <li>Sign on phone and generate the PDF locally</li>
                                 <li>Send a pre-filled email with only passport image added</li>
                             </ul>
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+        <article class="artifact" id="prepisi">
+            <header class="artifact-header">
+                <div>
+                    <h2>Prepiši</h2>
+                    <p class="artifact-summary">Privacy-first browser extension for reading Serbian, Croatian, Bosnian, and Montenegrin web text in a preferred script and pronunciation — with all conversion performed locally in the browser.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Published Extension</span>
+                    <a class="copy-link" href="#prepisi" data-copy-link aria-label="Copy link to Prepiši">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="Prepiši impact highlights">
+                        <span class="chip"><b>Three stores</b> &rarr; Chrome, Firefox &amp; Edge</span>
+                        <span class="chip"><b>Reviewed language data</b>, not guesswork</span>
+                        <span class="chip"><b>No server</b>, no tracking</span>
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>I grew up reading both Latin and Cyrillic and encountering Serbian, Croatian, Bosnian, and Montenegrin variants. It was frustrating that modern regional websites usually offered only the script easiest for them to publish and one institutionally favored dialect. I wanted one-click control over how everyday news and other web content looked to me, while preserving rather than flattening that diversity.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>I owned the product direction, implementation, linguistic research, testing, and store publication end to end with AI assistance. The first working extension came from one intensive day of research and coding in August 2026, followed by two focused refinement sessions. AI-assisted research helped locate corpora, lexicons, morphological evidence, and regional sources; proposed rules still had to pass explicit review and safety boundaries.</p>
+                            <p>The fully local engine converts Latin and Cyrillic bidirectionally and supports reviewed Ekavian, Ijekavian, and limited Ikavian forms. It recalculates each change from the original page, handles dynamic content, and protects code, forms, URLs, email addresses, names, brands, handles, and foreign-language spans instead of forcing plausible-looking but wrong conversions.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Version 0.9.1 is published on the Chrome Web Store, Mozilla Add-ons for desktop and Android, and Microsoft Edge Add-ons. Its 4,102 exact linguistic rows sit behind 91 offline tests and 12 browser-DOM checks in the current documented baseline. There is no server, account, telemetry, analytics, browsing-time network request, or page-text upload.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb">Chrome Web Store</a>
+                        <a href="https://addons.mozilla.org/firefox/addon/prepisi-converter/">Firefox Add-ons</a>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/prepi%C5%A1i/idgdmkmmdemdhdkenlodijkljpbckool">Microsoft Edge Add-ons</a>
+                        <span>Manifest V3, offline transformation engine, reviewed linguistic data, scoped DOM observation</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Prepiši product architecture">
+                    <p class="visual-title">Local conversion boundary</p>
+                    <div class="flow">
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Active page</b>
+                                <span>Only user-visible, eligible text is considered.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Offline rules</b>
+                                <span>Script, pronunciation, and protected-term logic run in-browser.</span>
+                            </div>
+                        </div>
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Reversible result</b>
+                                <span>Changes are recalculated from original text.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Local preference</b>
+                                <span>Optional setting persists only for a chosen site.</span>
+                            </div>
                         </div>
                     </div>
                 </aside>
