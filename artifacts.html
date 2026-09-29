@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Grujičić - Selected Work</title>
     <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, civic technology, a production AI family organizer, and a privacy-first language-conversion extension.">
-    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, civic technology, privacy by architecture, AI family organizer, local-first mobile app, browser extension, Latin Cyrillic conversion, Ekavian Ijekavian conversion, linguistic data, product operations, technical product leadership">
+    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, civic technology, privacy by architecture, Korak do glasa, AI family organizer, Adiufant, local-first mobile app, browser extension, Prepiši, Latin Cyrillic conversion, Ekavian Ijekavian conversion, linguistic data, product operations, technical product leadership">
     <meta property="og:title" content="Nemanja Grujičić - Selected Work">
     <meta property="og:description" content="Selected public projects and sanitized private-platform case studies behind the CV.">
     <meta property="og:type" content="website">
@@ -103,18 +103,21 @@
                 "description": "Open-source AI-agent method and skill package for stress-testing early ideas before they harden into code, with installer guides and tool-specific distributions."
             },
             {
-                "@type": "SoftwareSourceCode",
-                "name": "hocudaglasam.com",
+                "@type": "SoftwareApplication",
+                "name": "Korak do glasa",
+                "url": "https://korakdoglasa.org/",
                 "codeRepository": "https://github.com/vokativ/glasanje",
-                "programmingLanguage": ["TypeScript", "Angular"],
-                "description": "Open-source Serbian diaspora voter-registration portal with client-side document generation and no server-side PII collection."
+                "applicationCategory": "GovernmentApplication",
+                "operatingSystem": "All modern browsers",
+                "description": "Open-source civic-tech diaspora voter-registration platform for Serbia's 2026 election cycle. Features client-side document generation with zero server-side applicant PII and an automated source-backed diplomatic mission verification pipeline."
             },
             {
                 "@type": "SoftwareApplication",
                 "name": "Prepiši",
                 "url": "https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb",
+                "codeRepository": "https://github.com/vokativ/prepisi",
                 "applicationCategory": "UtilitiesApplication",
-                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge. It converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants without uploading page text."
+                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge (v0.9.3). Converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants with 100% client-side conversion and zero page-text upload."
             }
         ],
         "mainEntityOfPage": {
@@ -1027,6 +1030,7 @@
                 <a href="https://www.linkedin.com/in/grujicicnemanja/">LinkedIn</a>
                 <a href="https://github.com/vokativ/">GitHub</a>
                 <span>Singapore / Remote</span>
+                <span>Updated Sep 2026</span>
             </nav>
         </section>
 
@@ -1255,7 +1259,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>Adiufant</h2>
-                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning family-related images, PDFs, voice notes, shared files, and calendar screenshots into structured calendar events and preparation checklists.</p>
+                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning family-related images, PDFs, voice notes, shared files, and calendar screenshots into structured calendar events and preparation checklists with scheduling safeguards.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Live Product</span>
@@ -1266,8 +1270,8 @@
                 <div class="col-main">
                 <div class="impact-chips" aria-label="Adiufant impact highlights">
                     <span class="chip"><b>Two app stores</b> &rarr; Android + iPhone</span>
-                    <span class="chip"><b>Discovery-shaped</b> feature set</span>
-                    <span class="chip"><b>Local-first AI</b> &rarr; review before action</span>
+                    <span class="chip"><b>Review before action</b> &rarr; local-first</span>
+                    <span class="chip"><b>Auto-reschedule &amp; undo</b> &rarr; safeguards</span>
                 </div>
                 <div class="prose">
                         <div class="detail-block">
@@ -1277,18 +1281,18 @@
                         <div class="detail-block block-extra">
                             <strong>What I did</strong>
                             <p>I tested model feasibility in early 2025, built a web demo over the summer, and learned that a browser upload flow was too clunky because parents' source information lives on their phones. I then owned the mobile product, architecture, implementation, testing, customer discovery, and store releases end to end, using AI development tools throughout.</p>
-                            <p>Conversations with roughly two dozen busy parents and feedback from the first several dozen users moved voice input to the top level, added whole-calendar import from school or work materials, and created typed or spoken context so incoming assets can be mapped to the right Important Person. Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through protected Firebase callable functions to Gemini before normalized suggestions are saved for an explicit accept-or-skip review.</p>
+                            <p>Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through authenticated Firebase callable functions to Gemini with App Check protection before normalized suggestions are saved for an explicit accept-or-skip review. To make AI dependable in daily use, built temporal grounding guardrails to detect and fall back from prior-year resolution hallucinations on undated notices. When an event date is adjusted, a dedicated reschedule engine dynamically updates derived preparation task deadlines, pairing instant slide-fade feedback with an inline undo action. System share targets are isolated from capture flows to preserve original event start dates.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and publicly launched in August 2026 at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>, and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>. Version 1.1.0+18 is the documented release baseline; Android has approved the newest polished build and its Apple counterpart is awaiting review. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
+                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> (v1.3.1, build 25), and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (v1.3.0, build 25). Iterative releases added dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
                         <a href="https://adiufant.com">adiufant.com</a>
                         <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
                         <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
-                        <span>Flutter, Riverpod, Drift, Firebase Authentication, Firestore Sync, Cloud Functions, Gemini, App Check</span>
+                        <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, App Check, Temporal Guardrails</span>
                     </div>
                 </div>
                 <aside class="visual" aria-label="Adiufant product showcase and architecture">
@@ -1775,60 +1779,63 @@
         <article class="artifact" id="hocudaglasam">
             <header class="artifact-header">
                 <div>
-                    <h2>hocudaglasam.com</h2>
-                    <p class="artifact-summary">A public civic-tech product that simplified Serbian diaspora voter registration while keeping sensitive personal data on the user's device.</p>
+                    <h2>Korak do glasa</h2>
+                    <p class="artifact-summary">Civic-tech diaspora voter-registration platform active for Serbia's 2026 election cycle &mdash; combining client-side document generation with a source-backed verification pipeline for diplomatic mission contacts.</p>
                 </div>
                 <div class="artifact-actions">
-                    <span class="tag">Public project</span>
-                    <a class="copy-link" href="#hocudaglasam" data-copy-link aria-label="Copy link to hocudaglasam.com">Copy link</a>
+                    <span class="tag">Live Civic Tech</span>
+                    <a class="copy-link" href="#hocudaglasam" data-copy-link aria-label="Copy link to Korak do glasa">Copy link</a>
                 </div>
             </header>
             <div class="artifact-body">
                 <div class="col-main">
-                <div class="impact-chips" aria-label="hocudaglasam impact highlights">
-                    <span class="chip"><b>Several thousand</b> registered</span>
-                    <span class="chip"><b>Reused</b> across election cycles</span>
-                    <span class="chip"><b>On-device</b> PII, open source</span>
+                <div class="impact-chips" aria-label="Korak do glasa impact highlights">
+                    <span class="chip"><b>2026 election</b> refresh</span>
+                    <span class="chip"><b>Source-backed</b> recipient pipeline</span>
+                    <span class="chip"><b>No server-side</b> applicant PII</span>
                 </div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
-                            <p>Serbian citizens abroad faced a clumsy registration: find the right embassy, download and print forms, fill them by hand, scan, and email everything to the correct address.</p>
+                            <p>Serbian citizens abroad face a clumsy, high-friction registration process: locating covering embassies across jurisdictions, tracking down whether specific election mailboxes or notices exist, printing and hand-signing forms, attaching ID scans, and sending them before strict legal deadlines.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I did</strong>
-                            <p>Built an open-source Angular/TypeScript app that generated the registration document client-side and routed it to the right embassy. The core decision was privacy by architecture &mdash; no server-side PII; sensitive data stayed on the user's device, and the public code let citizens and institutions inspect the behavior.</p>
+                            <p>Originally created hocudaglasam.com in 2020 and refreshed the platform for Serbia's 2026 parliamentary election cycle as Korak do glasa (korakdoglasa.org). Rebuilt the frontend as a React 19 / TypeScript application using Vite and Bun, hosted on Firebase. Built an automated Python ingestion and verification pipeline that audits Ministry of Foreign Affairs directories and mission portals, enforces evidence citations before promoting newly published election mailboxes, and exposes a strict four-state coverage contract (confirmed, partial, notice-published, unconfirmed).</p>
+                            <p>The browser generates official voter registration PDFs locally with an embedded Cyrillic font and optional client-side ID document attachment. No applicant personal data or documents are ever transmitted to or stored on project servers; the completed PDF is handed off directly to the user's system mail or file-sharing app.</p>
                         </div>
                         <div class="detail-block">
-                            <strong>Impact</strong>
-                            <p>Several thousand registered, the tool was reused in later cycles, and it drew institutional scrutiny and press &mdash; making transparency and clear privacy communication as important as the workflow itself.</p>
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Live at <a href="https://korakdoglasa.org/">korakdoglasa.org</a> for the 2026 election cycle. Open source on GitHub with automated recipient verification and station coverage tests. (The historical 2020 domain hocudaglasam.com lapsed after prior cycles and now hosts unrelated third-party content; all current operations are maintained under korakdoglasa.org).</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
+                        <a href="https://korakdoglasa.org/">korakdoglasa.org</a>
                         <a href="https://github.com/vokativ/glasanje">GitHub repo</a>
-                        <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian interview</a>
-                        <a href="https://www.danas.rs/vesti/politika/sajt-hocudaglasam-com-pojednostavljuje-glasanje-u-inostranstvu/">Danas coverage</a>
+                        <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian interview (2020)</a>
+                        <a href="https://www.danas.rs/vesti/politika/sajt-hocudaglasam-com-pojednostavljuje-glasanje-u-inostranstvu/">Danas coverage (2020)</a>
+                        <span>React 19, TypeScript, Vite, Bun, Python verification pipeline, client-side PDF, zero server-side PII, Firebase Hosting</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="hocudaglasam before and after voter registration workflow">
-                    <p class="visual-title">Diaspora registration: before vs product</p>
+                <aside class="visual" aria-label="Korak do glasa before and after voter registration workflow">
+                    <p class="visual-title">Diaspora registration: manual vs verified &amp; local</p>
                     <div class="before-after">
                         <div class="state before">
-                            <h3>Before: fragmented search</h3>
+                            <h3>Before: manual &amp; unverified</h3>
                             <ul>
-                                <li>Find the right ministry and embassy pages</li>
-                                <li>Hope the registration email and PDF are published</li>
-                                <li>Print, fill by pen, scan, and attach documents</li>
-                                <li>Manually address the correct embassy email</li>
+                                <li>Search ministry pages and hope notices are current</li>
+                                <li>Guess whether general embassy inbox handles voting</li>
+                                <li>Print, hand-write, scan, and attach sensitive ID files</li>
+                                <li>Fragmented instructions across diplomatic posts</li>
                             </ul>
                         </div>
                         <div class="state after">
-                            <h3>After: guided flow</h3>
+                            <h3>After: verified &amp; local</h3>
                             <ul>
-                                <li>Pick country of residence</li>
-                                <li>Embassy and form details load automatically</li>
-                                <li>Sign on phone and generate the PDF locally</li>
-                                <li>Send a pre-filled email with only passport image added</li>
+                                <li>Automated pipeline audits notices &amp; coverage contracts</li>
+                                <li>4-state recipient certainty (confirmed, partial, notice, unconfirmed)</li>
+                                <li>Client-side PDF generation with embedded Cyrillic font</li>
+                                <li>Zero server-side PII: all data and documents stay on-device</li>
                             </ul>
                         </div>
                     </div>
@@ -1840,7 +1847,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>Prepiši</h2>
-                    <p class="artifact-summary">Privacy-first browser extension for reading Serbian, Croatian, Bosnian, and Montenegrin web text in a preferred script and pronunciation — with all conversion performed locally in the browser.</p>
+                    <p class="artifact-summary">Privacy-first offline browser extension for reading Serbian, Croatian, Bosnian, and Montenegrin web text in a preferred script and pronunciation &mdash; with 100% client-side conversion and zero page-text upload.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Published Extension</span>
@@ -1851,8 +1858,8 @@
                 <div class="col-main">
                     <div class="impact-chips" aria-label="Prepiši impact highlights">
                         <span class="chip"><b>Three stores</b> &rarr; Chrome, Firefox &amp; Edge</span>
-                        <span class="chip"><b>Reviewed language data</b>, not guesswork</span>
-                        <span class="chip"><b>No server</b>, no tracking</span>
+                        <span class="chip"><b>137 curated</b> media families</span>
+                        <span class="chip"><b>Zero network</b> requests</span>
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1861,19 +1868,21 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I built</strong>
-                            <p>I owned the product direction, implementation, linguistic research, testing, and store publication end to end with AI assistance. The first working extension came from one intensive day of research and coding in August 2026, followed by two focused refinement sessions. AI-assisted research helped locate corpora, lexicons, morphological evidence, and regional sources; proposed rules still had to pass explicit review and safety boundaries.</p>
-                            <p>The fully local engine converts Latin and Cyrillic bidirectionally and supports reviewed Ekavian, Ijekavian, and limited Ikavian forms. It recalculates each change from the original page, handles dynamic content, and protects code, forms, URLs, email addresses, names, brands, handles, and foreign-language spans instead of forcing plausible-looking but wrong conversions.</p>
+                            <p>Built a shared local conversion engine in TypeScript/JavaScript with strict boundary protection. Rather than relying on non-deterministic LLMs at browsing time, the extension uses 4,102 verified linguistic transformation rows, bidirectional Latin-Cyrillic mapping, and curated phonetic rules for Ekavian, Ijekavian, and Ikavian variants. The content engine safely protects code, forms, URLs, emails, brands, handles, and foreign-language spans while observing dynamic DOM mutations.</p>
+                            <p>Authored a dependency-free Node packaging pipeline with byte-level archive validation and cross-browser manifest handling (Manifest V3). Managed browser-specific permission and lifecycle differences across Chrome, Firefox (desktop + Android), and Microsoft Edge.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Version 0.9.1 is published on the Chrome Web Store, Mozilla Add-ons for desktop and Android, and Microsoft Edge Add-ons. Its 4,102 exact linguistic rows sit behind 91 offline tests and 12 browser-DOM checks in the current documented baseline. There is no server, account, telemetry, analytics, browsing-time network request, or page-text upload.</p>
+                            <p>Version 0.9.3 is published and live on Mozilla Firefox Add-ons (desktop + Android), the Chrome Web Store, and Microsoft Edge Add-ons. The engine is backed by 92 offline unit/integration tests and 12 headless-Chrome DOM checks, with a curated catalog of 137 regional media families (generating 600 explicit Firefox host permission patterns). Operates entirely offline with no analytics, telemetry, or remote text processing.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
                         <a href="https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb">Chrome Web Store</a>
                         <a href="https://addons.mozilla.org/firefox/addon/prepisi-converter/">Firefox Add-ons</a>
                         <a href="https://microsoftedge.microsoft.com/addons/detail/prepi%C5%A1i/idgdmkmmdemdhdkenlodijkljpbckool">Microsoft Edge Add-ons</a>
-                        <span>Manifest V3, offline transformation engine, reviewed linguistic data, scoped DOM observation</span>
+                        <a href="https://github.com/vokativ/prepisi">GitHub repo</a>
+                        <a href="https://github.com/vokativ/prepisi/blob/main/PRIVACY.md">Privacy Policy</a>
+                        <span>WebExtensions, Manifest V3, Offline transformation engine, Reviewed linguistic data, Dependency-free Node packager</span>
                     </div>
                 </div>
                 <aside class="visual" aria-label="Prepiši product architecture">

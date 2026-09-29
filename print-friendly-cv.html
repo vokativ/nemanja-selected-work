@@ -70,6 +70,16 @@
             font-weight: 750;
             font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
         }
+        .contact-line {
+            margin: 4px 0 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 550;
+        }
+
+        .contact-line a {
+            color: inherit;
+        }
 
         .links {
             display: flex;
@@ -217,6 +227,15 @@
                 font-size: 8pt;
                 margin: 3pt 0 5pt;
             }
+            .contact-line {
+                font-size: 7.8pt;
+                color: var(--muted);
+                margin: 2pt 0 0;
+            }
+
+            .contact-line a {
+                color: inherit;
+            }
 
             section {
                 padding: 6pt 0;
@@ -271,8 +290,8 @@
                 content: " (https://vokativ.github.io/nemanja-selected-work/artifacts.html)";
             }
 
-            a[href="artifacts.html#hocudaglasam"]::after,
-            a[href="artifacts.html#adiufant"]::after {
+            a[href^="artifacts.html#"]::after,
+            .contact-line a::after {
                 content: "";
             }
         }
@@ -283,12 +302,13 @@
         <header>
             <h1>Nemanja Grujičić</h1>
             <div class="subtitle">AI &amp; Data Builder-Translator | Enterprise AI Deployment | Product / Operations Systems | ex Google &amp; McKinsey</div>
+            <div class="contact-line">Singapore / Remote &bull; <a href="https://www.linkedin.com/in/grujicicnemanja/">linkedin.com/in/grujicicnemanja</a> &bull; <a href="https://vokativ.github.io/nemanja-selected-work/">vokativ.github.io/nemanja-selected-work</a></div>
         </header>
 
         <section>
             <h2>Summary</h2>
             <p>I engineer clarity out of business chaos. I spent years designing complex systems as a consultant and operator; today, AI-assisted development allows me to build and ship those workflows myself, without waiting for engineering headcount to get started. Former Google operator, McKinsey consultant, startup founder, and INSEAD MBA.</p>
-            <p><a href="artifacts.html">Selected work &amp; case studies</a> | Public products: <a href="artifacts.html#adiufant">Adiufant</a>, an AI app for busy families, live on the Apple App Store and Google Play; the open-source <a href="artifacts.html#hocudaglasam">Serbian diaspora voter-registration portal</a>.</p>
+            <p><a href="artifacts.html">Selected work &amp; case studies</a> | Public products: <a href="artifacts.html#adiufant">Adiufant</a> (reviewable AI family organizer; App Store &amp; Google Play), <a href="artifacts.html#hocudaglasam">Korak do glasa</a> (zero-PII civic-tech voter registration; 2026 election cycle), and <a href="artifacts.html#prepisi">Prepiši</a> (offline browser extension; Chrome, Firefox &amp; Edge).</p>
         </section>
 
         <section>
@@ -300,7 +320,7 @@
                 </div>
                 <ul>
                     <li>Turn user research and production feedback into product requirements, release decisions, and safeguards—testing where AI is dependable, where it fails, and where human review must remain.</li>
-                    <li>Built and released Adiufant, an AI app that turns unstructured family information into reviewable calendar events and preparation steps; live on the Apple App Store and Google Play.</li>
+                    <li>Built and released Adiufant on iOS and Android; iterative releases added temporal hallucination guardrails and dynamic prep-task rescheduling with inline undo.</li>
                 </ul>
             </article>
 
@@ -365,7 +385,7 @@
         <section>
             <h2>Skills &amp; Education</h2>
             <p><strong>Applied AI &amp; Data:</strong> Gemini, multimodal extraction, conversational analytics, human-in-the-loop workflows, BigQuery, Dataform, Airflow, SQL, Superset.</p>
-            <p><strong>Cloud &amp; Product Engineering:</strong> GCP, Terraform, Kubernetes, Cloud Run / Functions, Firebase, Python / FastAPI, Flutter / Dart, TypeScript / Bun.</p>
+            <p><strong>Cloud &amp; Product Engineering:</strong> GCP, Terraform, Kubernetes, Cloud Run / Functions, Firebase, Python / FastAPI, Flutter / Dart, TypeScript / Bun, WebExtensions / Manifest V3.</p>
             <p><strong>Product Delivery:</strong> customer discovery, technical scoping, stakeholder translation, vendor and partner ecosystems, customer-to-product feedback, operating-model design.</p>
             <p><strong>Education:</strong> INSEAD MBA; American University in Bulgaria, BA Business Administration and European Studies, Soros Foundation Full Scholarship.</p>
         </section>
