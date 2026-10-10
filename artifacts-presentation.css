@@ -102,6 +102,13 @@
     }
 }
 
+.subgroup-label {
+    margin: 32px 0 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+}
+
 /* Effects are ordinary HTML, with container-driven comparisons rather than diagrams.
    Deliberately do not set .visual display: the page owns mobile disclosure states. */
 .visual {
@@ -205,6 +212,43 @@
 .state p + p,
 .effect-item p + p {
     margin-top: 8px;
+}
+
+.effect-comparison {
+    gap: 10px 12px;
+}
+
+.effect-comparison .state {
+    padding: 10px 12px;
+}
+
+.effect-comparison .state h4 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.effect-comparison .effect-value {
+    font-size: 1.75rem;
+}
+
+.effect-comparison .state.effect-secondary {
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+}
+
+.effect-comparison .effect-secondary.before {
+    border-inline-start: 3px solid var(--line);
+}
+
+.effect-comparison .effect-secondary.after {
+    border-inline-start: 3px solid var(--teal);
+}
+
+.effect-comparison .effect-secondary p {
+    font-size: 1rem;
 }
 
 @container case-effect (min-width: 420px) {
