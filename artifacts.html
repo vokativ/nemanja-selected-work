@@ -277,72 +277,6 @@
             transition: background-color 180ms ease, border-color 180ms ease;
         }
 
-        .sticky-nav-inner {
-            max-width: 1180px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .sticky-nav-inner::-webkit-scrollbar {
-            display: none;
-        }
-
-        .nav-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 14px;
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            background: var(--panel);
-            color: var(--muted);
-            font-size: 0.86rem;
-            font-weight: 650;
-            white-space: nowrap;
-            text-decoration: none;
-            box-shadow: 0 1px 3px rgba(19, 32, 51, 0.05);
-            transition: all 160ms ease;
-        }
-
-        .nav-pill:hover {
-            border-color: var(--blue);
-            color: var(--ink);
-            text-decoration: none;
-            transform: translateY(-1px);
-        }
-
-        .nav-pill.is-active {
-            background: var(--blue);
-            color: #ffffff;
-            border-color: var(--blue);
-            box-shadow: 0 2px 8px rgba(19, 88, 219, 0.28);
-        }
-
-        .nav-pill .pill-count {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 18px;
-            height: 18px;
-            padding: 0 5px;
-            border-radius: 999px;
-            background: rgba(19, 32, 51, 0.08);
-            color: var(--ink);
-            font-size: 0.72rem;
-            font-family: ui-monospace, "SF Mono", monospace;
-            font-weight: 700;
-        }
-
-        .nav-pill.is-active .pill-count {
-            background: rgba(255, 255, 255, 0.25);
-            color: #ffffff;
-        }
-
         .artifact-group {
             margin-bottom: 38px;
             scroll-margin-top: 60px;
@@ -642,146 +576,6 @@
             transform: translateY(-1px);
         }
 
-        .visual {
-            position: relative;
-            padding: 16px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--code);
-            overflow: hidden;
-        }
-
-        .visual::before {
-            content: "";
-            position: absolute;
-            inset: 0 0 auto;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blue), var(--teal), var(--amber));
-            opacity: 0.7;
-        }
-
-        .visual-title {
-            margin: 0 0 12px;
-            color: var(--muted);
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
-        }
-
-        .visual-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 7px;
-            border: 1px solid var(--line);
-            margin-bottom: 14px;
-        }
-
-        .flow {
-            display: grid;
-            gap: 10px;
-        }
-
-        .flow-row {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr);
-            gap: 8px;
-            align-items: stretch;
-        }
-
-        .flow-card {
-            min-height: 74px;
-            padding: 11px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--diagram-panel);
-            transition: border-color 180ms ease, transform 180ms ease;
-        }
-
-        .flow-card:hover {
-            border-color: var(--blue);
-            transform: translateY(-1px);
-        }
-
-        .flow-card b {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--ink);
-            font-size: 0.88rem;
-        }
-
-        .flow-card span {
-            display: block;
-            color: var(--muted);
-            font-size: 0.83rem;
-        }
-
-        .flow-arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--blue);
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-
-        .pipeline {
-            display: grid;
-            gap: 9px;
-        }
-
-        .pipeline-step {
-            padding: 11px 12px;
-            border-left: 4px solid var(--blue);
-            border-radius: 6px;
-            background: var(--diagram-panel);
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .pipeline-step strong {
-            color: var(--ink);
-        }
-
-        .before-after {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .state {
-            padding: 13px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--diagram-panel);
-        }
-
-        .state.before {
-            border-top: 5px solid var(--red);
-        }
-
-        .state.after {
-            border-top: 5px solid var(--green);
-        }
-
-        .state h3 {
-            margin: 0 0 8px;
-            font-size: 1rem;
-        }
-
-        .state ul {
-            margin: 0;
-            padding-left: 18px;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        .state li {
-            margin-bottom: 7px;
-        }
-
         .impact-list {
             margin: 0;
             padding-left: 18px;
@@ -793,115 +587,6 @@
             margin-bottom: 8px;
         }
 
-        .consulting-flows {
-            display: grid;
-            gap: 12px;
-        }
-
-        .consulting-flow {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
-            gap: 8px;
-            align-items: stretch;
-        }
-
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 18px 0 0;
-        }
-
-        .metric {
-            min-height: 94px;
-            padding: 13px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: var(--diagram-panel);
-        }
-
-        .metric b {
-            display: block;
-            color: var(--ink);
-            font-size: 1.15rem;
-        }
-
-        .metric span {
-            display: block;
-            margin-top: 4px;
-            color: var(--muted);
-            font-size: 0.82rem;
-        }
-
-        .note {
-            margin: 20px 0 0;
-            padding: 15px;
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            background: #fff8e8;
-            color: #604000;
-            font-size: 0.94rem;
-        }
-
-        .diagram {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin-bottom: 14px;
-            overflow: visible;
-        }
-
-        .diagram-card {
-            fill: var(--diagram-panel);
-            stroke: var(--line);
-            stroke-width: 1.5;
-        }
-
-        .diagram-card.hot {
-            stroke: var(--red);
-        }
-
-        .diagram-card.good {
-            stroke: var(--green);
-        }
-
-        .diagram-card.ai {
-            stroke: var(--teal);
-        }
-
-        .diagram-card.core {
-            stroke: var(--blue);
-        }
-
-        .diagram-card.idea,
-        .diagram-card.test {
-            stroke: var(--amber);
-        }
-
-        .diagram-card.lens {
-            stroke: var(--violet);
-        }
-
-        .diagram-line {
-            fill: none;
-            stroke: var(--blue);
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .diagram-text {
-            fill: var(--ink);
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .diagram-subtext {
-            fill: var(--muted);
-            font-family: "Aptos", "Inter", ui-sans-serif, system-ui, sans-serif;
-            font-size: 11px;
-        }
 
         body.motion-ready .artifact {
             transform: translateY(14px);
@@ -912,34 +597,6 @@
             transition: transform 520ms ease, border-color 180ms ease, box-shadow 180ms ease;
         }
 
-        body.motion-ready .diagram-line {
-            stroke-dasharray: var(--path-length, 1);
-            stroke-dashoffset: var(--path-length, 1);
-            transition: stroke-dashoffset 900ms ease;
-        }
-
-        body.motion-ready .artifact.is-visible .diagram-line {
-            stroke-dashoffset: 0;
-        }
-
-        body.motion-ready .artifact.is-visible .visual .diagram-card,
-        body.motion-ready .artifact.is-visible .visual .flow-card,
-        body.motion-ready .artifact.is-visible .visual .state,
-        body.motion-ready .artifact.is-visible .visual .pipeline-step {
-            animation: visual-rise 520ms ease both;
-        }
-
-        @keyframes visual-rise {
-            from {
-                opacity: 0.65;
-                transform: translateY(8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         @keyframes reveal-extra {
             from {
@@ -1022,7 +679,6 @@
             }
 
             .artifact.is-open .block-extra,
-            .artifact.is-open .visual-extra,
             .artifact.is-open .chip-extra {
                 display: block;
             }
@@ -1042,19 +698,6 @@
                 justify-content: flex-start;
             }
 
-            .before-after {
-                grid-template-columns: 1fr;
-            }
-
-            .flow-row,
-            .consulting-flow {
-                grid-template-columns: 1fr;
-            }
-
-            .flow-arrow {
-                min-height: 16px;
-                transform: rotate(90deg);
-            }
         }
 
         @media (max-width: 680px) {
@@ -1151,12 +794,6 @@
                 margin: 12px 0 18px;
             }
 
-            .visual,
-            .state,
-            .flow-card,
-            .pipeline-step {
-                padding: 12px;
-            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -1172,9 +809,6 @@
                 transform: none;
             }
 
-            body.motion-ready .diagram-line {
-                stroke-dashoffset: 0;
-            }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -1208,39 +842,11 @@
                 color: var(--blue);
             }
 
-            .note {
-                background: #241c10;
-                color: #f7d89b;
-            }
 
             .sticky-nav {
                 background: rgba(13, 17, 23, 0.94);
             }
 
-            .nav-pill {
-                background: var(--panel);
-                color: var(--muted);
-            }
-
-            .nav-pill:hover {
-                color: var(--ink);
-            }
-
-            .nav-pill.is-active {
-                background: var(--blue);
-                color: #0d1117;
-                border-color: var(--blue);
-            }
-
-            .nav-pill .pill-count {
-                background: rgba(255, 255, 255, 0.12);
-                color: var(--ink);
-            }
-
-            .nav-pill.is-active .pill-count {
-                background: rgba(0, 0, 0, 0.22);
-                color: #0d1117;
-            }
 
             .trust-boundary {
                 background: rgba(71, 201, 216, 0.08);
@@ -1253,6 +859,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="artifacts-presentation.css">
 </head>
 <body>
     <main class="page">
@@ -1276,16 +883,16 @@
         <!-- Sticky Section Navigation -->
         <nav class="sticky-nav" aria-label="Selected work categories">
             <div class="sticky-nav-inner">
-                <a href="#group-built" class="nav-pill is-active">
-                    <span class="pill-title">Built &amp; Shipped</span>
+                <a href="#group-built" class="nav-pill is-active" aria-label="Products: 5 public projects" aria-current="location">
+                    <span class="pill-title">Products</span>
                     <span class="pill-count">5</span>
                 </a>
-                <a href="#group-rapsodo" class="nav-pill">
-                    <span class="pill-title">Rapsodo Data &amp; AI</span>
+                <a href="#group-rapsodo" class="nav-pill" aria-label="Company: 5 enterprise data and AI case studies at Rapsodo">
+                    <span class="pill-title">Company</span>
                     <span class="pill-count">5</span>
                 </a>
-                <a href="#group-earlier" class="nav-pill">
-                    <span class="pill-title">Google &amp; McKinsey</span>
+                <a href="#group-earlier" class="nav-pill" aria-label="Google and McKinsey: 2 earlier leadership case studies">
+                    <span class="pill-title"><span>Google &amp;</span> <span>McKinsey</span></span>
                     <span class="pill-count">2</span>
                 </a>
             </div>
@@ -1348,32 +955,22 @@
                         <span>React 19, TypeScript, Vite, Bun, Python verification pipeline, client-side PDF, zero server-side PII, Firebase Hosting, Agent playbook (agent.md), 16 templates (templates.json), workflow.json</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Korak do glasa two-phase civic architecture">
-                    <p class="visual-title">Two-phase architecture: Local PDF + Agent follow-up</p>
-                    <div class="flow">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>1. Registration (Browser)</b>
-                                <span>React 19 client builds Cyrillic PDF locally. Zero PII transmitted to servers.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>2. Verified Delivery</b>
-                                <span>Python pipeline audits MFA notices; hands off to voter's native mail app.</span>
-                            </div>
-                        </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>3. Follow-up Playbook</b>
-                                <span>Public guide with 16 canonical templates (T01&ndash;T16) &amp; workflow.json decision tree.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>4. Agent Boundary</b>
-                                <span>One-click agent.md handoff. Strict permissions: no inbox scraping, no auto-filing.</span>
-                            </div>
-                        </div>
-                    </div>
+                <aside class="visual" aria-labelledby="hocudaglasam-effect-title">
+                    <h3 class="visual-title" id="hocudaglasam-effect-title">Private preparation, clear follow-up</h3>
+                    <ol class="effect-list">
+                        <li class="effect-item">
+                            <h4>Prepare privately</h4>
+                            <p>Your PDF is made in your browser. Personal data and documents never reach project servers.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>You send it</h4>
+                            <p>The PDF opens in your mail app. This is not proof of sending, receipt, or registration.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Follow up</h4>
+                            <p><strong class="effect-value">16 templates</strong> guide follow-up. Assistants need separate permission to read email, save drafts, send, or file an appeal.</p>
+                        </li>
+                    </ol>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1420,36 +1017,22 @@
                         <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, App Check, Temporal Guardrails</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Adiufant product showcase and architecture">
-                    <p class="visual-title">Product in action: Notice to structured event</p>
-                    <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
-                    <div class="visual-extra">
-                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
-                        <div class="flow">
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Multimodal Input</b>
-                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Protected AI Pipeline</b>
-                                    <span>Auth + App Check + callable backend + temporary media staging + Gemini.</span>
-                                </div>
-                            </div>
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Save-First Review</b>
-                                    <span>Pending events, preparation tasks &amp; Important People in Drift.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Calendar &amp; Sync</b>
-                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <aside class="visual" aria-labelledby="adiufant-effect-title">
+                    <h3 class="visual-title" id="adiufant-effect-title">From school notice to a plan you review</h3>
+                    <a href="img/adiufant-showcase.jpg" aria-label="Open full-size Adiufant school notice and review screenshot">
+                        <img src="img/adiufant-showcase.jpg" alt="Actual Adiufant screen: a Deepavali school closure notice beside a suggested calendar event and a preparation task to confirm the closure." class="visual-img" width="1804" height="1944" loading="lazy">
+                    </a>
+                    <p class="effect-caption">Actual product capture: closure notice &rarr; suggested event and task.</p>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Review before adding</h4>
+                            <p>Accept or skip suggestions. Calendar additions need your confirmation.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>When plans change</h4>
+                            <p>Move an event and its preparation deadlines move too. Undo is available.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1500,28 +1083,22 @@
                         <span>Open-source AI agent, ChatGPT Desktop / Codex, OMP browser, YAML catalog, SKU resolution, Bounded fallbacks, Multi-device pairing, Node.js</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="RedMart Grocery Cart Helper workflow architecture">
-                    <p class="visual-title">Constrained agent pipeline: list to verified cart</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step">
-                            <strong>1. Multimodal input:</strong> Photo of kitchen whiteboard, voice note, or casual shorthand (&ldquo;persil powder&rdquo;, &ldquo;eggs&rdquo;).
-                        </div>
-                        <div class="pipeline-step">
-                            <strong>2. Canonical catalog matching:</strong> Resolves family aliases against YAML catalog with explicit <code>item_id</code>, <code>sku_id</code>, and default quantities.
-                        </div>
-                        <div class="pipeline-step">
-                            <strong>3. Human review boundary:</strong> Proposed cart previewed in chat; human confirms or edits (&ldquo;skip ham this time&rdquo;) before browser touches RedMart.
-                        </div>
-                        <div class="pipeline-step">
-                            <strong>4. Browser cart mutation:</strong> Desktop browser operates logged-in session, verifies stock, and applies ranked backups if unavailable within 2 days.
-                        </div>
-                        <div class="pipeline-step">
-                            <strong>5. Outcome verification:</strong> Reads actual cart table rows, canonical identifiers, pack sizes, and promo bundles (&ldquo;action &ne; outcome&rdquo;).
-                        </div>
-                        <div class="pipeline-step">
-                            <strong>6. Human checkout:</strong> Agent halts with cart ready; user chooses delivery slot, reviews total, and pays. Zero automated checkout.
-                        </div>
-                    </div>
+                <aside class="visual" aria-labelledby="redmart-grocery-effect-title">
+                    <h3 class="visual-title" id="redmart-grocery-effect-title">Your list, with the repetition handled</h3>
+                    <p class="effect-caption">Illustrative shopping note</p>
+                    <blockquote class="effect-quote">
+                        <p>eggs &middot; persil powder &middot; fruit mix</p>
+                    </blockquote>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Familiar products, checked</h4>
+                            <p>Known household products, with pack sizes and quantities checked. Anything the agent cannot verify is reported.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>You still check out</h4>
+                            <p>Review the proposal before the cart changes. You choose delivery and pay.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1570,32 +1147,20 @@
                         <span>WebExtensions, Manifest V3, Offline transformation engine, Reviewed linguistic data, Dependency-free Node packager</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Prepiši product architecture">
-                    <p class="visual-title">Local conversion boundary</p>
-                    <div class="flow">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Active page</b>
-                                <span>Only user-visible, eligible text is considered.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Offline rules</b>
-                                <span>Script, pronunciation, and protected-term logic run in-browser.</span>
-                            </div>
+                <aside class="visual" aria-labelledby="prepisi-effect-title">
+                    <h3 class="visual-title" id="prepisi-effect-title">The same words, your preferred script</h3>
+                    <p class="effect-caption">Illustrative script example</p>
+                    <div class="before-after effect-specimen">
+                        <div class="state before">
+                            <h4>Latin</h4>
+                            <p lang="sr-Latn">Vreme je za lepe vesti.</p>
                         </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Reversible result</b>
-                                <span>Changes are recalculated from original text.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Local preference</b>
-                                <span>Optional setting persists only for a chosen site.</span>
-                            </div>
+                        <div class="state after">
+                            <h4>Cyrillic</h4>
+                            <p lang="sr-Cyrl">Време је за лепе вести.</p>
                         </div>
                     </div>
+                    <p class="effect-evidence">Text stays on-device. Forms, code, and links are left alone.</p>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1640,56 +1205,22 @@
                         <a href="https://opal.google/app/14amAGTURQAnFBo8HRXwUXG4DRIaQUQZA">Opal app with Google Docs output</a>
                     </div>
                 </div>
-                <aside class="visual" aria-label="The Premise Lab method diagram">
-                    <p class="visual-title">Idea stress-test flow</p>
-                    <svg class="diagram" viewBox="0 0 520 292" role="img" aria-label="The Premise Lab turns a raw idea through hidden premise checks into an idea artifact and reality test">
-                        <rect class="diagram-card idea" x="14" y="106" width="112" height="80" rx="8"></rect>
-                        <text class="diagram-text" x="30" y="139">raw idea</text>
-                        <text class="diagram-subtext" x="30" y="158">can we build</text>
-                        <text class="diagram-subtext" x="30" y="173">this?</text>
-
-                        <path class="diagram-line" d="M138 146 C152 146 152 48 170 48"></path>
-                        <path class="diagram-line" d="M138 146 C154 146 154 112 170 112"></path>
-                        <path class="diagram-line" d="M138 146 C154 146 154 176 170 176"></path>
-                        <path class="diagram-line" d="M138 146 C152 146 152 240 170 240"></path>
-
-                        <rect class="diagram-card lens" x="170" y="22" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="45">hidden premise</text>
-                        <text class="diagram-subtext" x="186" y="62">what must be true?</text>
-
-                        <rect class="diagram-card lens" x="170" y="86" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="109">philosophy</text>
-                        <text class="diagram-subtext" x="186" y="126">better questions</text>
-
-                        <rect class="diagram-card lens" x="170" y="150" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="173">real world</text>
-                        <text class="diagram-subtext" x="186" y="190">real-world friction</text>
-
-                        <rect class="diagram-card lens" x="170" y="214" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="237">value</text>
-                        <text class="diagram-subtext" x="186" y="254">who is better off?</text>
-
-                        <path class="diagram-line" d="M322 48 C350 48 350 104 370 104"></path>
-                        <path class="diagram-line" d="M322 112 C346 112 346 104 370 104"></path>
-                        <path class="diagram-line" d="M322 176 C346 176 346 214 370 214"></path>
-                        <path class="diagram-line" d="M322 240 C350 240 350 214 370 214"></path>
-
-                        <rect class="diagram-card good" x="370" y="66" width="132" height="76" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="95">idea artifact</text>
-                        <text class="diagram-subtext" x="386" y="114">hypothesis and</text>
-                        <text class="diagram-subtext" x="386" y="129">reality debt</text>
-
-                        <rect class="diagram-card test" x="370" y="178" width="132" height="76" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="207">reality test</text>
-                        <text class="diagram-subtext" x="386" y="226">small contact</text>
-                        <text class="diagram-subtext" x="386" y="241">with the world</text>
-                    </svg>
-                    <div class="pipeline visual-extra">
-                        <div class="pipeline-step"><strong>Mirror:</strong> restate the idea in higher resolution before judging it.</div>
-                        <div class="pipeline-step"><strong>X-ray:</strong> surface the load-bearing assumption or category mistake.</div>
-                        <div class="pipeline-step"><strong>Reframe:</strong> turn the idea into a sharper working hypothesis.</div>
-                        <div class="pipeline-step"><strong>Contact:</strong> propose the smallest useful reality test before building.</div>
-                    </div>
+                <aside class="visual" aria-labelledby="premise-lab-effect-title">
+                    <h3 class="visual-title" id="premise-lab-effect-title">Sharper questions before more code</h3>
+                    <ol class="effect-list">
+                        <li class="effect-item">
+                            <h4>State the idea</h4>
+                            <p>What must be true for this idea to help someone?</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Test it</h4>
+                            <p>What small real-world test could prove it wrong?</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Name the unknowns</h4>
+                            <p>What still needs evidence before you build?</p>
+                        </li>
+                    </ol>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1701,8 +1232,8 @@
         <section class="artifact-group" id="group-rapsodo">
             <div class="group-header">
                 <div class="group-header-text">
-                    <h2 class="group-title">At Rapsodo: Head of Data Analytics &amp; AI Lead</h2>
-                    <p class="group-desc">Enterprise data platform turnaround, conversational AI, and operating systems (2023&ndash;2026).</p>
+                    <h2 class="group-title">Company Data &amp; AI</h2>
+                    <p class="group-desc">Enterprise work at Rapsodo as Head of Data Analytics &amp; AI Lead (2023&ndash;2026): data platform turnaround, conversational AI, and operating systems.</p>
                 </div>
                 <span class="group-badge">5 Case Studies &bull; Sanitized</span>
             </div>
@@ -1748,81 +1279,19 @@
                         <span>GCP, BigQuery, Airflow, Dataform, Superset</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Company before and after platform diagram">
-                    <p class="visual-title">Before / After</p>
-                    <svg class="diagram" viewBox="0 0 520 270" role="img" aria-label="Data platform rebuild diagram">
-                        <rect class="diagram-card hot" x="14" y="22" width="132" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="28" y="48">raw db copies</text>
-                        <text class="diagram-subtext" x="28" y="67">debug data, not</text>
-                        <text class="diagram-subtext" x="28" y="82">business context</text>
-
-                        <rect class="diagram-card hot" x="14" y="112" width="132" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="28" y="138">brittle jobs</text>
-                        <text class="diagram-subtext" x="28" y="157">VM Docker, old</text>
-                        <text class="diagram-subtext" x="28" y="172">Airflow/Airbyte</text>
-
-                        <rect class="diagram-card hot" x="14" y="202" width="132" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="28" y="231">broken syncs</text>
-
-                        <path class="diagram-line" d="M158 56 C190 56 190 135 222 135"></path>
-                        <path class="diagram-line" d="M158 146 C190 146 190 135 222 135"></path>
-                        <path class="diagram-line" d="M158 226 C190 226 190 135 222 135"></path>
-
-                        <rect class="diagram-card core" x="222" y="84" width="112" height="102" rx="8"></rect>
-                        <text class="diagram-text" x="239" y="115">rebuild</text>
-                        <text class="diagram-subtext" x="239" y="135">Terraform</text>
-                        <text class="diagram-subtext" x="239" y="153">GKE/Composer</text>
-                        <text class="diagram-subtext" x="239" y="171">BQ/Dataform</text>
-
-                        <path class="diagram-line" d="M346 135 C372 135 372 56 398 56"></path>
-                        <path class="diagram-line" d="M346 135 C372 135 372 135 398 135"></path>
-                        <path class="diagram-line" d="M346 135 C372 135 372 214 398 214"></path>
-
-                        <rect class="diagram-card good" x="398" y="22" width="108" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="412" y="48">daily revenue</text>
-                        <text class="diagram-subtext" x="412" y="67">trial, renewal,</text>
-                        <text class="diagram-subtext" x="412" y="82">churn cadence</text>
-
-                        <rect class="diagram-card good" x="398" y="101" width="108" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="412" y="127">governed BI</text>
-                        <text class="diagram-subtext" x="412" y="146">Superset and</text>
-                        <text class="diagram-subtext" x="412" y="161">domain models</text>
-
-                        <rect class="diagram-card good" x="398" y="180" width="108" height="70" rx="8"></rect>
-                        <text class="diagram-text" x="412" y="207">AI + live ops</text>
-                        <text class="diagram-subtext" x="412" y="226">chat analytics</text>
-                        <text class="diagram-subtext" x="412" y="241">office display</text>
-                    </svg>
-                    <div class="visual-extra">
+                <aside class="visual" aria-labelledby="company-platform-effect-title">
+                    <h3 class="visual-title" id="company-platform-effect-title">From a metric hunt to a daily view</h3>
                     <div class="before-after">
                         <div class="state before">
-                            <h3>Before</h3>
-                            <ul>
-                                <li>1-2 week metric procurement</li>
-                                <li>Raw engineering database dumps</li>
-                                <li>Brittle VM jobs and broken connectors</li>
-                                <li>Opaque payment, SKU, and trial behavior</li>
-                            </ul>
+                            <h4>Before</h4>
+                            <p><strong class="effect-value">1&ndash;2 weeks</strong> and 3&ndash;5 people to assemble core metrics.</p>
                         </div>
                         <div class="state after">
-                            <h3>After</h3>
-                            <ul>
-                                <li>Daily operating visibility</li>
-                                <li>Multi-domain warehouse</li>
-                                <li>Governed BI and AI analytics</li>
-                                <li>Executive and board reporting cadence</li>
-                            </ul>
+                            <h4>After</h4>
+                            <p><strong class="effect-value">Daily</strong> A shared operating view for leadership, finance, product, and support.</p>
                         </div>
                     </div>
-                    <p class="visual-title" style="margin-top: 18px;">Subscription visibility flow</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step"><strong>Sources:</strong> Stripe, Shopify, NetSuite, product usage, churn surveys, support, logistics.</div>
-                        <div class="pipeline-step"><strong>Warehouse:</strong> modeled BigQuery layers with transformation, quality checks, and domain ownership.</div>
-                        <div class="pipeline-step"><strong>Finance:</strong> daily sales reporting from business logic that was previously maintained manually.</div>
-                        <div class="pipeline-step"><strong>Operations:</strong> SKU and order-sync reporting exposed new Shopify / NetSuite issues before recurring cleanup escalated.</div>
-                        <div class="pipeline-step"><strong>Review:</strong> trial take-up, subscription behavior, payment movement, renewal cohorts, revenue, customer pain, and executive company-health reporting.</div>
-                    </div>
-                    </div>
+                    <p class="effect-evidence"><strong>16 business domains</strong> supporting executive and board reporting.</p>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1846,7 +1315,7 @@
                     <span class="chip"><b>Self-serve</b> with visible SQL</span>
                     <span class="chip"><b>All global teams</b> unblocked</span>
                 </div>
-                    <div class="trust-boundary"><strong>Trust boundary:</strong> Visible SQL generated and displayed before execution; analyst-verified query patterns prevent metric hallucinations; CSV/Excel export for independent auditing.</div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> Visible SQL generated and displayed before execution; analyst-verified query patterns ground queries in known business logic; CSV/Excel export for independent auditing.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1867,63 +1336,22 @@
                         <span>Verified query library</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Golf Genie flow diagram">
-                    <p class="visual-title">Question to answer flow</p>
-                    <svg class="diagram" viewBox="0 0 520 215" role="img" aria-label="Golf Genie analytics flow">
-                        <rect class="diagram-card" x="16" y="28" width="104" height="64" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="56">question</text>
-                        <text class="diagram-subtext" x="31" y="75">plain English</text>
-
-                        <path class="diagram-line" d="M132 60 H182"></path>
-                        <rect class="diagram-card core" x="182" y="18" width="126" height="84" rx="8"></rect>
-                        <text class="diagram-text" x="198" y="48">verified layer</text>
-                        <text class="diagram-subtext" x="198" y="67">known-good SQL</text>
-                        <text class="diagram-subtext" x="198" y="84">schema context</text>
-
-                        <path class="diagram-line" d="M320 60 H370"></path>
-                        <rect class="diagram-card ai" x="370" y="28" width="132" height="64" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="56">Gemini agent</text>
-                        <text class="diagram-subtext" x="386" y="75">SQL + answer</text>
-
-                        <path class="diagram-line" d="M436 104 V132"></path>
-                        <rect class="diagram-card" x="370" y="132" width="132" height="58" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="157">export</text>
-                        <text class="diagram-subtext" x="386" y="176">CSV/Excel + SQL</text>
-
-                        <path class="diagram-line" d="M370 160 H308"></path>
-                        <rect class="diagram-card core" x="182" y="122" width="126" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="198" y="150">BigQuery</text>
-                        <text class="diagram-subtext" x="198" y="169">curated datasets</text>
-
-                        <path class="diagram-line" d="M182 156 H120"></path>
-                        <rect class="diagram-card good" x="16" y="122" width="104" height="68" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="150">decision</text>
-                        <text class="diagram-subtext" x="31" y="169">visible evidence</text>
-                    </svg>
-                    <div class="flow visual-extra">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>User question</b>
-                                <span>Usage and renewal rates by vintage, month, geography, and segment.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Verified context</b>
-                                <span>Known-good query patterns, curated schemas, analyst-reviewed examples.</span>
-                            </div>
-                        </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Gemini + SQL</b>
-                                <span>Generated analysis with visible SQL instead of hidden black-box output.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Answer + export</b>
-                                <span>Result, SQL, CSV/Excel download, and a better handoff to analysts.</span>
-                            </div>
-                        </div>
-                    </div>
+                <aside class="visual" aria-labelledby="golf-genie-effect-title">
+                    <h3 class="visual-title" id="golf-genie-effect-title">Ask a question. Check the answer.</h3>
+                    <p class="effect-caption">Illustrative business question</p>
+                    <blockquote class="effect-quote">
+                        <p>How do renewals vary by month and geography?</p>
+                    </blockquote>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Usually within about</h4>
+                            <p><strong class="effect-value">30 seconds</strong> for a plain-English answer.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Check the workings</h4>
+                            <p>See the database query (SQL) and download a spreadsheet for review.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -1968,33 +1396,22 @@
                         <span>Ticket, email, and call classification</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Support AI operating model">
-                    <p class="visual-title">Support intelligence flow</p>
-                    <div class="flow">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Customer signals</b>
-                                <span>Tickets, emails, support calls, transcripts, and manual escalations.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>AI classification</b>
-                                <span>Product-defined issue categories, bug themes, and customer-pain clusters.</span>
-                            </div>
-                        </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Support action</b>
-                                <span>AI-handled tickets, human escalation, and continuous improvement loops.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Product signal</b>
-                                <span>Earlier weekly visibility for Product and Engineering on what is starting to break.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="note visual-extra">This case is about practical AI deployment: matching incentives, workflows, data, and operational ownership so AI becomes useful instead of performative.</p>
+                <aside class="visual" aria-labelledby="support-ai-reset-effect-title">
+                    <h3 class="visual-title" id="support-ai-reset-effect-title">Support helps teams spot problems</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>AI-handled tickets</h4>
+                            <p><strong class="effect-value">&asymp;30%</strong> of tickets handled by AI by handoff.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>People handle the unknowns</h4>
+                            <p>Unknown questions go to trained human agents.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Weekly product feedback</h4>
+                            <p>Emails, tickets, and calls help Product and Engineering spot emerging problems.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -2017,7 +1434,7 @@
                     <span class="chip"><b>Whole company</b> kept access</span>
                     <span class="chip"><b>5&times; fewer</b> API keys, stale accounts cut, full SSO</span>
                 </div>
-                    <div class="trust-boundary"><strong>Security boundary:</strong> Enterprise SSO, column/row-level BigQuery access, least-privilege service accounts, point-in-time recovery.</div>
+                    <div class="trust-boundary"><strong>Security boundary:</strong> Enterprise SSO, dataset-scoped BigQuery access, least-privilege service accounts, automated backups and restore procedures.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -2039,15 +1456,22 @@
                         <span>Least-privilege IAM</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Enterprise trust operating layer">
-                    <p class="visual-title">Trust layer</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step"><strong>Identity:</strong> Microsoft 365 SSO, role mapping, and governed user access.</div>
-                        <div class="pipeline-step"><strong>Recovery:</strong> automated backups, retention, and restore procedures for production BI metadata.</div>
-                        <div class="pipeline-step"><strong>Permissions:</strong> stale accounts removed, API keys consolidated, BigQuery access scoped by dataset and purpose.</div>
-                        <div class="pipeline-step"><strong>Operations:</strong> Terraform-managed infrastructure, Kubernetes deployment, and safer production change paths.</div>
-                    </div>
-                    <p class="note visual-extra">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
+                <aside class="visual" aria-labelledby="security-governance-effect-title">
+                    <h3 class="visual-title" id="security-governance-effect-title">Keep people working, reduce risk</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Access preserved</h4>
+                            <p><strong class="effect-value">100+ users</strong> kept access through the move, with company single sign-on.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Less unnecessary access</h4>
+                            <p><strong class="effect-value">5&times; fewer keys</strong> Stale accounts removed; access limited to the data needed.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>A way to recover</h4>
+                            <p>Automated backups and restore procedures protect reporting setup.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -2091,43 +1515,19 @@
                         <span>TV, mobile, and 4K layouts</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Office metrics display data flow">
-                    <p class="visual-title">Signals included</p>
-                    <svg class="diagram" viewBox="0 0 520 250" role="img" aria-label="Office metrics display flow">
-                        <rect class="diagram-card" x="16" y="20" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="49">sales</text>
-                        <rect class="diagram-card" x="16" y="79" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="108">logistics</text>
-                        <rect class="diagram-card" x="16" y="138" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="167">product usage</text>
-                        <rect class="diagram-card" x="16" y="197" width="116" height="38" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="222">surveys</text>
-
-                        <path class="diagram-line" d="M144 44 C174 44 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 103 C174 103 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 162 C174 162 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 216 C174 216 174 125 204 125"></path>
-
-                        <rect class="diagram-card core" x="204" y="78" width="120" height="94" rx="8"></rect>
-                        <text class="diagram-text" x="220" y="108">BigQuery</text>
-                        <text class="diagram-subtext" x="220" y="128">refreshes</text>
-                        <text class="diagram-subtext" x="220" y="146">metric cards</text>
-                        <text class="diagram-subtext" x="220" y="164">alert signals</text>
-
-                        <path class="diagram-line" d="M336 125 H382"></path>
-                        <rect class="diagram-card good" x="382" y="50" width="120" height="150" rx="8"></rect>
-                        <text class="diagram-text" x="398" y="82">TV display</text>
-                        <text class="diagram-subtext" x="398" y="104">Canvas 2D</text>
-                        <text class="diagram-subtext" x="398" y="124">WebSockets</text>
-                        <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
-                        <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
-                    </svg>
-                    <div class="pipeline visual-extra">
-                        <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
-                        <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
-                        <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
-                        <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
+                <aside class="visual" aria-labelledby="office-metrics-effect-title">
+                    <h3 class="visual-title" id="office-metrics-effect-title">One live picture across offices</h3>
+                    <div class="before-after">
+                        <div class="state before">
+                            <h4>Before</h4>
+                            <p>Scattered results and fragmented updates.</p>
+                        </div>
+                        <div class="state after">
+                            <h4>Across the company</h4>
+                            <p><strong class="effect-value">4 offices</strong> share live sales, product, logistics, and customer signals.</p>
+                        </div>
                     </div>
+                    <p class="effect-evidence">From phones to office TVs, with local measurement units.</p>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -2185,28 +1585,19 @@
                         <span>Tens of millions in supported revenue</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Magellan before and after market expansion model">
-                    <p class="visual-title">Market expansion: before vs Magellan</p>
+                <aside class="visual" aria-labelledby="google-magellan-effect-title">
+                    <h3 class="visual-title" id="google-magellan-effect-title">A shorter path into new markets</h3>
                     <div class="before-after">
                         <div class="state before">
-                            <h3>Before: 12-18 months</h3>
-                            <ul>
-                                <li>Hire local market research help</li>
-                                <li>Find finance, translation, and support providers</li>
-                                <li>Negotiate several separate contracts</li>
-                                <li>Integrate vendors before launch</li>
-                            </ul>
+                            <h4>Before</h4>
+                            <p><strong class="effect-value">12&ndash;18 months</strong> to work through expansion barriers.</p>
                         </div>
                         <div class="state after">
-                            <h3>Magellan: Google-led path</h3>
-                            <ul>
-                                <li>Start from an existing Google relationship</li>
-                                <li>Diagnose the market-entry blocker</li>
-                                <li>Route to vetted partner options</li>
-                                <li>Move toward launch in days or weeks</li>
-                            </ul>
+                            <h4>With Magellan</h4>
+                            <p><strong class="effect-value">Days or weeks</strong> to reduce those barriers.</p>
                         </div>
                     </div>
+                    <p class="effect-evidence"><strong>7 global payment partners.</strong> These times describe barrier reduction, not a guaranteed launch.</p>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -2254,43 +1645,22 @@
                         <span>Transformation tools and roadmaps</span>
                     </div>
                 </div>
-                <aside class="visual" aria-label="Durable operating system workstreams">
-                    <p class="visual-title">Three workstreams, one pattern</p>
-                    <div class="consulting-flows">
-                        <div class="consulting-flow">
-                            <div class="flow-card">
-                                <b>Commercial banking</b>
-                                <span>Myriad individual selling frameworks and manager-by-manager styles.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Team sales system</b>
-                                <span>A shared framework that let bankers work like a team, still used 17 years later.</span>
-                            </div>
-                        </div>
-                        <div class="consulting-flow">
-                            <div class="flow-card">
-                                <b>Bank restructuring</b>
-                                <span>Non-performing loans consumed management attention and obscured the healthy bank.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Management focus</b>
-                                <span>Workout entity separated bad assets so leaders could focus on rebuilding the good bank.</span>
-                            </div>
-                        </div>
-                        <div class="consulting-flow">
-                            <div class="flow-card">
-                                <b>Insurance portfolio</b>
-                                <span>Ghost clients created institutional noise, wasted sales effort, and operational cost.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Clean operating base</b>
-                                <span>Portfolio tooling removed 20% inactive / misallocated clients and reduced drag.</span>
-                            </div>
-                        </div>
-                    </div>
+                <aside class="visual" aria-labelledby="mckinsey-operating-systems-effect-title">
+                    <h3 class="visual-title" id="mckinsey-operating-systems-effect-title">Lasting changes in banking and insurance</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Bank sales</h4>
+                            <p><strong class="effect-value">17 years</strong> later, the shared sales approach was still in use.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Bank restructuring</h4>
+                            <p>Bad assets moved into a separate entity, leaving the healthy bank to operate.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Insurance portfolio</h4>
+                            <p><strong class="effect-value">20%</strong> inactive or misallocated clients removed.</p>
+                        </li>
+                    </ul>
                 </aside>
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
@@ -2388,8 +1758,10 @@
                             navPills.forEach((pill) => {
                                 if (pill.getAttribute("href") === `#${id}`) {
                                     pill.classList.add("is-active");
+                                    pill.setAttribute("aria-current", "location");
                                 } else {
                                     pill.classList.remove("is-active");
+                                    pill.removeAttribute("aria-current");
                                 }
                             });
                         }
@@ -2415,15 +1787,6 @@
             window.addEventListener("hashchange", openTargetCard);
 
             if (!prefersReducedMotion) {
-                document.querySelectorAll(".diagram-line").forEach((line) => {
-                    if (typeof line.getTotalLength !== "function") {
-                        return;
-                    }
-
-                    const length = line.getTotalLength();
-                    line.style.setProperty("--path-length", length);
-                });
-
                 artifacts.forEach((artifact) => {
                     const rect = artifact.getBoundingClientRect();
 
