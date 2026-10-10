@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nemanja Grujičić - Selected Work</title>
-    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, live operating metrics, civic technology, a production AI family organizer, and a privacy-first language-conversion extension.">
-    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, civic technology, privacy by architecture, Korak do glasa, AI family organizer, Adiufant, local-first mobile app, browser extension, Prepiši, Latin Cyrillic conversion, Ekavian Ijekavian conversion, linguistic data, product operations, technical product leadership">
+    <meta name="description" content="Selected work and case studies for Nemanja Grujičić, covering private data and AI platform work, conversational analytics, operating metrics, civic technology, a production AI family organizer, and an open-source constrained AI grocery assistant.">
+    <meta name="keywords" content="AI case studies, data platform case study, conversational analytics, Gemini analytics, BigQuery, GCP, Airflow, Dataform, Superset, Cloud Run, civic technology, privacy by architecture, Korak do glasa, AI family organizer, Adiufant, local-first mobile app, browser extension, Prepiši, RedMart grocery assistant, constrained AI agents, product operations, technical product leadership">
     <meta property="og:title" content="Nemanja Grujičić - Selected Work">
-    <meta property="og:description" content="Selected public projects and sanitized private-platform case studies behind the CV.">
+    <meta property="og:description" content="Selected public projects, open-source AI agent workflows, and sanitized private-platform case studies behind the CV.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vokativ.github.io/nemanja-selected-work/artifacts.html">
     <link rel="canonical" href="https://vokativ.github.io/nemanja-selected-work/artifacts.html">
@@ -17,7 +17,7 @@
         "@type": "CollectionPage",
         "name": "Nemanja Grujičić - Selected Work",
         "url": "https://vokativ.github.io/nemanja-selected-work/artifacts.html",
-        "description": "Selected public projects and sanitized private-platform case studies covering enterprise data platforms, AI analytics, live operating metrics, open-source agent methods, civic technology, and AI product building.",
+        "description": "Selected public projects, open-source agent workflows, and sanitized private-platform case studies covering enterprise data platforms, AI analytics, operating metrics, civic technology, and AI product building.",
         "creator": {
             "@type": "Person",
             "name": "Nemanja Grujičić",
@@ -47,16 +47,13 @@
         },
         "hasPart": [
             {
-                "@type": "CreativeWork",
-                "name": "Company Data + AI Platform",
-                "description": "Sanitized private-platform case study about turning previously opaque business metrics into daily operating visibility across subscriptions, payments, sales, support, logistics, and product usage.",
-                "keywords": "data platform, AI platform, enterprise analytics, subscription analytics, operating metrics, GCP, BigQuery, Airflow, Dataform, Superset, Cloud Functions"
-            },
-            {
                 "@type": "SoftwareApplication",
-                "name": "Golf Genie",
-                "applicationCategory": "BusinessApplication",
-                "description": "Internal conversational analytics application using Gemini, verified query patterns, BigQuery, visible SQL, and CSV/Excel export to help non-technical users explore business questions."
+                "name": "Korak do glasa",
+                "url": "https://korakdoglasa.org/",
+                "codeRepository": "https://github.com/vokativ/glasanje",
+                "applicationCategory": "GovernmentApplication",
+                "operatingSystem": "All modern browsers",
+                "description": "Open-source civic-tech diaspora voter-registration platform for Serbia's 2026 election cycle. Features client-side document generation with zero server-side applicant PII, an automated source-backed diplomatic mission verification pipeline, and an open post-submission follow-up procedure with machine-readable instructions for external AI agents."
             },
             {
                 "@type": "SoftwareApplication",
@@ -71,29 +68,20 @@
                 }
             },
             {
-                "@type": "CreativeWork",
-                "name": "Customer Support AI + Operating System Reset",
-                "description": "Reset a failed support AI procurement, replaced a misfit tooling setup, and turned support interactions into earlier product and engineering signals."
+                "@type": "SoftwareApplication",
+                "name": "RedMart Grocery Cart Helper",
+                "url": "https://github.com/vokativ/grocery-shopping-redmart",
+                "codeRepository": "https://github.com/vokativ/grocery-shopping-redmart",
+                "applicationCategory": "ProductivityApplication",
+                "description": "Open-source AI agent workflow that turns messy family whiteboard photos, voice notes, or shorthand lists into prepared grocery carts on RedMart / Lazada Singapore using constrained AI, canonical SKU matching, and human-in-the-loop review."
             },
             {
-                "@type": "CreativeWork",
-                "name": "Google Magellan: Export Business Line",
-                "description": "Turned advertiser international expansion pain into a scaled Google business line with partner networks, sales enablement, and payments-acceptance workflows."
-            },
-            {
-                "@type": "CreativeWork",
-                "name": "Security, Governance, and Production Discipline",
-                "description": "Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations."
-            },
-            {
-                "@type": "CreativeWork",
-                "name": "McKinsey: Durable Operating Systems",
-                "description": "Selected consulting work that mattered because clients kept using the operating systems after the project ended."
-            },
-            {
-                "@type": "CreativeWork",
-                "name": "Company Office Metrics Display",
-                "description": "Live office metrics display using BigQuery-backed refreshes, Canvas 2D, WebSockets, and TV-compatible rendering for shared operating visibility."
+                "@type": "SoftwareApplication",
+                "name": "Prepiši",
+                "url": "https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb",
+                "codeRepository": "https://github.com/vokativ/prepisi",
+                "applicationCategory": "UtilitiesApplication",
+                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge (v0.9.3). Converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants with 100% client-side conversion and zero page-text upload."
             },
             {
                 "@type": "SoftwareSourceCode",
@@ -103,21 +91,41 @@
                 "description": "Open-source AI-agent method and skill package for stress-testing early ideas before they harden into code, with installer guides and tool-specific distributions."
             },
             {
-                "@type": "SoftwareApplication",
-                "name": "Korak do glasa",
-                "url": "https://korakdoglasa.org/",
-                "codeRepository": "https://github.com/vokativ/glasanje",
-                "applicationCategory": "GovernmentApplication",
-                "operatingSystem": "All modern browsers",
-                "description": "Open-source civic-tech diaspora voter-registration platform for Serbia's 2026 election cycle. Features client-side document generation with zero server-side applicant PII and an automated source-backed diplomatic mission verification pipeline."
+                "@type": "CreativeWork",
+                "name": "Company Data + AI Platform",
+                "description": "Sanitized private-platform case study about turning previously opaque business metrics into daily operating visibility across subscriptions, payments, sales, support, logistics, and product usage.",
+                "keywords": "data platform, AI platform, enterprise analytics, subscription analytics, operating metrics, GCP, BigQuery, Airflow, Dataform, Superset, Cloud Functions"
             },
             {
                 "@type": "SoftwareApplication",
-                "name": "Prepiši",
-                "url": "https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb",
-                "codeRepository": "https://github.com/vokativ/prepisi",
-                "applicationCategory": "UtilitiesApplication",
-                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge (v0.9.3). Converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants with 100% client-side conversion and zero page-text upload."
+                "name": "Golf Genie",
+                "applicationCategory": "BusinessApplication",
+                "description": "Internal conversational analytics application using Gemini, verified query patterns, BigQuery, visible SQL, and CSV/Excel export to help non-technical users explore business questions."
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Customer Support AI + Operating System Reset",
+                "description": "Reset a failed support AI procurement, replaced a misfit tooling setup, and turned support interactions into earlier product and engineering signals."
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Security, Governance, and Production Discipline",
+                "description": "Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations."
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Company Office Metrics Display",
+                "description": "Live office metrics display using BigQuery-backed refreshes, Canvas 2D, WebSockets, and TV-compatible rendering for shared operating visibility."
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Google Magellan: Export Business Line",
+                "description": "Turned advertiser international expansion pain into a scaled Google business line with partner networks, sales enablement, and payments-acceptance workflows."
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "McKinsey: Durable Operating Systems",
+                "description": "Selected consulting work that mattered because clients kept using the operating systems after the project ended."
             }
         ],
         "mainEntityOfPage": {
@@ -179,48 +187,64 @@
 
         .hero {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
             gap: 28px;
             align-items: end;
-            padding: 38px 0 34px;
+            padding: 34px 0 28px;
         }
 
         .hero > div {
             min-width: 0;
         }
 
+        .hero-name {
+            margin: 0 0 4px;
+            font-size: 1.22rem;
+            font-weight: 800;
+            letter-spacing: -0.015em;
+            color: var(--ink);
+        }
+
+        .hero-role {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 0.94rem;
+            font-weight: 550;
+        }
+
         .eyebrow {
-            margin: 0 0 12px;
+            margin: 0 0 10px;
             color: var(--blue);
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
 
         h1 {
             margin: 0;
-            max-width: 850px;
-            font-size: 4.25rem;
-            line-height: 1.03;
-            letter-spacing: 0;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            max-width: 880px;
+            font-size: 3.35rem;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            font-family: "Aptos", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-weight: 760;
             overflow-wrap: anywhere;
         }
 
         .lead {
-            margin: 20px 0 0;
+            margin: 18px 0 0;
             max-width: 760px;
             color: var(--muted);
-            font-size: 1.12rem;
+            font-size: 1.08rem;
+            line-height: 1.58;
         }
 
         .contact {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             justify-content: flex-start;
         }
 
@@ -229,20 +253,144 @@
             display: inline-flex;
             align-items: center;
             min-height: 36px;
-            padding: 7px 11px;
+            padding: 6px 11px;
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--panel);
             color: var(--ink);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 650;
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 6px rgba(19, 32, 51, 0.04);
         }
 
-        .section-title {
-            margin: 28px 0 14px;
+        /* Sticky Category Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: 0 -22px 28px;
+            padding: 10px 22px;
+            background: rgba(245, 247, 251, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            transition: background-color 180ms ease, border-color 180ms ease;
+        }
+
+        .sticky-nav-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .sticky-nav-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 14px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--panel);
+            color: var(--muted);
+            font-size: 0.86rem;
+            font-weight: 650;
+            white-space: nowrap;
+            text-decoration: none;
+            box-shadow: 0 1px 3px rgba(19, 32, 51, 0.05);
+            transition: all 160ms ease;
+        }
+
+        .nav-pill:hover {
+            border-color: var(--blue);
+            color: var(--ink);
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .nav-pill.is-active {
+            background: var(--blue);
+            color: #ffffff;
+            border-color: var(--blue);
+            box-shadow: 0 2px 8px rgba(19, 88, 219, 0.28);
+        }
+
+        .nav-pill .pill-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            border-radius: 999px;
+            background: rgba(19, 32, 51, 0.08);
+            color: var(--ink);
+            font-size: 0.72rem;
+            font-family: ui-monospace, "SF Mono", monospace;
+            font-weight: 700;
+        }
+
+        .nav-pill.is-active .pill-count {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+        }
+
+        .artifact-group {
+            margin-bottom: 38px;
+            scroll-margin-top: 60px;
+        }
+
+        .group-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 32px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--line);
+        }
+
+        .group-header-text {
+            min-width: 0;
+        }
+
+        .group-title {
+            margin: 0 0 4px;
             font-size: 1.45rem;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-weight: 750;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            font-family: "Aptos", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        .group-desc {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .group-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(19, 88, 219, 0.08);
+            color: var(--blue);
+            font-size: 0.76rem;
+            font-weight: 750;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-family: ui-monospace, "SF Mono", monospace;
+            white-space: nowrap;
         }
 
         .artifact {
@@ -252,7 +400,7 @@
             background: var(--panel);
             box-shadow: var(--shadow);
             overflow: hidden;
-            scroll-margin-top: 18px;
+            scroll-margin-top: 68px;
             transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
         }
 
@@ -288,10 +436,12 @@
         }
 
         .artifact h2 {
-            margin: 0 0 8px;
-            font-size: 1.85rem;
-            line-height: 1.15;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            margin: 0 0 6px;
+            font-size: 1.68rem;
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+            font-family: "Aptos", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 720;
             overflow-wrap: anywhere;
         }
 
@@ -315,7 +465,7 @@
             font-weight: 800;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
 
         .copy-link {
@@ -332,7 +482,7 @@
             font-weight: 800;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
 
         .copy-link:hover {
@@ -340,14 +490,6 @@
             text-decoration: none;
         }
 
-        /*
-         * Layout model:
-         * - Desktop (> 900px): two columns, everything shown, no toggle.
-         * - Mobile (<= 900px): single column. By default only the essentials show
-         *   (chips, Challenge, Impact, the primary diagram). Anything tagged
-         *   .block-extra / .visual-extra is hidden until the card gets .is-open
-         *   via the "Show full case" toggle.
-         */
         .artifact-body {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
@@ -393,8 +535,28 @@
 
         .chip b {
             color: var(--ink);
-            font-weight: 800;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-weight: 750;
+        }
+
+        .trust-boundary {
+            margin-top: 14px;
+            padding: 9px 13px;
+            border-left: 3px solid var(--teal);
+            border-radius: 6px;
+            background: rgba(8, 127, 140, 0.06);
+            color: var(--ink);
+            font-size: 0.88rem;
+            line-height: 1.46;
+        }
+
+        .trust-boundary strong {
+            display: inline-block;
+            margin-right: 4px;
+            color: var(--teal);
+            font-size: 0.78rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
 
         .prose {
@@ -415,7 +577,7 @@
             font-size: 0.8rem;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
 
         .detail-block p {
@@ -437,7 +599,7 @@
             color: var(--blue);
             font-size: 0.92rem;
             font-weight: 750;
-            font-family: "SF Mono", "Roboto Mono", "Cascadia Code", "Menlo", monospace;
+            font-family: "Aptos", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             cursor: pointer;
         }
 
@@ -503,9 +665,11 @@
             color: var(--muted);
             font-size: 0.78rem;
             font-weight: 800;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
+            font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", "Menlo", monospace;
         }
+
         .visual-img {
             width: 100%;
             height: auto;
@@ -801,6 +965,7 @@
             }
         }
 
+
         @media (max-width: 900px) {
             .hero,
             .artifact-header {
@@ -808,20 +973,20 @@
             }
 
             h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .artifact-body {
                 display: flex;
                 flex-direction: column;
-                gap: 16px;
+                gap: 14px;
             }
 
             .col-main {
                 order: 1;
                 display: flex;
                 flex-direction: column;
-                gap: 16px;
+                gap: 12px;
             }
 
             .artifact-body > .visual {
@@ -833,38 +998,44 @@
                 display: flex;
             }
 
-            /* Mobile compact default: hide the "extra" until the card is opened. */
-            .artifact:not(.is-open) .block-extra,
-            .artifact:not(.is-open) .visual-extra {
+            /* Mobile compact default: hide deep case content until opened */
+            .artifact:not(.is-open) .prose,
+            .artifact:not(.is-open) .visual,
+            .artifact:not(.is-open) .proof-links {
                 display: none;
             }
 
-            /* Collapsed mobile card shows <= 3 chips; the rest reveal when that card opens. */
-            .artifact:not(.is-open) .chip-extra {
-                display: none;
-            }
-
-            /* Smooth the reveal as the extras switch from display:none to shown. */
-            .artifact.is-open .block-extra,
-            .artifact.is-open .visual-extra,
-            .artifact.is-open .chip-extra {
+            /* Reveal all sections smoothly when opened */
+            .artifact.is-open .prose {
+                display: grid;
                 animation: reveal-extra 280ms ease both;
             }
 
-            /* While collapsing, the card keeps .is-open (so extras stay rendered) and
-               plays the exit animation; JS drops both classes when it finishes. */
-            .artifact.is-closing .block-extra,
-            .artifact.is-closing .visual-extra,
-            .artifact.is-closing .chip-extra {
+            .artifact.is-open .visual {
+                display: block;
+                animation: reveal-extra 280ms ease both;
+            }
+
+            .artifact.is-open .proof-links {
+                display: flex;
+                animation: reveal-extra 280ms ease both;
+            }
+
+            .artifact.is-open .block-extra,
+            .artifact.is-open .visual-extra,
+            .artifact.is-open .chip-extra {
+                display: block;
+            }
+
+            /* Exit animations during collapse */
+            .artifact.is-closing .prose,
+            .artifact.is-closing .visual,
+            .artifact.is-closing .proof-links {
                 animation: collapse-extra 240ms ease both;
             }
 
             .case-toggle {
                 transition: background-color 160ms ease;
-            }
-
-            .prose {
-                margin-top: 0;
             }
 
             .artifact-actions {
@@ -886,71 +1057,98 @@
             }
         }
 
+        @media (max-width: 680px) {
+            .sticky-nav {
+                margin: 0 -16px 20px;
+                padding: 8px 16px;
+            }
+
+            .impact-chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px 6px;
+            }
+
+            .chip {
+                padding: 3px 8px;
+                font-size: 0.78rem;
+                line-height: 1.35;
+                border-left-width: 2px;
+                border-radius: 5px;
+            }
+
+            .artifact-header {
+                padding: 18px 18px 14px;
+            }
+
+            .artifact-body {
+                padding: 14px 18px 18px;
+            }
+
+            .group-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
         @media (max-width: 560px) {
             .page {
-                padding: 24px 14px 48px;
+                padding: 20px 14px 48px;
+            }
+
+            .sticky-nav {
+                margin: 0 -14px 18px;
+                padding: 8px 14px;
+            }
+
+            .hero-name {
+                font-size: 1.05rem;
+            }
+
+            .hero-role {
+                font-size: 0.88rem;
+                margin-bottom: 12px;
             }
 
             h1 {
-                font-size: 2rem;
-                line-height: 1.12;
-                word-break: break-word;
+                font-size: 1.85rem;
+                line-height: 1.15;
             }
 
             .lead {
-                font-size: 1rem;
+                font-size: 0.98rem;
+                margin-top: 14px;
             }
 
             .artifact h2 {
-                font-size: 1.35rem;
-                word-break: break-word;
-            }
-
-            .artifact-summary,
-            .detail-block p,
-            .chip,
-            .metric span,
-            .flow-card span,
-            .pipeline-step,
-            .state li {
-                overflow-wrap: anywhere;
+                font-size: 1.32rem;
+                line-height: 1.25;
             }
 
             .contact {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .contact a,
-            .contact span,
-            .tag,
-            .copy-link,
-            .proof-links a,
-            .proof-links span {
-                white-space: normal;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
             }
 
             .contact a,
             .contact span {
-                justify-content: center;
-                text-align: center;
+                min-height: 32px;
+                padding: 5px 9px;
+                font-size: 0.82rem;
             }
 
             .artifact-header,
             .artifact-body {
-                padding: 18px;
-            }
-
-            .diagram {
-                overflow: hidden;
+                padding: 16px;
             }
 
             .hero {
-                padding: 26px 0 24px;
+                padding: 18px 0 20px;
             }
 
             .artifact {
-                margin: 14px 0 22px;
+                margin: 12px 0 18px;
             }
 
             .visual,
@@ -1014,6 +1212,45 @@
                 background: #241c10;
                 color: #f7d89b;
             }
+
+            .sticky-nav {
+                background: rgba(13, 17, 23, 0.94);
+            }
+
+            .nav-pill {
+                background: var(--panel);
+                color: var(--muted);
+            }
+
+            .nav-pill:hover {
+                color: var(--ink);
+            }
+
+            .nav-pill.is-active {
+                background: var(--blue);
+                color: #0d1117;
+                border-color: var(--blue);
+            }
+
+            .nav-pill .pill-count {
+                background: rgba(255, 255, 255, 0.12);
+                color: var(--ink);
+            }
+
+            .nav-pill.is-active .pill-count {
+                background: rgba(0, 0, 0, 0.22);
+                color: #0d1117;
+            }
+
+            .trust-boundary {
+                background: rgba(71, 201, 216, 0.08);
+                border-left-color: var(--teal);
+            }
+
+            .group-badge {
+                background: rgba(122, 167, 255, 0.12);
+                color: var(--blue);
+            }
         }
     </style>
 </head>
@@ -1021,20 +1258,454 @@
     <main class="page">
         <section class="hero">
             <div>
+                <p class="hero-name">Nemanja Grujičić</p>
+                <p class="hero-role">Applied AI Product &amp; Research Lead &bull; ex Google &amp; McKinsey &bull; INSEAD MBA</p>
                 <p class="eyebrow">Selected work</p>
-                <h1>AI, data, and product systems built from ambiguity into operating leverage.</h1>
-                <p class="lead">A skim-first set of case studies behind the CV: proof that the same pattern repeats across roles - diagnosing hidden operating constraints, redesigning workflows &amp; partner models, and using technology to create measurable business impact.</p>
+                <h1>I lead data &amp; AI teams &mdash; and I still build and ship the systems myself.</h1>
+                <p class="lead">Selected public products, open-source agent workflows, and sanitized private platform case studies behind the CV. Built around a consistent pattern: diagnosing operating constraints, setting strict trust boundaries, and shipping dependable systems into real use.</p>
             </div>
             <nav class="contact" aria-label="Profile links">
                 <a href="index.html">CV</a>
                 <a href="https://www.linkedin.com/in/grujicicnemanja/">LinkedIn</a>
                 <a href="https://github.com/vokativ/">GitHub</a>
                 <span>Singapore / Remote</span>
-                <span>Updated Sep 2026</span>
+                <span>Updated Oct 2026</span>
             </nav>
         </section>
 
-        <h2 class="section-title">Selected Work</h2>
+        <!-- Sticky Section Navigation -->
+        <nav class="sticky-nav" aria-label="Selected work categories">
+            <div class="sticky-nav-inner">
+                <a href="#group-built" class="nav-pill is-active">
+                    <span class="pill-title">Built &amp; Shipped</span>
+                    <span class="pill-count">5</span>
+                </a>
+                <a href="#group-rapsodo" class="nav-pill">
+                    <span class="pill-title">Rapsodo Data &amp; AI</span>
+                    <span class="pill-count">5</span>
+                </a>
+                <a href="#group-earlier" class="nav-pill">
+                    <span class="pill-title">Google &amp; McKinsey</span>
+                    <span class="pill-count">2</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Group 1: Built & Shipped Myself (Public & Verifiable) -->
+        <section class="artifact-group" id="group-built">
+            <div class="group-header">
+                <div class="group-header-text">
+                    <h2 class="group-title">Built &amp; Shipped Myself</h2>
+                    <p class="group-desc">Public products and open-source agent systems live in production with verifiable trust boundaries.</p>
+                </div>
+                <span class="group-badge">5 Projects &bull; Public</span>
+            </div>
+
+        <article class="artifact" id="hocudaglasam">
+            <header class="artifact-header">
+                <div>
+                    <h2>Korak do glasa</h2>
+                    <p class="artifact-summary">Civic-tech diaspora voter-registration platform for Serbia's 2026 election cycle &mdash; combining client-side zero-PII registration PDF generation with a public follow-up procedure and machine-readable instructions for external AI agents.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Live Civic Tech</span>
+                    <a class="copy-link" href="#hocudaglasam" data-copy-link aria-label="Copy link to Korak do glasa">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="Korak do glasa impact highlights">
+                        <span class="chip"><b>2026 election</b> refresh</span>
+                        <span class="chip"><b>16 canonical</b> templates</span>
+                        <span class="chip"><b>Zero server-side</b> PII</span>
+                    </div>
+                    <div class="trust-boundary">
+                        <strong>Trust boundary:</strong> Zero server-side case data. Opening agent.md provides no email access; no drafting or sending without explicit human sign-off.
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Serbian citizens abroad face a clumsy, high-friction registration process across dozens of diplomatic missions with strict deadlines. After submitting, applicants frequently face weeks of administrative silence or ambiguous acknowledgements with no tracking mechanism or guidance on strict legal appeal windows (often 24&ndash;48 hours).</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>Originally created hocudaglasam.com in 2020 and refreshed the platform for Serbia's 2026 parliamentary election cycle as Korak do glasa (korakdoglasa.org). Rebuilt the frontend as a React 19 / TypeScript application using Vite and Bun, hosted on Firebase. Built an automated Python ingestion and verification pipeline that audits Ministry of Foreign Affairs directories and mission portals, enforces evidence citations before promoting newly published election mailboxes, and exposes a strict four-state coverage contract (confirmed, partial, notice-published, unconfirmed).</p>
+                            <p>The browser generates official voter registration PDFs locally with an embedded Cyrillic font and optional client-side ID document attachment. Zero applicant personal data or documents ever reach project servers; the completed PDF is handed off directly to the user's system mail client.</p>
+                            <p><strong>Post-submission follow-up &amp; AI agent instructions:</strong> Expanded the platform with a complete post-deadline follow-up system (<a href="https://korakdoglasa.org/pracenje/">/pracenje/</a> in Cyrillic and Latin). Rather than hosting an AI service that inspects personal inboxes, the site publishes an open operating procedure: 16 canonical correspondence templates (T01&ndash;T16) in <code>templates.json</code>, a machine-readable decision tree in <code>workflow.json</code>, an official legal source catalog in <code>sources.json</code>, and a dedicated AI agent playbook (<a href="https://korakdoglasa.org/pracenje/agent.md">/pracenje/agent.md</a>) with one-click handoff to ChatGPT, Claude, and Gemini.</p>
+                            <p>The agent playbook enforces strict permission and agency boundaries: visiting a URL is not permission to read private email; reading email does not permit saving drafts; saving drafts does not permit sending; and legal appeals require separate explicit authorization. The model must report along an explicit 5-step status ladder (text prepared &rarr; draft saved &rarr; message sent &rarr; receipt confirmed &rarr; filing proven) and distinguish preliminary acknowledgements from final polling place decisions.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Live at <a href="https://korakdoglasa.org/">korakdoglasa.org</a> for the 2026 election cycle. Open source on GitHub with automated recipient verification and station coverage tests. (The historical 2020 domain hocudaglasam.com lapsed after prior cycles and now hosts unrelated third-party content; all current operations are maintained under korakdoglasa.org).</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://korakdoglasa.org/">korakdoglasa.org</a>
+                        <a href="https://korakdoglasa.org/pracenje/">Follow-up Guide (/pracenje/)</a>
+                        <a href="https://korakdoglasa.org/pracenje/agent.md">Agent Instructions (agent.md)</a>
+                        <a href="https://github.com/vokativ/glasanje">GitHub repo</a>
+                        <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian coverage</a>
+                        <span>React 19, TypeScript, Vite, Bun, Python verification pipeline, client-side PDF, zero server-side PII, Firebase Hosting, Agent playbook (agent.md), 16 templates (templates.json), workflow.json</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Korak do glasa two-phase civic architecture">
+                    <p class="visual-title">Two-phase architecture: Local PDF + Agent follow-up</p>
+                    <div class="flow">
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>1. Registration (Browser)</b>
+                                <span>React 19 client builds Cyrillic PDF locally. Zero PII transmitted to servers.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>2. Verified Delivery</b>
+                                <span>Python pipeline audits MFA notices; hands off to voter's native mail app.</span>
+                            </div>
+                        </div>
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>3. Follow-up Playbook</b>
+                                <span>Public guide with 16 canonical templates (T01&ndash;T16) &amp; workflow.json decision tree.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>4. Agent Boundary</b>
+                                <span>One-click agent.md handoff. Strict permissions: no inbox scraping, no auto-filing.</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="adiufant">
+            <header class="artifact-header">
+                <div>
+                    <h2>Adiufant</h2>
+                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning family-related images, PDFs, voice notes, shared files, and calendar screenshots into structured calendar events and preparation checklists with scheduling safeguards.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Live Product</span>
+                    <a class="copy-link" href="#adiufant" data-copy-link aria-label="Copy link to Adiufant">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Adiufant impact highlights">
+                    <span class="chip"><b>Two app stores</b> &rarr; Android + iPhone</span>
+                    <span class="chip"><b>Review before action</b> &rarr; local-first</span>
+                    <span class="chip"><b>Auto-reschedule &amp; undo</b> &rarr; safeguards</span>
+                </div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> Save-first review; temporal grounding guardrails detect prior-year hallucinations; nothing reaches device calendar without explicit user confirmation.</div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>While coordinating two children's lives, my wife and I found that even a shared calendar solved only part of the problem. Information arrived through school apps, chats, flyers, PDFs, screenshots, voice notes, and work calendars; entering it was a constant time tax, and a date alone did not capture what had to be brought, signed, paid, or prepared beforehand.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>I tested model feasibility in early 2025, built a web demo over the summer, and learned that a browser upload flow was too clunky because parents' source information lives on their phones. I then owned the mobile product, architecture, implementation, testing, customer discovery, and store releases end to end, using AI development tools throughout.</p>
+                            <p>Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through authenticated Firebase callable functions to Gemini with App Check protection before normalized suggestions are saved for an explicit accept-or-skip review. To make AI dependable in daily use, built temporal grounding guardrails to detect and fall back from prior-year resolution hallucinations on undated notices. When an event date is adjusted, a dedicated reschedule engine dynamically updates derived preparation task deadlines, pairing instant slide-fade feedback with an inline undo action. System share targets are isolated from capture flows to preserve original event start dates.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> (v1.3.1, build 25), and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (v1.3.0, build 25). Iterative releases added dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://adiufant.com">adiufant.com</a>
+                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
+                        <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, App Check, Temporal Guardrails</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Adiufant product showcase and architecture">
+                    <p class="visual-title">Product in action: Notice to structured event</p>
+                    <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
+                    <div class="visual-extra">
+                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
+                        <div class="flow">
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Multimodal Input</b>
+                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Protected AI Pipeline</b>
+                                    <span>Auth + App Check + callable backend + temporary media staging + Gemini.</span>
+                                </div>
+                            </div>
+                            <div class="flow-row">
+                                <div class="flow-card">
+                                    <b>Save-First Review</b>
+                                    <span>Pending events, preparation tasks &amp; Important People in Drift.</span>
+                                </div>
+                                <div class="flow-arrow">></div>
+                                <div class="flow-card">
+                                    <b>Calendar &amp; Sync</b>
+                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="redmart-grocery">
+            <header class="artifact-header">
+                <div>
+                    <h2>RedMart Grocery Cart Helper</h2>
+                    <p class="artifact-summary">Open-source AI agent workflow that turns messy family whiteboard photos, voice notes, or shorthand lists into prepared grocery carts on RedMart / Lazada Singapore &mdash; using constrained AI, canonical SKU matching, and human-in-the-loop review.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Open-Source AI Agent</span>
+                    <a class="copy-link" href="#redmart-grocery" data-copy-link aria-label="Copy link to RedMart Grocery Cart Helper">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="RedMart Grocery Cart Helper impact highlights">
+                        <span class="chip"><b>Whiteboard</b> &rarr; verified cart</span>
+                        <span class="chip"><b>Canonical SKU</b> &amp; alias matching</span>
+                        <span class="chip"><b>Stops before</b> checkout</span>
+                    </div>
+                    <div class="trust-boundary">
+                        <strong>Trust boundary:</strong> Proposed cart previewed before any browser mutation. Stops at CAPTCHAs and never bypasses; zero automated checkout or payment.
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>When Amazon Fresh discontinued service in Singapore, our family moved to RedMart. Finding 20&ndash;30 known products, fixing quantities, and securing delivery slots became a recurring weekly chore competing with jobs and family time. Yet after a couple of months, household choices were already solved: we already knew which eggs, detergent, fruit, and bread we buy. We didn't need AI to invent new shopping trips; we needed help completing a familiar repetitive task consistently.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>Built an open-source agent workflow around a core engineering principle: <em>The family makes decisions once; the agent handles the repetition.</em> Rather than letting an LLM guess arbitrary products on a retailer website, the architecture constrains the agent's action space through a structured household YAML catalog.</p>
+                            <p>Family shorthand maps to catalog aliases, default quantities, and family mixes (e.g. &ldquo;fruit mix&rdquo; expanding into member items). Products are grounded by canonical retailer <code>item_id</code> and <code>sku_id</code> identifiers, with ranked backup products when first choices are unavailable within delivery windows.</p>
+                            <p><strong>Operational discipline &amp; verification:</strong> Enforces the principle that <em>an action is not an outcome</em>. Clicking &ldquo;Add to cart&rdquo; does not prove success: buttons may fail, items may be out of stock, or items may collapse into promotion bundles. The agent verifies actual cart table rows, canonical identifiers, pack sizes, and quantities. If state cannot be verified, it reports uncertainty rather than hallucinating success.</p>
+                            <p><strong>Ergonomic multi-device workflow:</strong> The list starts wherever life happens&mdash;snap a whiteboard photo, dictate a voice note, or type shorthand on a phone via ChatGPT Remote. The repetitive browser automation runs on a paired desktop host (Mac or Windows in Codex mode) where the logged-in RedMart session resides. Also supports OMP browser alternative and OS-level accessibility fallbacks.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Open source on GitHub at <a href="https://github.com/vokativ/grocery-shopping-redmart">vokativ/grocery-shopping-redmart</a>. Features synthetic catalog validators, unit test suites for alias resolution and review rendering, and documented browser connection hierarchies. Supervised runs with 5.6 Terra / Medium produced verified carts; stops before checkout so delivery slot selection and payment always stay with the human.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://github.com/vokativ/grocery-shopping-redmart">GitHub repo</a>
+                        <a href="https://github.com/vokativ/grocery-shopping-redmart/blob/main/docs/case-study.md">Architecture Case Study</a>
+                        <a href="https://github.com/vokativ/grocery-shopping-redmart/blob/main/docs/developer-guide.md">Developer Guide</a>
+                        <span>Open-source AI agent, ChatGPT Desktop / Codex, OMP browser, YAML catalog, SKU resolution, Bounded fallbacks, Multi-device pairing, Node.js</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="RedMart Grocery Cart Helper workflow architecture">
+                    <p class="visual-title">Constrained agent pipeline: list to verified cart</p>
+                    <div class="pipeline">
+                        <div class="pipeline-step">
+                            <strong>1. Multimodal input:</strong> Photo of kitchen whiteboard, voice note, or casual shorthand (&ldquo;persil powder&rdquo;, &ldquo;eggs&rdquo;).
+                        </div>
+                        <div class="pipeline-step">
+                            <strong>2. Canonical catalog matching:</strong> Resolves family aliases against YAML catalog with explicit <code>item_id</code>, <code>sku_id</code>, and default quantities.
+                        </div>
+                        <div class="pipeline-step">
+                            <strong>3. Human review boundary:</strong> Proposed cart previewed in chat; human confirms or edits (&ldquo;skip ham this time&rdquo;) before browser touches RedMart.
+                        </div>
+                        <div class="pipeline-step">
+                            <strong>4. Browser cart mutation:</strong> Desktop browser operates logged-in session, verifies stock, and applies ranked backups if unavailable within 2 days.
+                        </div>
+                        <div class="pipeline-step">
+                            <strong>5. Outcome verification:</strong> Reads actual cart table rows, canonical identifiers, pack sizes, and promo bundles (&ldquo;action &ne; outcome&rdquo;).
+                        </div>
+                        <div class="pipeline-step">
+                            <strong>6. Human checkout:</strong> Agent halts with cart ready; user chooses delivery slot, reviews total, and pays. Zero automated checkout.
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="prepisi">
+            <header class="artifact-header">
+                <div>
+                    <h2>Prepiši</h2>
+                    <p class="artifact-summary">Privacy-first offline browser extension for reading Serbian, Croatian, Bosnian, and Montenegrin web text in a preferred script and pronunciation &mdash; with 100% client-side conversion and zero page-text upload.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Published Extension</span>
+                    <a class="copy-link" href="#prepisi" data-copy-link aria-label="Copy link to Prepiši">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="Prepiši impact highlights">
+                        <span class="chip"><b>Three stores</b> &rarr; Chrome, Firefox &amp; Edge</span>
+                        <span class="chip"><b>137 curated</b> media families</span>
+                        <span class="chip"><b>Zero network</b> requests</span>
+                    </div>
+                                        <div class="trust-boundary"><strong>Trust boundary:</strong> 100% client-side conversion; 4,102 verified linguistic rules; zero LLMs, zero network requests, zero page-text upload.</div>
+<div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>I grew up reading both Latin and Cyrillic and encountering Serbian, Croatian, Bosnian, and Montenegrin variants. It was frustrating that modern regional websites usually offered only the script easiest for them to publish and one institutionally favored dialect. I wanted one-click control over how everyday news and other web content looked to me, while preserving rather than flattening that diversity.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>Built a shared local conversion engine in TypeScript/JavaScript with strict boundary protection. Rather than relying on non-deterministic LLMs at browsing time, the extension uses 4,102 verified linguistic transformation rows, bidirectional Latin-Cyrillic mapping, and curated phonetic rules for Ekavian, Ijekavian, and Ikavian variants. The content engine safely protects code, forms, URLs, emails, brands, handles, and foreign-language spans while observing dynamic DOM mutations.</p>
+                            <p>Authored a dependency-free Node packaging pipeline with byte-level archive validation and cross-browser manifest handling (Manifest V3). Managed browser-specific permission and lifecycle differences across Chrome, Firefox (desktop + Android), and Microsoft Edge.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Version 0.9.3 is published and live on Mozilla Firefox Add-ons (desktop + Android), the Chrome Web Store, and Microsoft Edge Add-ons. The engine is backed by 92 offline unit/integration tests and 12 headless-Chrome DOM checks, with a curated catalog of 137 regional media families (generating 600 explicit Firefox host permission patterns). Operates entirely offline with no analytics, telemetry, or remote text processing.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb">Chrome Web Store</a>
+                        <a href="https://addons.mozilla.org/firefox/addon/prepisi-converter/">Firefox Add-ons</a>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/prepi%C5%A1i/idgdmkmmdemdhdkenlodijkljpbckool">Microsoft Edge Add-ons</a>
+                        <a href="https://github.com/vokativ/prepisi">GitHub repo</a>
+                        <a href="https://github.com/vokativ/prepisi/blob/main/PRIVACY.md">Privacy Policy</a>
+                        <span>WebExtensions, Manifest V3, Offline transformation engine, Reviewed linguistic data, Dependency-free Node packager</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Prepiši product architecture">
+                    <p class="visual-title">Local conversion boundary</p>
+                    <div class="flow">
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Active page</b>
+                                <span>Only user-visible, eligible text is considered.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Offline rules</b>
+                                <span>Script, pronunciation, and protected-term logic run in-browser.</span>
+                            </div>
+                        </div>
+                        <div class="flow-row">
+                            <div class="flow-card">
+                                <b>Reversible result</b>
+                                <span>Changes are recalculated from original text.</span>
+                            </div>
+                            <div class="flow-arrow">></div>
+                            <div class="flow-card">
+                                <b>Local preference</b>
+                                <span>Optional setting persists only for a chosen site.</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="premise-lab">
+            <header class="artifact-header">
+                <div>
+                    <h2>The Premise Lab</h2>
+                    <p class="artifact-summary">A public, open-source example of using AI to think before building: surfacing hidden premises, testing real-world assumptions, and turning rough ideas into sharper artifacts.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Public open source</span>
+                    <a class="copy-link" href="#premise-lab" data-copy-link aria-label="Copy link to The Premise Lab">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="The Premise Lab impact highlights">
+                    <span class="chip"><b>Open source</b> + Gemini + Opal</span>
+                    <span class="chip"><b>AI</b> for judgment, not just code</span>
+                    <span class="chip"><b>Philosophy</b> as a build tool</span>
+                </div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> Explicit falsification criteria; stress-tests assumptions before code is written; requires verifiable counter-evidence.</div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>AI is getting good at building &mdash; which lets weak ideas harden faster. The expensive failure comes earlier: unclear premises, vague words, and hidden beliefs about how the world works.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a public, open-source thinking partner combining philosophy, behavioral science, and systems thinking, so you can examine an idea before building it. It asks what must be true, what would prove the idea wrong, and which words carry more confusion than meaning &mdash; without making you perform intelligence for the machine.</p>
+                        </div>
+                        <div class="detail-block">
+                            <strong>Impact</strong>
+                            <p>A rough thought becomes a working hypothesis, a clearer brief, a reality test, and a ledger of assumptions still owed to the world &mdash; AI used to improve judgment before action.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://github.com/vokativ/premise-lab">GitHub repo</a>
+                        <a href="https://gemini.google.com/gem/1q5LvzjQh-pSG5I9E5RAEZ4CgLtqNC1cR?usp=sharing">Gemini Gem</a>
+                        <a href="https://opal.google/app/14amAGTURQAnFBo8HRXwUXG4DRIaQUQZA">Opal app with Google Docs output</a>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="The Premise Lab method diagram">
+                    <p class="visual-title">Idea stress-test flow</p>
+                    <svg class="diagram" viewBox="0 0 520 292" role="img" aria-label="The Premise Lab turns a raw idea through hidden premise checks into an idea artifact and reality test">
+                        <rect class="diagram-card idea" x="14" y="106" width="112" height="80" rx="8"></rect>
+                        <text class="diagram-text" x="30" y="139">raw idea</text>
+                        <text class="diagram-subtext" x="30" y="158">can we build</text>
+                        <text class="diagram-subtext" x="30" y="173">this?</text>
+
+                        <path class="diagram-line" d="M138 146 C152 146 152 48 170 48"></path>
+                        <path class="diagram-line" d="M138 146 C154 146 154 112 170 112"></path>
+                        <path class="diagram-line" d="M138 146 C154 146 154 176 170 176"></path>
+                        <path class="diagram-line" d="M138 146 C152 146 152 240 170 240"></path>
+
+                        <rect class="diagram-card lens" x="170" y="22" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="45">hidden premise</text>
+                        <text class="diagram-subtext" x="186" y="62">what must be true?</text>
+
+                        <rect class="diagram-card lens" x="170" y="86" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="109">philosophy</text>
+                        <text class="diagram-subtext" x="186" y="126">better questions</text>
+
+                        <rect class="diagram-card lens" x="170" y="150" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="173">real world</text>
+                        <text class="diagram-subtext" x="186" y="190">real-world friction</text>
+
+                        <rect class="diagram-card lens" x="170" y="214" width="140" height="52" rx="8"></rect>
+                        <text class="diagram-text" x="186" y="237">value</text>
+                        <text class="diagram-subtext" x="186" y="254">who is better off?</text>
+
+                        <path class="diagram-line" d="M322 48 C350 48 350 104 370 104"></path>
+                        <path class="diagram-line" d="M322 112 C346 112 346 104 370 104"></path>
+                        <path class="diagram-line" d="M322 176 C346 176 346 214 370 214"></path>
+                        <path class="diagram-line" d="M322 240 C350 240 350 214 370 214"></path>
+
+                        <rect class="diagram-card good" x="370" y="66" width="132" height="76" rx="8"></rect>
+                        <text class="diagram-text" x="386" y="95">idea artifact</text>
+                        <text class="diagram-subtext" x="386" y="114">hypothesis and</text>
+                        <text class="diagram-subtext" x="386" y="129">reality debt</text>
+
+                        <rect class="diagram-card test" x="370" y="178" width="132" height="76" rx="8"></rect>
+                        <text class="diagram-text" x="386" y="207">reality test</text>
+                        <text class="diagram-subtext" x="386" y="226">small contact</text>
+                        <text class="diagram-subtext" x="386" y="241">with the world</text>
+                    </svg>
+                    <div class="pipeline visual-extra">
+                        <div class="pipeline-step"><strong>Mirror:</strong> restate the idea in higher resolution before judging it.</div>
+                        <div class="pipeline-step"><strong>X-ray:</strong> surface the load-bearing assumption or category mistake.</div>
+                        <div class="pipeline-step"><strong>Reframe:</strong> turn the idea into a sharper working hypothesis.</div>
+                        <div class="pipeline-step"><strong>Contact:</strong> propose the smallest useful reality test before building.</div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        </section>
+
+        <!-- Group 2: At Rapsodo: Head of Data Analytics & AI Lead (2023–2026) -->
+        <section class="artifact-group" id="group-rapsodo">
+            <div class="group-header">
+                <div class="group-header-text">
+                    <h2 class="group-title">At Rapsodo: Head of Data Analytics &amp; AI Lead</h2>
+                    <p class="group-desc">Enterprise data platform turnaround, conversational AI, and operating systems (2023&ndash;2026).</p>
+                </div>
+                <span class="group-badge">5 Case Studies &bull; Sanitized</span>
+            </div>
 
         <article class="artifact" id="company-platform">
             <header class="artifact-header">
@@ -1056,6 +1727,7 @@
                     <span class="chip chip-extra"><b>3.5B+</b> rows modeled</span>
                     <span class="chip chip-extra"><b>1,100</b> SKUs governed</span>
                 </div>
+                    <div class="trust-boundary"><strong>Governance boundary:</strong> Governed Dataform models with automated BigQuery assertions; least-privilege IAM; business logic lives in version control, not ad-hoc BI formulas.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1155,6 +1827,7 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
+
         <article class="artifact" id="golf-genie">
             <header class="artifact-header">
                 <div>
@@ -1173,6 +1846,7 @@
                     <span class="chip"><b>Self-serve</b> with visible SQL</span>
                     <span class="chip"><b>All global teams</b> unblocked</span>
                 </div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> Visible SQL generated and displayed before execution; analyst-verified query patterns prevent metric hallucinations; CSV/Excel export for independent auditing.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1255,80 +1929,6 @@
             </div>
         </article>
 
-        <article class="artifact" id="adiufant">
-            <header class="artifact-header">
-                <div>
-                    <h2>Adiufant</h2>
-                    <p class="artifact-summary">Production AI calendar assistant &amp; task manager for busy parents &mdash; turning family-related images, PDFs, voice notes, shared files, and calendar screenshots into structured calendar events and preparation checklists with scheduling safeguards.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Live Product</span>
-                    <a class="copy-link" href="#adiufant" data-copy-link aria-label="Copy link to Adiufant">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Adiufant impact highlights">
-                    <span class="chip"><b>Two app stores</b> &rarr; Android + iPhone</span>
-                    <span class="chip"><b>Review before action</b> &rarr; local-first</span>
-                    <span class="chip"><b>Auto-reschedule &amp; undo</b> &rarr; safeguards</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>While coordinating two children's lives, my wife and I found that even a shared calendar solved only part of the problem. Information arrived through school apps, chats, flyers, PDFs, screenshots, voice notes, and work calendars; entering it was a constant time tax, and a date alone did not capture what had to be brought, signed, paid, or prepared beforehand.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>I tested model feasibility in early 2025, built a web demo over the summer, and learned that a browser upload flow was too clunky because parents' source information lives on their phones. I then owned the mobile product, architecture, implementation, testing, customer discovery, and store releases end to end, using AI development tools throughout.</p>
-                            <p>Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through authenticated Firebase callable functions to Gemini with App Check protection before normalized suggestions are saved for an explicit accept-or-skip review. To make AI dependable in daily use, built temporal grounding guardrails to detect and fall back from prior-year resolution hallucinations on undated notices. When an event date is adjusted, a dedicated reschedule engine dynamically updates derived preparation task deadlines, pairing instant slide-fade feedback with an inline undo action. System share targets are isolated from capture flows to preserve original event start dates.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>Status &amp; Delivery</strong>
-                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> (v1.3.1, build 25), and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (v1.3.0, build 25). Iterative releases added dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <a href="https://adiufant.com">adiufant.com</a>
-                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
-                        <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, App Check, Temporal Guardrails</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Adiufant product showcase and architecture">
-                    <p class="visual-title">Product in action: Notice to structured event</p>
-                    <img src="img/adiufant-showcase.jpg" alt="Adiufant side-by-side extraction showing original school notice converted into structured calendar event and prep checklist" class="visual-img" loading="lazy">
-                    <div class="visual-extra">
-                        <p class="visual-title" style="margin-top: 14px;">System Architecture</p>
-                        <div class="flow">
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Multimodal Input</b>
-                                    <span>Photo, PDF, voice note, message, or work calendar photo.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Protected AI Pipeline</b>
-                                    <span>Auth + App Check + callable backend + temporary media staging + Gemini.</span>
-                                </div>
-                            </div>
-                            <div class="flow-row">
-                                <div class="flow-card">
-                                    <b>Save-First Review</b>
-                                    <span>Pending events, preparation tasks &amp; Important People in Drift.</span>
-                                </div>
-                                <div class="flow-arrow">></div>
-                                <div class="flow-card">
-                                    <b>Calendar &amp; Sync</b>
-                                    <span>Device calendar insert, ICS export &amp; cloud database sync.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
         <article class="artifact" id="support-ai-reset">
             <header class="artifact-header">
                 <div>
@@ -1347,6 +1947,7 @@
                     <span class="chip"><b>Weekly</b> product signal</span>
                     <span class="chip"><b>Outcome-aligned</b> vendor</span>
                 </div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> AI handles repetitive tier-1 volume; unknown queries route to human agents; weekly structured categorization feeds product &amp; engineering roadmap.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1398,6 +1999,152 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
+
+        <article class="artifact" id="security-governance">
+            <header class="artifact-header">
+                <div>
+                    <h2>Security, Governance, and Production Discipline</h2>
+                    <p class="artifact-summary">Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Enterprise trust</span>
+                    <a class="copy-link" href="#security-governance" data-copy-link aria-label="Copy link to Security, Governance, and Production Discipline">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Security and governance impact highlights">
+                    <span class="chip"><b>Whole company</b> kept access</span>
+                    <span class="chip"><b>5&times; fewer</b> API keys, stale accounts cut, full SSO</span>
+                </div>
+                    <div class="trust-boundary"><strong>Security boundary:</strong> Enterprise SSO, column/row-level BigQuery access, least-privilege service accounts, point-in-time recovery.</div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Production analytics and AI touched company, customer, billing, and athlete data &mdash; but the inherited setup had fragile VM deployments, stale access, scattered keys, little disaster recovery, and overly broad permissions.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Migrated Superset from a VM to Kubernetes with Microsoft 365 SSO, automated backups, and custom roles &mdash; preserving existing dashboards and users. Tightened GCP service accounts, API keys, and dataset-level BigQuery permissions. The goal was a trust layer people could rely on, not just dashboards.</p>
+                        </div>
+                        <div class="detail-block">
+                            <strong>Impact</strong>
+                            <p>Safer and easier to trust: 100+ users kept access through the migration, stale accounts were removed, and permissions narrowed without breaking production workflows.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <span>Superset v4 to v5 migration</span>
+                        <span>M365 SSO and RBAC</span>
+                        <span>Automated backups and restore paths</span>
+                        <span>Least-privilege IAM</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Enterprise trust operating layer">
+                    <p class="visual-title">Trust layer</p>
+                    <div class="pipeline">
+                        <div class="pipeline-step"><strong>Identity:</strong> Microsoft 365 SSO, role mapping, and governed user access.</div>
+                        <div class="pipeline-step"><strong>Recovery:</strong> automated backups, retention, and restore procedures for production BI metadata.</div>
+                        <div class="pipeline-step"><strong>Permissions:</strong> stale accounts removed, API keys consolidated, BigQuery access scoped by dataset and purpose.</div>
+                        <div class="pipeline-step"><strong>Operations:</strong> Terraform-managed infrastructure, Kubernetes deployment, and safer production change paths.</div>
+                    </div>
+                    <p class="note visual-extra">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="office-metrics">
+            <header class="artifact-header">
+                <div>
+                    <h2>Company Office Metrics Display</h2>
+                    <p class="artifact-summary">A live TV-native dashboard that gave offices a shared view of what was happening across products, channels, customers, support, logistics, and regions.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Live operations</span>
+                    <a class="copy-link" href="#office-metrics" data-copy-link aria-label="Copy link to Company Office Metrics Display">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                <div class="impact-chips" aria-label="Office metrics display impact highlights">
+                    <span class="chip"><b>4 offices</b>, one live view</span>
+                    <span class="chip"><b>Responsive</b>: TV, 4K, and mobile</span>
+                    <span class="chip"><b>Always-on</b> cadence</span>
+                </div>
+                <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Company results were siloed. Teams had no shared, ambient view of product usage, sales, support signals, logistics, or customer feedback &mdash; and fragmented updates filled the gap.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I did</strong>
+                            <p>Built a Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes for office TVs (including Amazon Silk on Fire TV), scaling from mobile to 4K. Display context was a product constraint &mdash; URL parameters set units, so North American teams saw imperial while others saw metric.</p>
+                        </div>
+                        <div class="detail-block">
+                            <strong>Impact</strong>
+                            <p>All four global offices saw the same live picture at once, without digging through reports &mdash; surfacing unusual changes and aligning teams across functions.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <span>Bun, TypeScript, Canvas 2D, WebSockets</span>
+                        <span>BigQuery-backed metrics</span>
+                        <span>TV, mobile, and 4K layouts</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-label="Office metrics display data flow">
+                    <p class="visual-title">Signals included</p>
+                    <svg class="diagram" viewBox="0 0 520 250" role="img" aria-label="Office metrics display flow">
+                        <rect class="diagram-card" x="16" y="20" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="49">sales</text>
+                        <rect class="diagram-card" x="16" y="79" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="108">logistics</text>
+                        <rect class="diagram-card" x="16" y="138" width="116" height="48" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="167">product usage</text>
+                        <rect class="diagram-card" x="16" y="197" width="116" height="38" rx="8"></rect>
+                        <text class="diagram-text" x="31" y="222">surveys</text>
+
+                        <path class="diagram-line" d="M144 44 C174 44 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 103 C174 103 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 162 C174 162 174 125 204 125"></path>
+                        <path class="diagram-line" d="M144 216 C174 216 174 125 204 125"></path>
+
+                        <rect class="diagram-card core" x="204" y="78" width="120" height="94" rx="8"></rect>
+                        <text class="diagram-text" x="220" y="108">BigQuery</text>
+                        <text class="diagram-subtext" x="220" y="128">refreshes</text>
+                        <text class="diagram-subtext" x="220" y="146">metric cards</text>
+                        <text class="diagram-subtext" x="220" y="164">alert signals</text>
+
+                        <path class="diagram-line" d="M336 125 H382"></path>
+                        <rect class="diagram-card good" x="382" y="50" width="120" height="150" rx="8"></rect>
+                        <text class="diagram-text" x="398" y="82">TV display</text>
+                        <text class="diagram-subtext" x="398" y="104">Canvas 2D</text>
+                        <text class="diagram-subtext" x="398" y="124">WebSockets</text>
+                        <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
+                        <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
+                    </svg>
+                    <div class="pipeline visual-extra">
+                        <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
+                        <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
+                        <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
+                        <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
+                    </div>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        </section>
+
+        <!-- Group 3: Earlier Leadership: Google & McKinsey -->
+        <section class="artifact-group" id="group-earlier">
+            <div class="group-header">
+                <div class="group-header-text">
+                    <h2 class="group-title">Earlier Leadership: Google &amp; McKinsey</h2>
+                    <p class="group-desc">Scaled international business lines and durable commercial transformations.</p>
+                </div>
+                <span class="group-badge">2 Case Studies &bull; Scaled</span>
+            </div>
+
         <article class="artifact" id="google-magellan">
             <header class="artifact-header">
                 <div>
@@ -1464,59 +2211,6 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
-
-        <article class="artifact" id="security-governance">
-            <header class="artifact-header">
-                <div>
-                    <h2>Security, Governance, and Production Discipline</h2>
-                    <p class="artifact-summary">Made the data and AI operating layer more enterprise-ready through SSO, backups, least-privilege access, governed BI, and safer production operations.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Enterprise trust</span>
-                    <a class="copy-link" href="#security-governance" data-copy-link aria-label="Copy link to Security, Governance, and Production Discipline">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Security and governance impact highlights">
-                    <span class="chip"><b>Whole company</b> kept access</span>
-                    <span class="chip"><b>5&times; fewer</b> API keys, stale accounts cut, full SSO</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>Production analytics and AI touched company, customer, billing, and athlete data &mdash; but the inherited setup had fragile VM deployments, stale access, scattered keys, little disaster recovery, and overly broad permissions.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Migrated Superset from a VM to Kubernetes with Microsoft 365 SSO, automated backups, and custom roles &mdash; preserving existing dashboards and users. Tightened GCP service accounts, API keys, and dataset-level BigQuery permissions. The goal was a trust layer people could rely on, not just dashboards.</p>
-                        </div>
-                        <div class="detail-block">
-                            <strong>Impact</strong>
-                            <p>Safer and easier to trust: 100+ users kept access through the migration, stale accounts were removed, and permissions narrowed without breaking production workflows.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <span>Superset v4 to v5 migration</span>
-                        <span>M365 SSO and RBAC</span>
-                        <span>Automated backups and restore paths</span>
-                        <span>Least-privilege IAM</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Enterprise trust operating layer">
-                    <p class="visual-title">Trust layer</p>
-                    <div class="pipeline">
-                        <div class="pipeline-step"><strong>Identity:</strong> Microsoft 365 SSO, role mapping, and governed user access.</div>
-                        <div class="pipeline-step"><strong>Recovery:</strong> automated backups, retention, and restore procedures for production BI metadata.</div>
-                        <div class="pipeline-step"><strong>Permissions:</strong> stale accounts removed, API keys consolidated, BigQuery access scoped by dataset and purpose.</div>
-                        <div class="pipeline-step"><strong>Operations:</strong> Terraform-managed infrastructure, Kubernetes deployment, and safer production change paths.</div>
-                    </div>
-                    <p class="note visual-extra">Learning velocity mattered here, but it is not the headline: I came from a non-traditional technical path and used AI as a force multiplier while taking ownership of production systems under pressure.</p>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
-
 
         <article class="artifact" id="mckinsey-operating-systems">
             <header class="artifact-header">
@@ -1601,320 +2295,8 @@
                 <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
             </div>
         </article>
-        <article class="artifact" id="office-metrics">
-            <header class="artifact-header">
-                <div>
-                    <h2>Company Office Metrics Display</h2>
-                    <p class="artifact-summary">A live TV-native dashboard that gave offices a shared view of what was happening across products, channels, customers, support, logistics, and regions.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Live operations</span>
-                    <a class="copy-link" href="#office-metrics" data-copy-link aria-label="Copy link to Company Office Metrics Display">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Office metrics display impact highlights">
-                    <span class="chip"><b>4 offices</b>, one live view</span>
-                    <span class="chip"><b>Responsive</b>: TV, 4K, and mobile</span>
-                    <span class="chip"><b>Always-on</b> cadence</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>Company results were siloed. Teams had no shared, ambient view of product usage, sales, support signals, logistics, or customer feedback &mdash; and fragmented updates filled the gap.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Built a Bun + TypeScript app using Canvas 2D, WebSockets, and BigQuery-backed refreshes for office TVs (including Amazon Silk on Fire TV), scaling from mobile to 4K. Display context was a product constraint &mdash; URL parameters set units, so North American teams saw imperial while others saw metric.</p>
-                        </div>
-                        <div class="detail-block">
-                            <strong>Impact</strong>
-                            <p>All four global offices saw the same live picture at once, without digging through reports &mdash; surfacing unusual changes and aligning teams across functions.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <span>Bun, TypeScript, Canvas 2D, WebSockets</span>
-                        <span>BigQuery-backed metrics</span>
-                        <span>TV, mobile, and 4K layouts</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Office metrics display data flow">
-                    <p class="visual-title">Signals included</p>
-                    <svg class="diagram" viewBox="0 0 520 250" role="img" aria-label="Office metrics display flow">
-                        <rect class="diagram-card" x="16" y="20" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="49">sales</text>
-                        <rect class="diagram-card" x="16" y="79" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="108">logistics</text>
-                        <rect class="diagram-card" x="16" y="138" width="116" height="48" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="167">product usage</text>
-                        <rect class="diagram-card" x="16" y="197" width="116" height="38" rx="8"></rect>
-                        <text class="diagram-text" x="31" y="222">surveys</text>
 
-                        <path class="diagram-line" d="M144 44 C174 44 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 103 C174 103 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 162 C174 162 174 125 204 125"></path>
-                        <path class="diagram-line" d="M144 216 C174 216 174 125 204 125"></path>
-
-                        <rect class="diagram-card core" x="204" y="78" width="120" height="94" rx="8"></rect>
-                        <text class="diagram-text" x="220" y="108">BigQuery</text>
-                        <text class="diagram-subtext" x="220" y="128">refreshes</text>
-                        <text class="diagram-subtext" x="220" y="146">metric cards</text>
-                        <text class="diagram-subtext" x="220" y="164">alert signals</text>
-
-                        <path class="diagram-line" d="M336 125 H382"></path>
-                        <rect class="diagram-card good" x="382" y="50" width="120" height="150" rx="8"></rect>
-                        <text class="diagram-text" x="398" y="82">TV display</text>
-                        <text class="diagram-subtext" x="398" y="104">Canvas 2D</text>
-                        <text class="diagram-subtext" x="398" y="124">WebSockets</text>
-                        <text class="diagram-subtext" x="398" y="144">Amazon Silk</text>
-                        <text class="diagram-subtext" x="398" y="164">mobile to 4K</text>
-                    </svg>
-                    <div class="pipeline visual-extra">
-                        <div class="pipeline-step"><strong>Product usage:</strong> activity by product, region, and behavior.</div>
-                        <div class="pipeline-step"><strong>Sales and logistics:</strong> Shopify, third-party channels, Amazon, shipping, and geography.</div>
-                        <div class="pipeline-step"><strong>Customer voice:</strong> CSAT, churn surveys, and Gemini-assisted free-text categorization into actionable reason groups.</div>
-                        <div class="pipeline-step"><strong>Shared display:</strong> live office screen for visibility, alignment, and lightweight operational alerting.</div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
-
-
-
-        <article class="artifact" id="premise-lab">
-            <header class="artifact-header">
-                <div>
-                    <h2>The Premise Lab</h2>
-                    <p class="artifact-summary">A public, open-source example of using AI to think before building: surfacing hidden premises, testing real-world assumptions, and turning rough ideas into sharper artifacts.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Public open source</span>
-                    <a class="copy-link" href="#premise-lab" data-copy-link aria-label="Copy link to The Premise Lab">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="The Premise Lab impact highlights">
-                    <span class="chip"><b>Open source</b> + Gemini + Opal</span>
-                    <span class="chip"><b>AI</b> for judgment, not just code</span>
-                    <span class="chip"><b>Philosophy</b> as a build tool</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>AI is getting good at building &mdash; which lets weak ideas harden faster. The expensive failure comes earlier: unclear premises, vague words, and hidden beliefs about how the world works.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Built a public, open-source thinking partner combining philosophy, behavioral science, and systems thinking, so you can examine an idea before building it. It asks what must be true, what would prove the idea wrong, and which words carry more confusion than meaning &mdash; without making you perform intelligence for the machine.</p>
-                        </div>
-                        <div class="detail-block">
-                            <strong>Impact</strong>
-                            <p>A rough thought becomes a working hypothesis, a clearer brief, a reality test, and a ledger of assumptions still owed to the world &mdash; AI used to improve judgment before action.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <a href="https://github.com/vokativ/premise-lab">GitHub repo</a>
-                        <a href="https://gemini.google.com/gem/1q5LvzjQh-pSG5I9E5RAEZ4CgLtqNC1cR?usp=sharing">Gemini Gem</a>
-                        <a href="https://opal.google/app/14amAGTURQAnFBo8HRXwUXG4DRIaQUQZA">Opal app with Google Docs output</a>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="The Premise Lab method diagram">
-                    <p class="visual-title">Idea stress-test flow</p>
-                    <svg class="diagram" viewBox="0 0 520 292" role="img" aria-label="The Premise Lab turns a raw idea through hidden premise checks into an idea artifact and reality test">
-                        <rect class="diagram-card idea" x="14" y="106" width="112" height="80" rx="8"></rect>
-                        <text class="diagram-text" x="30" y="139">raw idea</text>
-                        <text class="diagram-subtext" x="30" y="158">can we build</text>
-                        <text class="diagram-subtext" x="30" y="173">this?</text>
-
-                        <path class="diagram-line" d="M138 146 C152 146 152 48 170 48"></path>
-                        <path class="diagram-line" d="M138 146 C154 146 154 112 170 112"></path>
-                        <path class="diagram-line" d="M138 146 C154 146 154 176 170 176"></path>
-                        <path class="diagram-line" d="M138 146 C152 146 152 240 170 240"></path>
-
-                        <rect class="diagram-card lens" x="170" y="22" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="45">hidden premise</text>
-                        <text class="diagram-subtext" x="186" y="62">what must be true?</text>
-
-                        <rect class="diagram-card lens" x="170" y="86" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="109">philosophy</text>
-                        <text class="diagram-subtext" x="186" y="126">better questions</text>
-
-                        <rect class="diagram-card lens" x="170" y="150" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="173">real world</text>
-                        <text class="diagram-subtext" x="186" y="190">real-world friction</text>
-
-                        <rect class="diagram-card lens" x="170" y="214" width="140" height="52" rx="8"></rect>
-                        <text class="diagram-text" x="186" y="237">value</text>
-                        <text class="diagram-subtext" x="186" y="254">who is better off?</text>
-
-                        <path class="diagram-line" d="M322 48 C350 48 350 104 370 104"></path>
-                        <path class="diagram-line" d="M322 112 C346 112 346 104 370 104"></path>
-                        <path class="diagram-line" d="M322 176 C346 176 346 214 370 214"></path>
-                        <path class="diagram-line" d="M322 240 C350 240 350 214 370 214"></path>
-
-                        <rect class="diagram-card good" x="370" y="66" width="132" height="76" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="95">idea artifact</text>
-                        <text class="diagram-subtext" x="386" y="114">hypothesis and</text>
-                        <text class="diagram-subtext" x="386" y="129">reality debt</text>
-
-                        <rect class="diagram-card test" x="370" y="178" width="132" height="76" rx="8"></rect>
-                        <text class="diagram-text" x="386" y="207">reality test</text>
-                        <text class="diagram-subtext" x="386" y="226">small contact</text>
-                        <text class="diagram-subtext" x="386" y="241">with the world</text>
-                    </svg>
-                    <div class="pipeline visual-extra">
-                        <div class="pipeline-step"><strong>Mirror:</strong> restate the idea in higher resolution before judging it.</div>
-                        <div class="pipeline-step"><strong>X-ray:</strong> surface the load-bearing assumption or category mistake.</div>
-                        <div class="pipeline-step"><strong>Reframe:</strong> turn the idea into a sharper working hypothesis.</div>
-                        <div class="pipeline-step"><strong>Contact:</strong> propose the smallest useful reality test before building.</div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
-
-        <article class="artifact" id="hocudaglasam">
-            <header class="artifact-header">
-                <div>
-                    <h2>Korak do glasa</h2>
-                    <p class="artifact-summary">Civic-tech diaspora voter-registration platform active for Serbia's 2026 election cycle &mdash; combining client-side document generation with a source-backed verification pipeline for diplomatic mission contacts.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Live Civic Tech</span>
-                    <a class="copy-link" href="#hocudaglasam" data-copy-link aria-label="Copy link to Korak do glasa">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                <div class="impact-chips" aria-label="Korak do glasa impact highlights">
-                    <span class="chip"><b>2026 election</b> refresh</span>
-                    <span class="chip"><b>Source-backed</b> recipient pipeline</span>
-                    <span class="chip"><b>No server-side</b> applicant PII</span>
-                </div>
-                <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>Serbian citizens abroad face a clumsy, high-friction registration process: locating covering embassies across jurisdictions, tracking down whether specific election mailboxes or notices exist, printing and hand-signing forms, attaching ID scans, and sending them before strict legal deadlines.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I did</strong>
-                            <p>Originally created hocudaglasam.com in 2020 and refreshed the platform for Serbia's 2026 parliamentary election cycle as Korak do glasa (korakdoglasa.org). Rebuilt the frontend as a React 19 / TypeScript application using Vite and Bun, hosted on Firebase. Built an automated Python ingestion and verification pipeline that audits Ministry of Foreign Affairs directories and mission portals, enforces evidence citations before promoting newly published election mailboxes, and exposes a strict four-state coverage contract (confirmed, partial, notice-published, unconfirmed).</p>
-                            <p>The browser generates official voter registration PDFs locally with an embedded Cyrillic font and optional client-side ID document attachment. No applicant personal data or documents are ever transmitted to or stored on project servers; the completed PDF is handed off directly to the user's system mail or file-sharing app.</p>
-                        </div>
-                        <div class="detail-block">
-                            <strong>Status &amp; Delivery</strong>
-                            <p>Live at <a href="https://korakdoglasa.org/">korakdoglasa.org</a> for the 2026 election cycle. Open source on GitHub with automated recipient verification and station coverage tests. (The historical 2020 domain hocudaglasam.com lapsed after prior cycles and now hosts unrelated third-party content; all current operations are maintained under korakdoglasa.org).</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <a href="https://korakdoglasa.org/">korakdoglasa.org</a>
-                        <a href="https://github.com/vokativ/glasanje">GitHub repo</a>
-                        <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian interview (2020)</a>
-                        <a href="https://www.danas.rs/vesti/politika/sajt-hocudaglasam-com-pojednostavljuje-glasanje-u-inostranstvu/">Danas coverage (2020)</a>
-                        <span>React 19, TypeScript, Vite, Bun, Python verification pipeline, client-side PDF, zero server-side PII, Firebase Hosting</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Korak do glasa before and after voter registration workflow">
-                    <p class="visual-title">Diaspora registration: manual vs verified &amp; local</p>
-                    <div class="before-after">
-                        <div class="state before">
-                            <h3>Before: manual &amp; unverified</h3>
-                            <ul>
-                                <li>Search ministry pages and hope notices are current</li>
-                                <li>Guess whether general embassy inbox handles voting</li>
-                                <li>Print, hand-write, scan, and attach sensitive ID files</li>
-                                <li>Fragmented instructions across diplomatic posts</li>
-                            </ul>
-                        </div>
-                        <div class="state after">
-                            <h3>After: verified &amp; local</h3>
-                            <ul>
-                                <li>Automated pipeline audits notices &amp; coverage contracts</li>
-                                <li>4-state recipient certainty (confirmed, partial, notice, unconfirmed)</li>
-                                <li>Client-side PDF generation with embedded Cyrillic font</li>
-                                <li>Zero server-side PII: all data and documents stay on-device</li>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
-        <article class="artifact" id="prepisi">
-            <header class="artifact-header">
-                <div>
-                    <h2>Prepiši</h2>
-                    <p class="artifact-summary">Privacy-first offline browser extension for reading Serbian, Croatian, Bosnian, and Montenegrin web text in a preferred script and pronunciation &mdash; with 100% client-side conversion and zero page-text upload.</p>
-                </div>
-                <div class="artifact-actions">
-                    <span class="tag">Published Extension</span>
-                    <a class="copy-link" href="#prepisi" data-copy-link aria-label="Copy link to Prepiši">Copy link</a>
-                </div>
-            </header>
-            <div class="artifact-body">
-                <div class="col-main">
-                    <div class="impact-chips" aria-label="Prepiši impact highlights">
-                        <span class="chip"><b>Three stores</b> &rarr; Chrome, Firefox &amp; Edge</span>
-                        <span class="chip"><b>137 curated</b> media families</span>
-                        <span class="chip"><b>Zero network</b> requests</span>
-                    </div>
-                    <div class="prose">
-                        <div class="detail-block">
-                            <strong>Challenge</strong>
-                            <p>I grew up reading both Latin and Cyrillic and encountering Serbian, Croatian, Bosnian, and Montenegrin variants. It was frustrating that modern regional websites usually offered only the script easiest for them to publish and one institutionally favored dialect. I wanted one-click control over how everyday news and other web content looked to me, while preserving rather than flattening that diversity.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>What I built</strong>
-                            <p>Built a shared local conversion engine in TypeScript/JavaScript with strict boundary protection. Rather than relying on non-deterministic LLMs at browsing time, the extension uses 4,102 verified linguistic transformation rows, bidirectional Latin-Cyrillic mapping, and curated phonetic rules for Ekavian, Ijekavian, and Ikavian variants. The content engine safely protects code, forms, URLs, emails, brands, handles, and foreign-language spans while observing dynamic DOM mutations.</p>
-                            <p>Authored a dependency-free Node packaging pipeline with byte-level archive validation and cross-browser manifest handling (Manifest V3). Managed browser-specific permission and lifecycle differences across Chrome, Firefox (desktop + Android), and Microsoft Edge.</p>
-                        </div>
-                        <div class="detail-block block-extra">
-                            <strong>Status &amp; Delivery</strong>
-                            <p>Version 0.9.3 is published and live on Mozilla Firefox Add-ons (desktop + Android), the Chrome Web Store, and Microsoft Edge Add-ons. The engine is backed by 92 offline unit/integration tests and 12 headless-Chrome DOM checks, with a curated catalog of 137 regional media families (generating 600 explicit Firefox host permission patterns). Operates entirely offline with no analytics, telemetry, or remote text processing.</p>
-                        </div>
-                    </div>
-                    <div class="proof-links block-extra">
-                        <a href="https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb">Chrome Web Store</a>
-                        <a href="https://addons.mozilla.org/firefox/addon/prepisi-converter/">Firefox Add-ons</a>
-                        <a href="https://microsoftedge.microsoft.com/addons/detail/prepi%C5%A1i/idgdmkmmdemdhdkenlodijkljpbckool">Microsoft Edge Add-ons</a>
-                        <a href="https://github.com/vokativ/prepisi">GitHub repo</a>
-                        <a href="https://github.com/vokativ/prepisi/blob/main/PRIVACY.md">Privacy Policy</a>
-                        <span>WebExtensions, Manifest V3, Offline transformation engine, Reviewed linguistic data, Dependency-free Node packager</span>
-                    </div>
-                </div>
-                <aside class="visual" aria-label="Prepiši product architecture">
-                    <p class="visual-title">Local conversion boundary</p>
-                    <div class="flow">
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Active page</b>
-                                <span>Only user-visible, eligible text is considered.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Offline rules</b>
-                                <span>Script, pronunciation, and protected-term logic run in-browser.</span>
-                            </div>
-                        </div>
-                        <div class="flow-row">
-                            <div class="flow-card">
-                                <b>Reversible result</b>
-                                <span>Changes are recalculated from original text.</span>
-                            </div>
-                            <div class="flow-arrow">></div>
-                            <div class="flow-card">
-                                <b>Local preference</b>
-                                <span>Optional setting persists only for a chosen site.</span>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
-            </div>
-        </article>
+        </section>
 
     </main>
     <script>
@@ -1935,7 +2317,6 @@
                 }
             };
 
-            // The toggle only matters on mobile; on desktop everything is shown via CSS.
             const COLLAPSE_MS = prefersReducedMotion ? 0 : 240;
 
             const updateToggleLabel = (artifact, open) => {
@@ -1943,7 +2324,7 @@
 
                 if (toggle) {
                     toggle.setAttribute("aria-expanded", String(open));
-                    toggle.firstChild.textContent = open ? "Show less" : "Show full case";
+                    toggle.firstChild.textContent = open ? "Close case" : "Show full case";
                 }
             };
 
@@ -1965,8 +2346,6 @@
 
                 updateToggleLabel(artifact, false);
 
-                // Play the exit animation, then actually collapse. Skip the wait when
-                // motion is reduced or the toggle is off-screen (desktop).
                 if (COLLAPSE_MS === 0) {
                     artifact.classList.remove("is-open", "is-closing");
                     return;
@@ -1985,10 +2364,43 @@
                     const artifact = toggle.closest(".artifact");
 
                     if (artifact) {
-                        setCardOpen(artifact, !artifact.classList.contains("is-open"));
+                        const wasOpen = artifact.classList.contains("is-open");
+                        setCardOpen(artifact, !wasOpen);
+                        if (wasOpen) {
+                            const header = artifact.querySelector(".artifact-header");
+                            if (header) {
+                                header.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                            }
+                        }
                     }
                 });
             });
+
+            // Sticky Category Navigation highlight on scroll
+            const groupSections = Array.from(document.querySelectorAll(".artifact-group"));
+            const navPills = Array.from(document.querySelectorAll(".nav-pill"));
+
+            if ("IntersectionObserver" in window && groupSections.length > 0) {
+                const groupObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            navPills.forEach((pill) => {
+                                if (pill.getAttribute("href") === `#${id}`) {
+                                    pill.classList.add("is-active");
+                                } else {
+                                    pill.classList.remove("is-active");
+                                }
+                            });
+                        }
+                    });
+                }, {
+                    rootMargin: "-15% 0px -75% 0px",
+                    threshold: 0
+                });
+
+                groupSections.forEach((section) => groupObserver.observe(section));
+            }
 
             // Deep links from the CV pages (e.g. artifacts.html#adiufant) should land on an open case.
             const openTargetCard = () => {
