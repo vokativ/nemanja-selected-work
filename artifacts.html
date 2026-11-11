@@ -83,7 +83,7 @@
                 "name": "Adiufant",
                 "url": "https://adiufant.com",
                 "applicationCategory": "ProductivityApplication",
-                "description": "Production mobile app for iPhone and Android, live at adiufant.com; turns family-related PDFs, photos, voice notes, shared files, and calendar screenshots into structured events and preparation tasks.",
+                "description": "Mobile app for iPhone and Android, available free on Google Play and the App Store; turns family-related PDFs, photos, voice notes, shared files, and calendar screenshots into structured events and preparation tasks that parents review before anything is added to the calendar.",
                 "publisher": {
                     "@type": "Organization",
                     "name": "Vulcanus Holdings, Inc.",
@@ -93,7 +93,7 @@
             {
                 "@type": "CreativeWork",
                 "name": "Phone-based home agent",
-                "description": "Private lab prototype that turns a spare Android phone or tablet into an always-on host for six AI coding-agent harnesses; built by orchestrating AI coding agents with the owner as reviewer. 3,301-test gate in 248 s; 6 harnesses x 10 tasks device matrix with file-based verifiers."
+                "description": "Private prototype, not released: turns a spare or used Android phone or tablet into an always-on home for AI coding assistants (Codex, Claude Code and four others), running on subscriptions people already pay for and controlled from their everyday phone. Includes secure credential storage and automated tests that check the actual output, not the assistant's own report. Built with AI coding assistants; the owner makes the product decisions, architecture, review and testing."
             },
             {
                 "@type": "SoftwareApplication",
@@ -102,7 +102,7 @@
                 "codeRepository": "https://github.com/vokativ/glasanje",
                 "applicationCategory": "GovernmentApplication",
                 "operatingSystem": "All modern browsers",
-                "description": "Open-source civic tool that helps Serbians abroad prepare a voting request and follow up when a reply is missing. PDFs are made in the browser. On supported devices, Web Share attaches the PDF to a chosen app; users can also download and attach it themselves. Users send requests. An optional guide offers 16 follow-up templates and instructions for external assistants."
+                "description": "Open-source civic tool (archived) that helps Serbians abroad prepare a voting request and follow up when a reply is missing. It prepares the official request PDF in the browser on the user's own device; the user decides how to send it, and an optional guide offers follow-up letter templates and instructions for external assistants."
             },
             {
                 "@type": "SoftwareApplication",
@@ -110,7 +110,7 @@
                 "url": "https://chromewebstore.google.com/detail/prepi%C5%A1i/lgcbhfgbbjdhglmomlgkbeikcngjhikb",
                 "codeRepository": "https://github.com/vokativ/prepisi",
                 "applicationCategory": "UtilitiesApplication",
-                "description": "Privacy-first, offline browser extension published for Chrome, Firefox, and Edge (v0.9.3). Converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants with 100% client-side conversion and zero page-text upload."
+                "description": "Privacy-first, offline browser extension published on the Chrome, Firefox and Edge add-on stores. Converts Serbian, Croatian, Bosnian, and Montenegrin web text between scripts and reviewed pronunciation variants with 100% client-side conversion and zero page-text upload."
             },
             {
                 "@type": "SoftwareApplication",
@@ -118,14 +118,14 @@
                 "url": "https://github.com/vokativ/grocery-shopping-redmart",
                 "codeRepository": "https://github.com/vokativ/grocery-shopping-redmart",
                 "applicationCategory": "ProductivityApplication",
-                "description": "Open-source AI agent workflow that turns messy family whiteboard photos, voice notes, or shorthand lists into prepared grocery carts on RedMart / Lazada Singapore using constrained AI, canonical SKU matching, and human-in-the-loop review."
+                "description": "Open-source AI agent that turns messy family whiteboard photos, voice notes, or shorthand lists into a prepared grocery cart on RedMart Singapore: it matches the list to the household's usual products and approved substitutes, fills the logged-in cart, checks it, and stops before checkout so a person pays; human-in-the-loop review throughout."
             },
             {
                 "@type": "SoftwareSourceCode",
                 "name": "omp-model-roles",
                 "url": "https://github.com/vokativ/omp-model-roles",
                 "codeRepository": "https://github.com/vokativ/omp-model-roles",
-                "description": "Quota-aware model-role configuration for the Oh My Pi coding-agent harness: 15 roles with fallback chains across five subscriptions plus API providers, backed by directional benchmarks."
+                "description": "Open-source AI model selection for coding work (omp-model-roles): routes each kind of coding task to a suitable AI model across several subscriptions, switching models when one hits its usage limit; backed by preliminary results from small tests on real code reviews."
             },
             {
                 "@type": "SoftwareSourceCode",
@@ -149,8 +149,8 @@
             },
             {
                 "@type": "CreativeWork",
-                "name": "McKinsey: Durable Operating Systems",
-                "description": "Selected consulting work that mattered because clients kept using the operating systems after the project ended."
+                "name": "McKinsey: Durable Business Tools and Workflows",
+                "description": "Selected consulting work that mattered because clients kept using the business tools and operating workflows after the project ended."
             }
         ],
         "mainEntityOfPage": {
@@ -928,7 +928,7 @@
             <div class="group-header">
                 <div class="group-header-text">
                     <h2 class="group-title">Company Data &amp; AI</h2>
-                    <p class="group-desc">Enterprise work at Rapsodo as Head of Data Analytics &amp; AI Lead (2023&ndash;2026): data platform turnaround, conversational AI, and operating systems.</p>
+                    <p class="group-desc">Enterprise work at Rapsodo as Head of Data Analytics &amp; AI Lead (2023&ndash;2026): data platform turnaround, conversational AI, and operating workflows.</p>
                 </div>
                 <span class="group-badge">5 Case Studies &bull; Sanitized</span>
             </div>
@@ -1275,7 +1275,7 @@
                     <span class="chip"><b>Review before action</b> &rarr; local-first</span>
                     <span class="chip"><b>Auto-reschedule &amp; undo</b> &rarr; safeguards</span>
                 </div>
-                    <div class="trust-boundary"><strong>Trust boundary:</strong> Save-first review; temporal grounding guardrails detect prior-year hallucinations; nothing reaches device calendar without explicit user confirmation.</div>
+                    <div class="trust-boundary"><strong>Trust boundary:</strong> Parents review AI suggestions before anything is added to the calendar; temporal grounding guardrails detect prior-year hallucinations; nothing reaches the device calendar without explicit user confirmation.</div>
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1284,18 +1284,18 @@
                         <div class="detail-block block-extra">
                             <strong>What I did</strong>
                             <p>I tested model feasibility in early 2025, built a web demo over the summer, and learned that a browser upload flow was too clunky because parents' source information lives on their phones. I then owned the mobile product, architecture, implementation, testing, customer discovery, and store releases end to end, using AI development tools throughout.</p>
-                            <p>Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through authenticated Firebase callable functions to Gemini with App Check protection before normalized suggestions are saved for an explicit accept-or-skip review. To make AI dependable in daily use, built temporal grounding guardrails to detect and fall back from prior-year resolution hallucinations on undated notices. When an event date is adjusted, a dedicated reschedule engine dynamically updates derived preparation task deadlines, pairing instant slide-fade feedback with an inline undo action. System share targets are isolated from capture flows to preserve original event start dates.</p>
+                            <p>Underneath, Drift remains the device source of truth; authenticated users can sync through Firestore; and media flows through authenticated Firebase callable functions to Gemini with Firebase app-integrity checks before normalized suggestions are saved for an explicit accept-or-skip review. To make AI dependable in daily use, built temporal grounding guardrails to detect and fall back from prior-year resolution hallucinations on undated notices. When an event date is adjusted, a dedicated reschedule engine dynamically updates derived preparation task deadlines, pairing instant slide-fade feedback with an inline undo action. System share targets are isolated from capture flows to preserve original event start dates.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live free at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (latest version v1.3.0). Releases added an AI-consent flow (after App Store review feedback), dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
+                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and available free on Google Play and the App Store (<a href="https://adiufant.com">adiufant.com</a>). Releases added an AI-consent flow (after App Store review feedback), dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
                         <a href="https://adiufant.com">adiufant.com</a>
-                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a>
+                        <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">App Store</a>
                         <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a>
-                        <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, App Check, Temporal Guardrails</span>
+                        <span>Flutter, Riverpod, Drift / SQLite, Firebase Auth, Firestore Sync, Cloud Functions, Gemini, Firebase app-integrity checks, Temporal Guardrails</span>
                     </div>
                 </div>
                 <aside class="visual" aria-labelledby="adiufant-effect-title">
@@ -1323,7 +1323,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>Phone-based home agent</h2>
-                    <p class="artifact-summary">Private prototype that turns a spare Android phone or tablet into an always-on host for six AI coding-agent harnesses, running on subscriptions people already pay for and reachable from their daily phone.</p>
+                    <p class="artifact-summary">Private prototype, not released: turns a spare or used Android phone or tablet into an always-on home for AI coding assistants (Codex, Claude Code and four others), running on subscriptions people already pay for and controlled from their everyday phone.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Private prototype</span>
@@ -1333,12 +1333,12 @@
             <div class="artifact-body">
                 <div class="col-main">
                     <div class="impact-chips" aria-label="Phone-based home agent impact highlights">
-                        <span class="chip"><b>6 harnesses</b> &rarr; one always-on host</span>
-                        <span class="chip"><b>3,301 tests</b> &rarr; 248 s gate</span>
-                        <span class="chip"><b>Files on disk</b> &rarr; verifiers</span>
+                        <span class="chip"><b>Spare phone</b> &rarr; always-on AI workspace</span>
+                        <span class="chip"><b>Your existing</b> subscriptions</span>
+                        <span class="chip"><b>Checked</b> by real-output tests</span>
                     </div>
                     <div class="trust-boundary">
-                        <strong>Trust boundary:</strong> Lab prototype on a Pixel Tablet; not released and not on Google Play. Agent runs are judged by verifiers that check files on disk, never the agent's words.
+                        <strong>Trust boundary:</strong> Private prototype; not released and not on Google Play. Agent runs are judged by automated tests that check the actual output, never the assistant's own report.
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1347,17 +1347,17 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I built</strong>
-                            <p>A client app and a host app, a job API, and a credential vault, supporting six agent harnesses: Codex, Claude Code, Antigravity, Pi, Oh My Pi, and Mistral Vibe. A second backend runs on Android's Linux VM (Android 15+).</p>
-                            <p>It was built by orchestrating AI coding agents, with me as owner and reviewer: I set direction, recorded decisions (D1&ndash;D62 in an owner decision log), and reviewed and accepted the work. Quality is enforced by gates rather than trust: a 3,301-test workstation gate that runs in 248 seconds (down from about 61 minutes serial) and a device matrix of 6 harnesses &times; 10 tasks whose verifiers check files on disk, never the agent's words.</p>
+                            <p>A client app and a host app, an interface for sending tasks to the device, and secure credential storage, supporting six AI coding assistants: Codex, Claude Code, Antigravity, Pi, Oh My Pi, and Mistral Vibe. A second backend runs on Android's Linux VM. The hard parts were keeping sign-ins and credentials safe on an always-on device, running six different assistants reliably, and proving that work was actually done.</p>
+                            <p>Built with AI coding assistants; I own the product decisions, architecture, review and testing. Quality is enforced by automated tests that check the actual output, not the assistant's own report.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Since 12 October 2026: 1,022 commits and 92 pull requests. Release signing, licence records for 303 components, and Google Play policy preparation are done. It remains a lab prototype on a Pixel Tablet: not released, not on Play, and with no public repository or product name yet.</p>
+                            <p>Private prototype, not released: the sign-in and credential handling, release signing, open-source licence records, and Google Play policy preparation are done. It has no public repository or product name yet.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
-                        <span>Private code &mdash; figures above are from the project's own commit history, test gate, and decision log.</span>
-                        <span>Android, Android Linux VM, job API, credential vault, device-matrix verification</span>
+                        <span>Private code &mdash; no public repository.</span>
+                        <span>Android, Android Linux VM, secure credential storage, real-output test verification</span>
                     </div>
                 </div>
                 <aside class="visual" aria-labelledby="phone-based-agent-effect-title">
@@ -1365,11 +1365,11 @@
                     <ul class="effect-list">
                         <li class="effect-item">
                             <h4>Use what you already pay for</h4>
-                            <p>Runs the harnesses on existing subscriptions, from your daily phone.</p>
+                            <p>Runs six AI coding assistants on existing subscriptions, from your everyday phone.</p>
                         </li>
                         <li class="effect-item">
-                            <h4>Checked on disk</h4>
-                            <p>Each task is verified by inspecting the resulting files, not by trusting the agent's report.</p>
+                            <h4>Checked on real output</h4>
+                            <p>Each task is verified by automated tests that inspect the actual output, not by trusting the assistant's report.</p>
                         </li>
                     </ul>
                 </aside>
@@ -1392,11 +1392,11 @@
                 <div class="col-main">
                     <div class="impact-chips" aria-label="Korak do glasa impact highlights">
                         <span class="chip"><b>PDF made</b> in browser</span>
-                        <span class="chip"><b>16</b> follow-up templates</span>
+                        <span class="chip"><b>Follow-up</b> letter templates</span>
                         <span class="chip"><b>Optional</b> assistant</span>
                     </div>
                     <div class="trust-boundary">
-                        <strong>Trust boundary:</strong> The site keeps no personal case. Anything shared with an assistant goes to its provider. The guide tells assistants to ask before reading email or sending messages.
+                        <strong>Trust boundary:</strong> The PDF is prepared in the browser on your own device and you decide how to send it. The site keeps no personal case. Anything shared with an assistant goes to its provider. The guide tells assistants to ask before reading email or sending messages.
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1407,7 +1407,7 @@
                             <strong>What I built</strong>
                             <p>I co-built the first version in 2020 and rebuilt it in 2026.</p>
                             <p>Your browser makes the official PDF. On supported devices, Web Share can attach it to your mail app. Or download it and attach it yourself. You send it. Unconfirmed contacts are flagged.</p>
-                            <p>The follow-up guide offers 16 letter templates. Use it alone or with your own assistant.</p>
+                            <p>The optional follow-up guide offers letter templates. Use it alone or with your own assistant.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status</strong>
@@ -1452,10 +1452,10 @@
                 <div class="col-main">
                     <div class="impact-chips" aria-label="Prepiši impact highlights">
                         <span class="chip"><b>Three stores</b> &rarr; Chrome, Firefox &amp; Edge</span>
-                        <span class="chip"><b>137 curated</b> media families</span>
+                        <span class="chip"><b>Curated</b> regional media families</span>
                         <span class="chip"><b>Zero network</b> requests</span>
                     </div>
-                                        <div class="trust-boundary"><strong>Trust boundary:</strong> 100% client-side conversion; 4,102 verified linguistic rules; zero LLMs, zero network requests, zero page-text upload.</div>
+                                        <div class="trust-boundary"><strong>Trust boundary:</strong> 100% client-side conversion; reviewed linguistic rules; zero LLMs, zero network requests, zero page-text upload.</div>
 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
@@ -1463,12 +1463,12 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I built</strong>
-                            <p>Built a shared local conversion engine in TypeScript/JavaScript with strict boundary protection. Rather than relying on non-deterministic LLMs at browsing time, the extension uses 4,102 verified linguistic transformation rows, bidirectional Latin-Cyrillic mapping, and curated phonetic rules for Ekavian, Ijekavian, and Ikavian variants. The content engine safely protects code, forms, URLs, emails, brands, handles, and foreign-language spans while observing dynamic DOM mutations.</p>
+                            <p>Built a shared local conversion engine in TypeScript/JavaScript with strict boundary protection. Rather than relying on non-deterministic LLMs at browsing time, the extension uses verified linguistic transformation rows, bidirectional Latin-Cyrillic mapping, and curated phonetic rules for Ekavian, Ijekavian, and Ikavian variants. The content engine safely protects code, forms, URLs, emails, brands, handles, and foreign-language spans while observing dynamic DOM mutations.</p>
                             <p>Authored a dependency-free Node packaging pipeline with byte-level archive validation and cross-browser manifest handling (Manifest V3). Managed browser-specific permission and lifecycle differences across Chrome, Firefox (desktop + Android), and Microsoft Edge.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Version 0.9.3 is published and live on Mozilla Firefox Add-ons (desktop + Android), the Chrome Web Store, and Microsoft Edge Add-ons. The engine is backed by 92 offline unit/integration tests and 12 headless-Chrome DOM checks, with a curated catalog of 137 regional media families (generating 600 explicit Firefox host permission patterns). Operates entirely offline with no analytics, telemetry, or remote text processing.</p>
+                            <p>Published on the Chrome, Firefox and Edge add-on stores (Firefox desktop and Android). The engine is covered by offline unit, integration and headless-browser checks, with a curated catalog of regional media families. Operates entirely offline with no analytics, telemetry, or remote text processing.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
@@ -1505,7 +1505,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>RedMart Grocery Cart Helper</h2>
-                    <p class="artifact-summary">Open-source AI agent workflow that turns messy family whiteboard photos, voice notes, or shorthand lists into prepared grocery carts on RedMart / Lazada Singapore &mdash; using constrained AI, canonical SKU matching, and human-in-the-loop review.</p>
+                    <p class="artifact-summary">Open-source AI agent that turns messy family whiteboard photos, voice notes, or shorthand lists into a prepared grocery cart on RedMart Singapore &mdash; matching the list to the household's usual products and approved substitutes, with human-in-the-loop review.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Open-Source AI Agent</span>
@@ -1516,11 +1516,11 @@
                 <div class="col-main">
                     <div class="impact-chips" aria-label="RedMart Grocery Cart Helper impact highlights">
                         <span class="chip"><b>Whiteboard</b> &rarr; verified cart</span>
-                        <span class="chip"><b>Canonical SKU</b> &amp; alias matching</span>
+                        <span class="chip"><b>Usual products</b> &amp; substitutes</span>
                         <span class="chip"><b>Stops before</b> checkout</span>
                     </div>
                     <div class="trust-boundary">
-                        <strong>Trust boundary:</strong> Proposed cart previewed before any browser mutation. Detects Lazada's anti-bot challenge and hands back to you rather than bypassing it; zero automated checkout or payment.
+                        <strong>Trust boundary:</strong> Proposed cart previewed before any browser change. When the shop asks for a verification check, the agent pauses and hands control back to you; it never checks out or pays.
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1530,21 +1530,21 @@
                         <div class="detail-block block-extra">
                             <strong>What I built</strong>
                             <p>Built an open-source agent workflow around a core engineering principle: <em>The family makes decisions once; the agent handles the repetition.</em> Rather than letting an LLM guess arbitrary products on a retailer website, the architecture constrains the agent's action space through a structured household YAML catalog.</p>
-                            <p>Family shorthand maps to catalog aliases, default quantities, and family mixes (e.g. &ldquo;fruit mix&rdquo; expanding into member items). Products are grounded by canonical retailer <code>item_id</code> and <code>sku_id</code> identifiers, with ranked backup products when first choices are unavailable within delivery windows.</p>
-                            <p><strong>Operational discipline &amp; verification:</strong> Enforces the principle that <em>an action is not an outcome</em>. Clicking &ldquo;Add to cart&rdquo; does not prove success: buttons may fail, items may be out of stock, or items may collapse into promotion bundles. The agent verifies actual cart table rows, canonical identifiers, pack sizes, and quantities. If state cannot be verified, it reports uncertainty rather than hallucinating success.</p>
+                            <p>Family shorthand maps to catalog aliases, default quantities, and family mixes (e.g. &ldquo;fruit mix&rdquo; expanding into member items). Each item is matched to the household's usual product, with ranked approved substitutes when first choices are unavailable within delivery windows.</p>
+                            <p><strong>Operational discipline &amp; verification:</strong> Enforces the principle that <em>an action is not an outcome</em>. Clicking &ldquo;Add to cart&rdquo; does not prove success: buttons may fail, items may be out of stock, or items may collapse into promotion bundles. The agent checks the actual cart rows, products, pack sizes, and quantities. If state cannot be verified, it reports uncertainty rather than hallucinating success.</p>
                             <p><strong>Ergonomic multi-device workflow:</strong> The list starts wherever life happens&mdash;snap a whiteboard photo, dictate a voice note, or type shorthand on a phone via ChatGPT Remote. The repetitive browser automation runs on a paired desktop host (Mac or Windows in Codex mode) where the logged-in RedMart session resides. Also supports OMP browser alternative and OS-level accessibility fallbacks.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Open source (MIT) on GitHub at <a href="https://github.com/vokativ/grocery-shopping-redmart">vokativ/grocery-shopping-redmart</a>, in daily household use since July 2026 (60 commits). Features synthetic catalog validators, unit test suites for alias resolution and review rendering, and documented browser connection hierarchies. Stops before checkout so delivery slot selection and payment always stay with the human.</p>
-                            <p>October 2026 hardening added a paced Chrome DevTools Protocol cart helper with a no-op cooldown and hand-back to the user, and detection of Lazada's anti-bot challenge. Two bugs found in live testing (stale and over-broad cart reads) were fixed, catalog reviews continued through November 2026, and the workflow has been tested across several agent harnesses and models. I am looking for a few Singapore households to test it &mdash; open an issue on the repo if you would like to try it.</p>
+                            <p>Open source (MIT) on GitHub at <a href="https://github.com/vokativ/grocery-shopping-redmart">vokativ/grocery-shopping-redmart</a>, in daily use at home since July 2026. It matches the list to the household's usual products and approved substitutes, fills the logged-in cart, checks it, and stops before checkout so delivery slot selection and payment always stay with a person; it pauses and hands control back when the shop asks for a verification check. Includes automated tests for list matching and review rendering.</p>
+                            <p>Hardening since then fixed two bugs found in real use (stale and over-broad cart reads), and the workflow has been tested across several AI coding assistants and models. I am looking for a few Singapore households to test it &mdash; open an issue on the repo if you would like to try it.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
                         <a href="https://github.com/vokativ/grocery-shopping-redmart">GitHub repo</a>
                         <a href="https://github.com/vokativ/grocery-shopping-redmart/blob/main/docs/case-study.md">Architecture Case Study</a>
                         <a href="https://github.com/vokativ/grocery-shopping-redmart/blob/main/docs/developer-guide.md">Developer Guide</a>
-                        <span>Open-source AI agent, ChatGPT Desktop / Codex, OMP browser, YAML catalog, SKU resolution, Bounded fallbacks, Multi-device pairing, Node.js</span>
+                        <span>Open-source AI agent, ChatGPT Desktop / Codex, OMP browser, YAML catalog, product matching, Bounded fallbacks, Multi-device pairing, Node.js</span>
                     </div>
                 </div>
                 <aside class="visual" aria-labelledby="redmart-grocery-effect-title">
@@ -1572,7 +1572,7 @@
             <header class="artifact-header">
                 <div>
                     <h2>omp-model-roles</h2>
-                    <p class="artifact-summary">Quota-aware model-role configuration for the Oh My Pi coding-agent harness, with 15 roles, fallback chains across five subscriptions plus API providers, and an evidence trail of benchmarks behind each routing choice.</p>
+                    <p class="artifact-summary">AI model selection for coding work (omp-model-roles), open source: routes each kind of coding task to a suitable AI model across several subscriptions, switching models when one hits its usage limit, with the test evidence behind each choice.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Open-source &middot; LLM evaluation</span>
@@ -1582,12 +1582,12 @@
             <div class="artifact-body">
                 <div class="col-main">
                     <div class="impact-chips" aria-label="omp-model-roles impact highlights">
-                        <span class="chip"><b>15 roles</b> &rarr; fallback chains</span>
-                        <span class="chip"><b>5 subscriptions</b> + API providers</span>
-                        <span class="chip"><b>Directional</b> evidence, small n</span>
+                        <span class="chip"><b>Right model</b> for each task</span>
+                        <span class="chip"><b>Several subscriptions</b> + API providers</span>
+                        <span class="chip"><b>Preliminary</b> results, small tests</span>
                     </div>
                     <div class="trust-boundary">
-                        <strong>Trust boundary:</strong> Results are labelled directional because sample sizes are small; routing choices are recorded with the evidence behind them, not presented as proof.
+                        <strong>Trust boundary:</strong> Preliminary results from small tests; routing choices are recorded with the evidence behind them, not presented as proof.
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1596,21 +1596,21 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I built</strong>
-                            <p>A role-based configuration for the Oh My Pi harness: each of 15 roles maps to a primary model with fallback chains across five subscriptions plus API providers, so work moves to the next available model when quota is exhausted.</p>
-                            <p>Choices were tested, not assumed: a review benchmark on 11 real regression PRs (101 result rows), a tool-task probe across 8 models, and a blinded A/B comparison that surfaced judge self-preference. Quota forensics showed where reviews were being consumed and re-routed them.</p>
+                            <p>A configuration for the Oh My Pi open-source AI coding assistant that gives each kind of coding task (planning, review, quick edits, long reading) a suitable AI model, with fallbacks across several subscriptions plus API providers, so work moves to the next available model when a usage limit is hit.</p>
+                            <p>Choices were tested, not assumed: tests on real code reviews, a tool-use probe across several models, and blind comparisons that surfaced bias when AI models grade AI output. Usage-limit forensics showed where reviews were being consumed and re-routed them.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Public on GitHub, currently at v40. Benchmark sizes are small; the repository labels its findings as directional rather than conclusive.</p>
+                            <p>Public on GitHub. The tests were small; the repository labels its findings as preliminary rather than conclusive.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
                         <a href="https://github.com/vokativ/omp-model-roles">GitHub repo</a>
-                        <span>Oh My Pi, model routing, fallback chains, LLM-as-judge evaluation, quota management</span>
+                        <span>Oh My Pi, model selection, fallback chains, LLM-as-judge evaluation, usage-limit management</span>
                     </div>
                 </div>
                 <aside class="visual" aria-labelledby="omp-model-roles-effect-title">
-                    <h3 class="visual-title" id="omp-model-roles-effect-title">Routing backed by evidence</h3>
+                    <h3 class="visual-title" id="omp-model-roles-effect-title">Model choices backed by evidence</h3>
                     <ul class="effect-list">
                         <li class="effect-item">
                             <h4>Fallbacks, not stalls</h4>
@@ -1618,7 +1618,7 @@
                         </li>
                         <li class="effect-item">
                             <h4>Bias checked</h4>
-                            <p>A blinded A/B comparison surfaced judge self-preference, a bias to account for when models grade models.</p>
+                            <p>Blind comparisons surfaced bias when AI models grade AI output, something to account for in any evaluation.</p>
                         </li>
                     </ul>
                 </aside>
@@ -1816,12 +1816,12 @@
         <article class="artifact" id="mckinsey-operating-systems">
             <header class="artifact-header">
                 <div>
-                    <h2>McKinsey: Durable Operating Systems</h2>
-                    <p class="artifact-summary">Selected consulting work that mattered because clients kept using the operating systems after the project ended.</p>
+                    <h2>McKinsey: Durable Business Tools and Workflows</h2>
+                    <p class="artifact-summary">Selected consulting work that mattered because clients kept using the business tools and operating workflows after the project ended.</p>
                 </div>
                 <div class="artifact-actions">
                     <span class="tag">Durable change</span>
-                    <a class="copy-link" href="#mckinsey-operating-systems" data-copy-link aria-label="Copy link to McKinsey: Durable Operating Systems">Copy link</a>
+                    <a class="copy-link" href="#mckinsey-operating-systems" data-copy-link aria-label="Copy link to McKinsey: Durable Business Tools and Workflows">Copy link</a>
                 </div>
             </header>
             <div class="artifact-body">
@@ -1834,7 +1834,7 @@
                 <div class="prose">
                         <div class="detail-block">
                             <strong>Challenge</strong>
-                            <p>Clients didn't just need strategy decks. Banks, insurers, and industrial companies needed operating systems that managers could actually run after the consulting team left.</p>
+                            <p>Clients didn't just need strategy decks. Banks, insurers, and industrial companies needed business tools and operating workflows that managers could actually run after the consulting team left.</p>
                         </div>
                         <div class="detail-block block-extra">
                             <strong>What I did</strong>
