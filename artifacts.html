@@ -10,6 +10,11 @@
     <meta property="og:description" content="Selected public projects, open-source AI agent workflows, and sanitized private-platform case studies behind the CV.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vokativ.github.io/nemanja-selected-work/artifacts.html">
+    <meta property="og:image" content="https://vokativ.github.io/nemanja-selected-work/img/adiufant-showcase.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nemanja Grujičić - Selected Work">
+    <meta name="twitter:description" content="Selected public projects, open-source AI agent workflows, and sanitized private-platform case studies behind the CV.">
+    <meta name="twitter:image" content="https://vokativ.github.io/nemanja-selected-work/img/adiufant-showcase.jpg">
     <link rel="canonical" href="https://vokativ.github.io/nemanja-selected-work/artifacts.html">
     <script type="application/ld+json">
     {
@@ -86,9 +91,14 @@
                 }
             },
             {
+                "@type": "CreativeWork",
+                "name": "Phone-based home agent",
+                "description": "Private lab prototype that turns a spare Android phone or tablet into an always-on host for six AI coding-agent harnesses; built by orchestrating AI coding agents with the owner as reviewer. 3,301-test gate in 248 s; 6 harnesses x 10 tasks device matrix with file-based verifiers."
+            },
+            {
                 "@type": "SoftwareApplication",
                 "name": "Korak do glasa",
-                "url": "https://korakdoglasa.org/",
+                "url": "https://github.com/vokativ/glasanje",
                 "codeRepository": "https://github.com/vokativ/glasanje",
                 "applicationCategory": "GovernmentApplication",
                 "operatingSystem": "All modern browsers",
@@ -109,6 +119,21 @@
                 "codeRepository": "https://github.com/vokativ/grocery-shopping-redmart",
                 "applicationCategory": "ProductivityApplication",
                 "description": "Open-source AI agent workflow that turns messy family whiteboard photos, voice notes, or shorthand lists into prepared grocery carts on RedMart / Lazada Singapore using constrained AI, canonical SKU matching, and human-in-the-loop review."
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "omp-model-roles",
+                "url": "https://github.com/vokativ/omp-model-roles",
+                "codeRepository": "https://github.com/vokativ/omp-model-roles",
+                "description": "Quota-aware model-role configuration for the Oh My Pi coding-agent harness: 15 roles with fallback chains across five subscriptions plus API providers, backed by directional benchmarks."
+            },
+            {
+                "@type": "SoftwareSourceCode",
+                "name": "tern-file-paste",
+                "url": "https://github.com/vokativ/tern-file-paste",
+                "codeRepository": "https://github.com/vokativ/tern-file-paste",
+                "programmingLanguage": ["Luau", "Python"],
+                "description": "Tern terminal plugin that uploads copied files over SSH and inserts remote paths into the focused pane; never presses Enter."
             },
             {
                 "@type": "SoftwareSourceCode",
@@ -866,7 +891,7 @@
         <section class="hero">
             <div>
                 <p class="hero-name">Nemanja Grujičić</p>
-                <p class="hero-role">Applied AI Product &amp; Research Lead &bull; ex Google &amp; McKinsey &bull; INSEAD MBA</p>
+                <p class="hero-role">Applied AI Engineer &bull; ex Google &amp; McKinsey &bull; INSEAD MBA</p>
                 <p class="eyebrow">Selected work</p>
                 <h1>I lead data &amp; AI teams &mdash; and I still build and ship the systems myself.</h1>
                 <p class="lead">Selected company data and AI case studies, public products, open-source builds, and earlier leadership work behind the CV. Built around a consistent pattern: diagnosing operating constraints, setting strict trust boundaries, and shipping dependable systems into real use.</p>
@@ -876,7 +901,7 @@
                 <a href="https://www.linkedin.com/in/grujicicnemanja/">LinkedIn</a>
                 <a href="https://github.com/vokativ/">GitHub</a>
                 <span>Singapore / Remote</span>
-                <span>Updated Oct 2026</span>
+                <span>Updated Nov 2026</span>
             </nav>
         </section>
 
@@ -887,9 +912,9 @@
                     <span class="pill-title">Company</span>
                     <span class="pill-count">5</span>
                 </a>
-                <a href="#group-built" class="nav-pill" aria-label="Products: 3 published products and 2 smaller open-source builds">
+                <a href="#group-built" class="nav-pill" aria-label="Products: 4 products and prototypes and 4 smaller open-source builds">
                     <span class="pill-title">Products</span>
-                    <span class="pill-count">5</span>
+                    <span class="pill-count">8</span>
                 </a>
                 <a href="#group-earlier" class="nav-pill" aria-label="Google and McKinsey: 2 earlier leadership case studies">
                     <span class="pill-title"><span>Google &amp;</span> <span>McKinsey</span></span>
@@ -1227,9 +1252,9 @@
             <div class="group-header">
                 <div class="group-header-text">
                     <h2 class="group-title">Public products &amp; open-source builds</h2>
-                    <p class="group-desc">Three published products, plus two smaller open-source builds.</p>
+                    <p class="group-desc">Four products and prototypes, plus four smaller open-source builds.</p>
                 </div>
-                <span class="group-badge">3 Products &bull; 2 Small Builds</span>
+                <span class="group-badge">4 Products &bull; 4 Small Builds</span>
             </div>
 
         <article class="artifact" id="adiufant">
@@ -1263,7 +1288,7 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> (v1.3.1, build 25), and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (v1.3.0, build 25). Iterative releases added dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
+                            <p>Built and published through <a href="https://vulcanusholdings.com">Vulcanus Holdings, Inc.</a> and live free at <a href="https://adiufant.com">adiufant.com</a>, on the <a href="https://apps.apple.com/us/app/adiufant-family-organizer/id6757211021">Apple App Store</a> and on <a href="https://play.google.com/store/apps/details?id=com.adiufant.app">Google Play</a> (latest version v1.3.0). Releases added an AI-consent flow (after App Store review feedback), dynamic prep-task auto-rescheduling with inline undo, temporal hallucination guards, and crash hardening. Early feedback is positive, but it is too soon to claim retention or scaled adoption.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
@@ -1287,6 +1312,64 @@
                         <li class="effect-item">
                             <h4>When plans change</h4>
                             <p>Move an event and its preparation deadlines move too. Undo is available.</p>
+                        </li>
+                    </ul>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="phone-based-agent">
+            <header class="artifact-header">
+                <div>
+                    <h2>Phone-based home agent</h2>
+                    <p class="artifact-summary">Private prototype that turns a spare Android phone or tablet into an always-on host for six AI coding-agent harnesses, running on subscriptions people already pay for and reachable from their daily phone.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Private prototype</span>
+                    <a class="copy-link" href="#phone-based-agent" data-copy-link aria-label="Copy link to Phone-based home agent">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="Phone-based home agent impact highlights">
+                        <span class="chip"><b>6 harnesses</b> &rarr; one always-on host</span>
+                        <span class="chip"><b>3,301 tests</b> &rarr; 248 s gate</span>
+                        <span class="chip"><b>Files on disk</b> &rarr; verifiers</span>
+                    </div>
+                    <div class="trust-boundary">
+                        <strong>Trust boundary:</strong> Lab prototype on a Pixel Tablet; not released and not on Google Play. Agent runs are judged by verifiers that check files on disk, never the agent's words.
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>AI coding agents are useful, but they usually run on a laptop that has to stay open. A spare Android phone or tablet is always on and always charged, and people already pay for agent subscriptions; the missing piece is a safe way to host the agents there and reach them from the phone in your pocket.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>A client app and a host app, a job API, and a credential vault, supporting six agent harnesses: Codex, Claude Code, Antigravity, Pi, Oh My Pi, and Mistral Vibe. A second backend runs on Android's Linux VM (Android 15+).</p>
+                            <p>It was built by orchestrating AI coding agents, with me as owner and reviewer: I set direction, recorded decisions (D1&ndash;D62 in an owner decision log), and reviewed and accepted the work. Quality is enforced by gates rather than trust: a 3,301-test workstation gate that runs in 248 seconds (down from about 61 minutes serial) and a device matrix of 6 harnesses &times; 10 tasks whose verifiers check files on disk, never the agent's words.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Since 12 October 2026: 1,022 commits and 92 pull requests. Release signing, licence records for 303 components, and Google Play policy preparation are done. It remains a lab prototype on a Pixel Tablet: not released, not on Play, and with no public repository or product name yet.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <span>Private code &mdash; figures above are from the project's own commit history, test gate, and decision log.</span>
+                        <span>Android, Android Linux VM, job API, credential vault, device-matrix verification</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-labelledby="phone-based-agent-effect-title">
+                    <h3 class="visual-title" id="phone-based-agent-effect-title">An agent host in a drawer</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Use what you already pay for</h4>
+                            <p>Runs the harnesses on existing subscriptions, from your daily phone.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Checked on disk</h4>
+                            <p>Each task is verified by inspecting the resulting files, not by trusting the agent's report.</p>
                         </li>
                     </ul>
                 </aside>
@@ -1328,14 +1411,11 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status</strong>
-                            <p>Registration depends on election deadlines. The follow-up guide remains available at <a href="https://korakdoglasa.org/">korakdoglasa.org</a>. Open source.</p>
+                            <p>Ran through the 2026 registration deadline and is now archived. The site at korakdoglasa.org was retired on 25 October 2026 and redirects to the public repository. Open source. Continuation of the 2020 civic project covered by BBC Serbian.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
-                        <a href="https://korakdoglasa.org/">korakdoglasa.org</a>
-                        <a href="https://korakdoglasa.org/pracenje/">Follow-up guide</a>
-                        <a href="https://korakdoglasa.org/pracenje/agent.md">Assistant guide</a>
-                        <a href="https://github.com/vokativ/glasanje">GitHub repo</a>
+                        <a href="https://github.com/vokativ/glasanje">GitHub repo (public)</a>
                         <a href="https://www.bbc.com/serbian/lat/srbija-52769005">BBC Serbian (2020)</a>
                     </div>
                 </div>
@@ -1440,7 +1520,7 @@
                         <span class="chip"><b>Stops before</b> checkout</span>
                     </div>
                     <div class="trust-boundary">
-                        <strong>Trust boundary:</strong> Proposed cart previewed before any browser mutation. Stops at CAPTCHAs and never bypasses; zero automated checkout or payment.
+                        <strong>Trust boundary:</strong> Proposed cart previewed before any browser mutation. Detects Lazada's anti-bot challenge and hands back to you rather than bypassing it; zero automated checkout or payment.
                     </div>
                     <div class="prose">
                         <div class="detail-block">
@@ -1456,7 +1536,8 @@
                         </div>
                         <div class="detail-block block-extra">
                             <strong>Status &amp; Delivery</strong>
-                            <p>Open source on GitHub at <a href="https://github.com/vokativ/grocery-shopping-redmart">vokativ/grocery-shopping-redmart</a>. Features synthetic catalog validators, unit test suites for alias resolution and review rendering, and documented browser connection hierarchies. Supervised runs with 5.6 Terra / Medium produced verified carts; stops before checkout so delivery slot selection and payment always stay with the human.</p>
+                            <p>Open source (MIT) on GitHub at <a href="https://github.com/vokativ/grocery-shopping-redmart">vokativ/grocery-shopping-redmart</a>, in daily household use since July 2026 (60 commits). Features synthetic catalog validators, unit test suites for alias resolution and review rendering, and documented browser connection hierarchies. Stops before checkout so delivery slot selection and payment always stay with the human.</p>
+                            <p>October 2026 hardening added a paced Chrome DevTools Protocol cart helper with a no-op cooldown and hand-back to the user, and detection of Lazada's anti-bot challenge. Two bugs found in live testing (stale and over-broad cart reads) were fixed, catalog reviews continued through November 2026, and the workflow has been tested across several agent harnesses and models. I am looking for a few Singapore households to test it &mdash; open an issue on the repo if you would like to try it.</p>
                         </div>
                     </div>
                     <div class="proof-links block-extra">
@@ -1480,6 +1561,121 @@
                         <li class="effect-item">
                             <h4>You still check out</h4>
                             <p>Review the proposal before the cart changes. You choose delivery and pay.</p>
+                        </li>
+                    </ul>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="omp-model-roles">
+            <header class="artifact-header">
+                <div>
+                    <h2>omp-model-roles</h2>
+                    <p class="artifact-summary">Quota-aware model-role configuration for the Oh My Pi coding-agent harness, with 15 roles, fallback chains across five subscriptions plus API providers, and an evidence trail of benchmarks behind each routing choice.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Open-source &middot; LLM evaluation</span>
+                    <a class="copy-link" href="#omp-model-roles" data-copy-link aria-label="Copy link to omp-model-roles">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="omp-model-roles impact highlights">
+                        <span class="chip"><b>15 roles</b> &rarr; fallback chains</span>
+                        <span class="chip"><b>5 subscriptions</b> + API providers</span>
+                        <span class="chip"><b>Directional</b> evidence, small n</span>
+                    </div>
+                    <div class="trust-boundary">
+                        <strong>Trust boundary:</strong> Results are labelled directional because sample sizes are small; routing choices are recorded with the evidence behind them, not presented as proof.
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>A coding agent runs many different jobs (planning, review, quick edits, long-context reading), and subscription quotas run out at different times. A single default model wastes quota on easy tasks and stalls when a limit is hit.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>A role-based configuration for the Oh My Pi harness: each of 15 roles maps to a primary model with fallback chains across five subscriptions plus API providers, so work moves to the next available model when quota is exhausted.</p>
+                            <p>Choices were tested, not assumed: a review benchmark on 11 real regression PRs (101 result rows), a tool-task probe across 8 models, and a blinded A/B comparison that surfaced judge self-preference. Quota forensics showed where reviews were being consumed and re-routed them.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>Public on GitHub, currently at v40. Benchmark sizes are small; the repository labels its findings as directional rather than conclusive.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://github.com/vokativ/omp-model-roles">GitHub repo</a>
+                        <span>Oh My Pi, model routing, fallback chains, LLM-as-judge evaluation, quota management</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-labelledby="omp-model-roles-effect-title">
+                    <h3 class="visual-title" id="omp-model-roles-effect-title">Routing backed by evidence</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Fallbacks, not stalls</h4>
+                            <p>When one subscription hits its limit, the role falls through to the next model in its chain.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>Bias checked</h4>
+                            <p>A blinded A/B comparison surfaced judge self-preference, a bias to account for when models grade models.</p>
+                        </li>
+                    </ul>
+                </aside>
+                <button type="button" class="case-toggle" aria-expanded="false">Show full case</button>
+            </div>
+        </article>
+
+        <article class="artifact" id="tern-file-paste">
+            <header class="artifact-header">
+                <div>
+                    <h2>tern-file-paste</h2>
+                    <p class="artifact-summary">Tern terminal plugin: copy files locally, press one shortcut, and the files upload over SSH while their remote paths are inserted into the focused pane for the coding agent to read.</p>
+                </div>
+                <div class="artifact-actions">
+                    <span class="tag">Open-source &middot; Terminal plugin</span>
+                    <a class="copy-link" href="#tern-file-paste" data-copy-link aria-label="Copy link to tern-file-paste">Copy link</a>
+                </div>
+            </header>
+            <div class="artifact-body">
+                <div class="col-main">
+                    <div class="impact-chips" aria-label="tern-file-paste impact highlights">
+                        <span class="chip"><b>One shortcut</b> &rarr; upload + paths</span>
+                        <span class="chip"><b>Never presses</b> Enter</span>
+                        <span class="chip"><b>CI</b> on macOS, Linux, Windows</span>
+                    </div>
+                    <div class="trust-boundary">
+                        <strong>Trust boundary:</strong> The plugin only inserts text; it never presses Enter, so you review the command before it runs.
+                    </div>
+                    <div class="prose">
+                        <div class="detail-block">
+                            <strong>Challenge</strong>
+                            <p>Coding agents often run on a remote machine over SSH, where a screenshot or file on your laptop cannot simply be pasted into the session.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>What I built</strong>
+                            <p>A plugin in Luau and Python for the Tern terminal. Copy files locally, press the shortcut, and it uploads them over SSH and inserts the remote paths into the focused pane as agent <code>@"path"</code> references.</p>
+                        </div>
+                        <div class="detail-block block-extra">
+                            <strong>Status &amp; Delivery</strong>
+                            <p>MIT-licensed, released as v0.3.2 in October 2026, with CI on macOS, Linux, and Windows and an honest verification table showing what has and has not been tested on each platform.</p>
+                        </div>
+                    </div>
+                    <div class="proof-links block-extra">
+                        <a href="https://github.com/vokativ/tern-file-paste">GitHub repo</a>
+                        <span>Luau, Python, SSH, Tern terminal plugin</span>
+                    </div>
+                </div>
+                <aside class="visual" aria-labelledby="tern-file-paste-effect-title">
+                    <h3 class="visual-title" id="tern-file-paste-effect-title">From local file to remote path</h3>
+                    <ul class="effect-list">
+                        <li class="effect-item">
+                            <h4>Copy, then paste</h4>
+                            <p>One shortcut uploads the files and inserts their remote paths.</p>
+                        </li>
+                        <li class="effect-item">
+                            <h4>You press Enter</h4>
+                            <p>Nothing runs until you submit the line yourself.</p>
                         </li>
                     </ul>
                 </aside>
